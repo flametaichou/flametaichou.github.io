@@ -4,7 +4,7 @@ on:
 
 jobs:
   generate-tag-pages:
-    name: Generate the set of tag pages.
+    name: tag pages generation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
