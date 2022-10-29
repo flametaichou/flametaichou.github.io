@@ -1,21 +1,9 @@
-title: Title
-author:
-  name: GitHub User
-  email: your-email@domain.com
+title: Test Title
  
 description: >
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-
-theme: minima
-
-minima:
-  date_format: "%b %-d, %Y"
-
-  social_links:
-    twitter: test
-    github:  test
 
 plugins:
  - jekyll-feed
