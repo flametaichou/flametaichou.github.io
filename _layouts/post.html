@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<article class="post post--big">
+    {% if page.cover_image %}
+    <div class="post__cover">
+        <div class="post__overlay"></div>
+        <img src="/data/images/{{ page.cover_image }}" />
+    </div>
+    {% endif %}
+
+    <div class="post__wrapper post__main">
+        <div class="post__section">
+            <div class="post__date">
+            <span class="category">
+                {% if page.categories %}
+                {{ page.categories }}
+                {% else %}
+                Other
+                {% endif %}
+            </span>
+                /
+                <span>{{ page.date | date_to_string }}</span>
+            </div>
+
+            <div>
+                {% include author.html %}
+            </div>
+        </div>
+
+        <div class="post__title">
+            <h1>
+                {% if page.title%}
+                {{ page.title }}
+                {% else %}
+                Untitled post
+                {% endif %}
+            </h1>
+            {% if page.description%}
+            <div>
+                {{ page.description }}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="post__content">
+            {{ content }}
+        </div>
+
+        <div class="post__section">
+            <nav class="post__tags">
+                {% for tag in page.tags %}
+                <a href="/tags/{{ tag | slugify }}" class="tag tag--small">
+                    {{ tag }}
+                </a>
+                {% endfor %}
+            </nav>
+        </div>
+    </div>
+</article>

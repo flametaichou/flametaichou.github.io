@@ -1,0 +1,38 @@
+title: Test Title
+
+description: >
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+lang: 'en'
+languages: ['en', 'ru']
+
+permalink: pretty
+
+feed:
+  path: /posts/feed.xml
+
+#collections:
+#  pages:
+#    output: true
+#    permalink: /en/:basename
+
+#defaults:
+#  - scope:
+#      path: ""
+#      type: "pages"
+#    values:
+#      language: en
+#      permalink: /en/:basename
+#  - scope:
+#      path: ""
+#      type: "pages"
+#    values:
+#      language: ru
+#      permalink: /ru/:basename
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap

@@ -1,0 +1,38 @@
+// https://www.canva.com/colors/color-palettes/northern-lights-3/
+
+$colorPrimary: #323232;
+$colorSecondary: #278AB0;
+$colorSecondaryDarken1: #236a8c;
+$colorAccent: #228B22;
+
+$colorInfo: #278AB0;
+$colorSuccess: #1DC690;
+$colorWarning: #FF851B;
+$colorError: #FF4136;
+
+$colorPurple: #713770;
+
+$colorBlack: #111111;
+$colorWhite: #ffffff;
+$colorGray0: #f3f3f3;
+$colorGray1: #AAAAAA;
+$colorGray2: gray;
+$colorGray3: dimgray;
+
+$widthMobile: 1024px;
+
+$fontSizes: (
+        'mobile': (
+                'small': 14px,
+                'default': 16px,
+                'large': 20px,
+                'xl': 28px
+        ),
+        'desktop': (
+                'small': 12px,
+                'default': 14px,
+                'large': 18px,
+                'xl': 24px
+        )
+);
+$fontSize: map-get($fontSizes, 'desktop');

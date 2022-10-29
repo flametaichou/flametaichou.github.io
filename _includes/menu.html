@@ -1,0 +1,14 @@
+<nav class="menu">
+  <a href="/" class="menu-item {% if page.url == '/' %}menu-item--active{% endif %}">
+    {% include components/i18n.html code = 'home' %}
+  </a>
+  <a href="/posts" class="menu-item {% if page.url == '/posts/' %}menu-item--active{% endif %}">
+    {% include components/i18n.html code = 'posts' %}
+  </a>
+  <a href="/tags" class="menu-item {% if page.url == '/tags/' %}menu-item--active{% endif %}">
+    {% include components/i18n.html code = 'tags' %}
+  </a>
+  <a href="/about" class="menu-item {% if page.url == '/about/' %}menu-item--active{% endif %}">
+    {% include components/i18n.html code = 'about' %}
+  </a>
+</nav>

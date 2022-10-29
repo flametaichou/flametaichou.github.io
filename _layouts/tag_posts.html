@@ -1,0 +1,13 @@
+---
+layout: tags
+---
+
+<div class="posts">
+    {% for post in site.tags[page.tag] %}
+
+    {% include components/post_preview.html
+    post = post
+    %}
+
+    {% endfor %}
+</div>

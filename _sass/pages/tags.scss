@@ -1,0 +1,10 @@
+@import "../vars";
+@import "../mixins";
+
+.tags {
+  padding: 1em;
+
+  &__list {
+    margin-bottom: 30px;
+  }
+}

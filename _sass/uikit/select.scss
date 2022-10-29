@@ -1,0 +1,36 @@
+/*
+ * Origin:
+ * https://codepen.io/raubaca/pen/bGWmZje
+ */
+$glass: rgba(255, 255, 255, 0.2);
+$glass-icon: rgba(255, 255, 255, 0.3);
+
+/* <select> styles */
+.f-select {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+
+  height: 3em;
+  padding: 0 4em 0 1em;
+  background: url('/data/icons/FA-caret-down.svg') no-repeat right 0.8em center / 1.4em, linear-gradient(to left, $glass-icon 3em, $glass 3em);
+  color: $colorWhite;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  option {
+    color: inherit;
+    background-color: $colorGray3;
+    font: inherit;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+}

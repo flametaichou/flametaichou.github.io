@@ -1,0 +1,156 @@
+@import "../vars";
+@import "../mixins";
+
+.posts {
+  padding: 1em;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 2vh;
+  grid-row-gap: 2vh;
+}
+
+.post {
+  @include shadow-default;
+  //padding: 30px 20px;
+
+  background-color: $colorWhite;
+  display: flex;
+  flex-direction: column;
+
+  @include border-radius-default;
+
+  /*
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+  */
+
+  &__cover {
+    background-color: $colorGray1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 128px;
+    overflow-y: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__main {
+    flex: 1 0;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__category {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 1;
+  }
+
+  &__title {
+
+  }
+
+  &__date {
+    color: $colorGray1;
+  }
+
+  &__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    //background: linear-gradient(180deg, rgb(40, 40, 40, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+
+    background: linear-gradient(
+                    180deg,
+                    rgba(40, 40, 40, 0.8) 0%,
+                    rgba(255, 255, 255, 0) 33%,
+                    rgb(255, 255, 255) 100%
+    );
+    z-index: 0;
+  }
+
+  &__tags {
+  }
+
+  &__section {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    flex: 1 0;
+
+    h1:before {
+      padding-right: 0.3em;
+      color: $colorAccent;
+      content: "~";
+    }
+
+    h2:before {
+      padding-right: 0.3em;
+      color: $colorAccent;
+      content: "~~";
+    }
+
+    h3:before {
+      padding-right: 0.3em;
+      color: $colorAccent;
+      content: "~~~";
+    }
+
+    h4:before {
+      padding-right: 0.3em;
+      color: $colorAccent;
+      content: "~~~~";
+    }
+
+    h5:before {
+      padding-right: 0.3em;
+      color: $colorAccent;
+      content: "~~~~~";
+    }
+
+    h6:before {
+      padding-right: 0.3em;
+      color: $colorAccent;
+      content: "~~~~~~";
+    }
+  }
+
+  &--big {
+    .post__title {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .post__content {
+      p {
+        &::first-letter {
+          initial-letter: 6 1;
+          color: $colorPrimary;
+          font-weight: bold;
+          line-height: .75;
+          margin-right: .1em;
+        }
+      }
+    }
+
+    .post__cover {
+      height: 256px;
+    }
+  }
+
+  &:not(&--big) {
+    border: 1px solid $colorGray0;
+  }
+}
