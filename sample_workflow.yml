@@ -10,5 +10,5 @@ jobs:
       - uses: actions/checkout@v2
       - uses: hendrixjoseph/jekyll-tag-page-generator-action@master
         with:
-          source: "https://www.joehxblog.com/data/tags.json"
+          source: "https://flametaichou.github.io/prerequisites/tags.json"
           destination: "./tags/"
