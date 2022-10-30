@@ -15,7 +15,8 @@ description: All tags
     {% for tag in site.tags %}
     <div style="margin-top:33px">
       <ul>
-        {% for post in site.tags[tag | first] %}
+        {% assign tag_str = tag | first %}
+        {% for post in site.tags[tag_str] %}
         <li>
           <a href="{{ post.url }}">{{ post.title }}</a>
           </br>
