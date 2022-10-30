@@ -1,10 +1,10 @@
 ---
-layout: default_container
+layout: default
 title: Tags
-description: Tags written about on this webpage.
+description: All tags
 ---
 
-<h1><span></span> {{ page.title }}</h1>
+<h1>{{ page.title }}</h1>
 
 {% include all_tags.html %}
 <hr>
@@ -15,10 +15,6 @@ description: Tags written about on this webpage.
     {% assign tag = page.path | strip %}
    
     <div style="margin-top:33px">
-      <h3 id="{{ tag | slugify}}">
-        <span class="fas fa-tag" aria-hidden="true"></span> {{ tag }}:
-        <a class="anchor-link" href="#{{ tag | slugify}}"><i class="fas fa-sm fa-link"></i></a>
-      </h3>
       <ul>
         {% for post in site.tags[tag] %}
         <li>
