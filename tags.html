@@ -1,0 +1,32 @@
+---
+layout: default_container
+title: Tags
+description: Tags written about on this webpage.
+---
+
+<h1><span></span> {{ page.title }}</h1>
+
+{% include all_tags.html %}
+<hr>
+
+<div class="pagination-container">
+    <div style="margin-top:33px">
+      <h3 id="{{ tag | slugify}}">
+        <span class="fas fa-tag" aria-hidden="true"></span> {{ tag }}:
+        <a class="anchor-link" href="#{{ tag | slugify}}"><i class="fas fa-sm fa-link"></i></a>
+      </h3>
+      <ul>
+        {% for post in site.tags[tag] %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          </br>
+          <i>{{ post.date | date_to_string }}</i>
+          </br>
+          {{ post.description }}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <hr>
+</div>
+<hr>
