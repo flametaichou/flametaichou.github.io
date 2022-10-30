@@ -1,0 +1,5 @@
+{% for tag in site.tags %}
+    <a href="/tags/#{{ tag | slugify }}" class="btn btn-outline-primary tag-btn">
+        <span aria-hidden="true"></span> {{ tag | first }} ({{ tag | last | size}})
+    </a>
+{% endfor %}
