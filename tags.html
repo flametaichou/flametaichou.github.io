@@ -15,7 +15,7 @@ description: All tags
     {% for tag in site.tags %}
     <div style="margin-top:33px">
       <ul>
-        {% for post in site.tags[tag] %}
+        {% for post in site.tags[tag | slugify] %}
         <li>
           <a href="{{ post.url }}">{{ post.title }}</a>
           </br>
