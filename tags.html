@@ -11,22 +11,4 @@ description: All tags
 
     {{ page.path }}
 
-<div class="pagination-container">
-    {% assign tag = page.path | strip %}
-   
-    <div style="margin-top:33px">
-      <ul>
-        {% for post in site.tags[tag] %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-          </br>
-          <i>{{ post.date | date_to_string }}</i>
-          </br>
-          {{ post.description }}
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-    <hr>
-</div>
 <hr>
