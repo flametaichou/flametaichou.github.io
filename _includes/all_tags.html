@@ -1,4 +1,6 @@
 {% for tag in site.tags %}
-  Name: {{ tag | first }},
-  count: {{ tag | last | size}}
+    <a href="/tags/#{{ tag | slugify }}">
+        {{ tag | first }}
+        ({{ tag | last | size}})
+    </a>
 {% endfor %}
