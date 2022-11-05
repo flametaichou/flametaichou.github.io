@@ -22,6 +22,7 @@ body {
 
   &--sidebar {
     justify-content: end;
+    border-color: transparent;
   }
 
   &__close {
@@ -113,11 +114,11 @@ body {
     width: 400px;
     position: absolute;
     top: 0;
-  }
 
-  &--closed {
-    width: 0 !important;
-    overflow: hidden;
+    &--closed {
+      width: 0 !important;
+      overflow: hidden;
+    }
   }
 
   &__top {

@@ -26,10 +26,6 @@
                 sidebarBtn.classList.add('header__toggle--active');
             }
         };
-
-        if (window.innerWidth <= 900) {
-            toggleSidebar();
-        }
     </script>
 </head>
 <body>
@@ -43,7 +39,7 @@
             {{ site.title }}
         </h1>
     </div>
-    <div id="sidebar" class="navigation">
+    <div id="sidebar" class="navigation navigation--closed">
         <div class="header header--sidebar">
             <h1>
                 {{ site.title }}
