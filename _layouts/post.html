@@ -10,24 +10,16 @@ layout: default
     {% endif %}
 
     <div>
-        {{ page.date | date: "%b %d, %Y" }}
+        {{ page.date | date_to_string }}
     </div>
-    <i>
-        post date: {{ page.date }}
-    </i>
 
     <div>
-        [
         {% for tag in page.tags %}
         {% capture tag_name %}{{ tag }}{% endcapture %}
         <a href="/tags/{{ tag_name }}">
-            <code class="highligher-rouge">
-                <nobr>{{ tag_name }}</nobr>
-            </code>
-            &nbsp;
+            {{ tag_name }}
         </a>
         {% endfor %}
-        ]
     </div>
 
     <p>
