@@ -26,10 +26,11 @@ body {
   }
 
   &__close {
-    width: 2em;
-    height: 2em;
+    width: 2.4em;
+    height: 2.4em;
     position: relative;
     margin-right: 1em;
+    margin-left: 1em;
   }
 
   &__toggle {
@@ -73,7 +74,7 @@ body {
   align-items: center;
   padding: 1em;
 
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid $colorGray0;
 }
 
 .overlay {
@@ -144,8 +145,21 @@ body {
   &__menu {
     padding: 2em;
 
+    ul {
+      list-style-type: none;
+    }
+
     a {
+      font-size: $fontSizeLarge;
       text-decoration: none;
+
+      &:active {
+        color: $colorGray0;
+      }
+
+      &:visited {
+        color: $colorWhite;
+      }
     }
   }
 }
