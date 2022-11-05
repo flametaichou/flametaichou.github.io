@@ -20,16 +20,20 @@
 
             } else {
                 navbar.classList.remove('navigation--closed');
-                navbarBtn.textContent = '<';
+                navbarBtn.textContent = 'X';
             }
         }
     </script>
 </head>
 <body>
-    <div id="navbar-close" class="navigation__close">
-        <button id="navbar-btn" onclick="toggleNavbar()">
-            >
-        </button>
+    <div class="header">
+        <div id="navbar-close" class="header__close">
+            <button id="navbar-btn" onclick="toggleNavbar()">
+                >
+            </button>
+        </div>
+
+
     </div>
     <div id="navbar" class="navigation">
         <div class="navigation__top"></div>

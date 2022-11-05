@@ -10,6 +10,34 @@ body {
   }
 }
 
+.header {
+  @include breakpoint-desktop {
+    display: none;
+  }
+
+  &__close {
+    z-index: 1;
+    position: absolute;
+    left: 2em;
+    top: 2em;
+
+    button {
+      width: 2em;
+      height: 2em;
+      font-size: 2em;
+      border: 1px solid lightgray;
+      background-color: transparent;
+    }
+  }
+
+  height: 4em;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+
+  border-bottom: 1px solid lightgray;
+}
+
 .navigation {
   background: $colorBlack;
   color: $colorWhite;
@@ -19,12 +47,11 @@ body {
   text-align: right;
   height: 100%;
 
-  animation: slide-right 0.1s ease-in;
   transition: width 0.2s;
 
   @include breakpoint-desktop {
     justify-content: flex-end;
-    width: 30%;
+    width: max(400px, 20%);
 
     .navigation__close {
       display: none;
@@ -37,22 +64,7 @@ body {
   }
 
   &--closed {
-    width: 0;
-  }
-
-  &__close {
-    z-index: 1;
-    position: absolute;
-    left: 2em;
-    top: 2em;
-
-    button {
-      font-size: 2em;
-    }
-
-    @include breakpoint-desktop {
-      display: none;
-    }
+    width: 0 !important;
   }
 
   &__top {
