@@ -1,6 +1,9 @@
 @import "vars";
 
 body {
+  height: 100vh;
+  margin: 0;
+
   @media screen and (min-width: $widthMobile) {
     display: flex;
   }
@@ -44,7 +47,7 @@ body {
     }
   }
 
-  @media screen and (min-width: $widthMobile) {
+  @media screen and (max-width: $widthMobile) {
     position: absolute;
   }
 }
