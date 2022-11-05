@@ -16,7 +16,7 @@ body {
   }
 
   &__close {
-    z-index: 1;
+    z-index: 2;
     position: absolute;
 
     button {
@@ -25,7 +25,7 @@ body {
       font-size: 2em;
       border: 1px solid dimgray;
       color: dimgray;
-      background-color: transparent;
+      background-color: rgba(255, 255, 255, 0.05);
     }
   }
 
@@ -37,7 +37,16 @@ body {
   border-bottom: 1px solid lightgray;
 }
 
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: 0;
+}
+
 .navigation {
+  z-index: 1;
   background: $colorBlack;
   color: $colorWhite;
   padding: 2em;
