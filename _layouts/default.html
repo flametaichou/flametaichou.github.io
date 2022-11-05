@@ -9,10 +9,10 @@
         let sidebarOpened = true;
 
         if (window.innerWidth <= 900) {
-            togglesidebar();
+            toggleSidebar();
         }
 
-        togglesidebar = function () {
+        toggleSidebar = function () {
             sidebarOpened = !sidebarOpened;
 
             const sidebar = document.getElementById('sidebar');
@@ -34,7 +34,7 @@
 </head>
 <body>
     <div class="header">
-        <div class="header__close" onclick="togglesidebar()">
+        <div class="header__close" onclick="toggleSidebar()">
             <div id="sidebar-btn" class="header__toggle">
                 <div></div>
             </div>
