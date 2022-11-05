@@ -6,7 +6,11 @@
     <title>{{page.title}}</title>
 	<link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
     <script>
-        let sidebarOpened = window.innerWidth >= 900;
+        let sidebarOpened = true;
+
+        if (window.innerWidth <= 900) {
+            togglesidebar();
+        }
 
         togglesidebar = function () {
             sidebarOpened = !sidebarOpened;
