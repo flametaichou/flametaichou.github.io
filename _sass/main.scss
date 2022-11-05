@@ -56,7 +56,7 @@ body {
       transform: translateY(12px) rotate(135deg);
     }
     &--active:after {
-      transform: translateY(-12px) rotate(-135deg);
+      transform: translateY(-10px) rotate(-135deg);
     }
     &--active div {
       transform: scale(0);
