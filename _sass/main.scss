@@ -1,10 +1,11 @@
 @import "vars";
+@import "mixins";
 
 body {
   height: 100vh;
   margin: 0;
 
-  @media (min-width: $widthMobile) {
+  @include breakpoint-desktop {
     display: flex;
   }
 }
@@ -17,24 +18,24 @@ body {
   flex-direction: column;
   text-align: right;
 
-  @media (min-width: $widthMobile) {
+  @include breakpoint-desktop {
     justify-content: flex-end;
     width: 30%;
   }
 
-  @media (max-width: $widthMobile) {
+  @include breakpoint-mobile {
     width: 400px;
     position: absolute;
   }
 
   &__top {
-    @media (min-width: $widthMobile) {
+    @include breakpoint-desktop {
       flex: 1 0 auto;
     }
   }
 
   &__bottom {
-    @media (min-width: $widthMobile) {
+    @include breakpoint-desktop {
       flex: 0 0;
       height: 10vh;
     }

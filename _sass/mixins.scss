@@ -1,0 +1,13 @@
+@import "vars";
+
+@mixin breakpoint-desktop() {
+  @media (min-width: $widthMobile) {
+    @content;
+  }
+}
+
+@mixin breakpoint-mobile() {
+  @media (max-width: $widthMobile) {
+    @content;
+  }
+}
