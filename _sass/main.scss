@@ -26,6 +26,10 @@ body {
     z-index: 2;
     position: absolute;
     width: 100%;
+    cursor: pointer;
+
+    border: none;
+    background-color: transparent;
     //font-size: 2em;
     //border: 1px solid dimgray;
     //color: dimgray;
@@ -49,7 +53,7 @@ body {
       transition: 0.5s;
     }
 
-    &__active {
+    &--active {
       .header__toggle:before {
         transform: translateY(12px) rotate(135deg);
       }
