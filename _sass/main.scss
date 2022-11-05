@@ -16,17 +16,20 @@ body {
   }
 
   &__close {
-    z-index: 2;
-    position: absolute;
+    width: 2em;
+    height: 2em;
+    position: relative;
 
     button {
-      width: 2em;
-      height: 2em;
+      z-index: 2;
+      position: absolute;
       font-size: 2em;
       border: 1px solid dimgray;
       color: dimgray;
       background-color: rgba(255, 255, 255, 0.05);
     }
+
+    margin-right: 1em;
   }
 
   height: 4em;
@@ -79,6 +82,7 @@ body {
   &--closed {
     width: 0 !important;
     padding: 0;
+    overflow: hidden;
   }
 
   &__top {
