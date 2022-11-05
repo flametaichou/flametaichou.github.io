@@ -29,7 +29,7 @@
     </script>
 </head>
 <body>
-    <div class="header">
+    <div class="header header--main">
         <div class="header__close" onclick="toggleSidebar()">
             <div id="sidebar-btn" class="header__toggle">
                 <div></div>
@@ -40,13 +40,8 @@
         </h1>
     </div>
     <div id="sidebar" class="navigation navigation--closed">
-        <div class="header header--sidebar">
-            <h1>
-                {{ site.title }}
-            </h1>
-        </div>
         <div class="navigation__top"></div>
-        <div class="navigation__title">
+        <div class="header header--sidebar">
             <h1>
                 {{ site.title }}
             </h1>

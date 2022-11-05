@@ -11,13 +11,15 @@ body {
 }
 
 .header {
-  @include breakpoint-desktop {
-    display: none;
-  }
-
   h1 {
     margin-block-start: 0;
     margin-block-end: 0;
+  }
+
+  &--main {
+    @include breakpoint-desktop {
+      display: none;
+    }
   }
 
   &--sidebar {
@@ -123,19 +125,15 @@ body {
   }
 
   &__top {
-    @include breakpoint-desktop {
-      flex: 1 0 auto;
+    flex: 1 0 auto;
+
+    @include breakpoint-mobile {
+      display: none;
     }
   }
 
   &__bottom {
-    @include breakpoint-desktop {
-      height: 10vh;
-    }
-  }
-
-  &__title {
-    padding: 2em;
+    height: 10vh;
 
     @include breakpoint-mobile {
       display: none;
@@ -150,7 +148,7 @@ body {
     }
 
     a {
-      font-size: $fontSizeLarge;
+      font-size: $fontSizeXL;
       text-decoration: none;
 
       &:active {
