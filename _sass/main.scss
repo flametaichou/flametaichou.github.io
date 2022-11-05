@@ -4,7 +4,7 @@ body {
   height: 100vh;
   margin: 0;
 
-  @media screen and (min-width: $widthMobile) {
+  @media (min-width: $widthMobile) {
     display: flex;
   }
 }
@@ -17,24 +17,24 @@ body {
   flex-direction: column;
   text-align: right;
 
-  @media screen and (min-width: $widthMobile) {
+  @media (min-width: $widthMobile) {
     justify-content: flex-end;
     width: 30%;
   }
 
-  @media screen and (max-width: $widthMobile) {
+  @media (max-width: $widthMobile) {
     width: 400px;
     position: absolute;
   }
 
   &__top {
-    @media screen and (min-width: $widthMobile) {
+    @media (min-width: $widthMobile) {
       flex: 1 0 auto;
     }
   }
 
   &__bottom {
-    @media screen and (min-width: $widthMobile) {
+    @media (min-width: $widthMobile) {
       flex: 0 0;
       height: 10vh;
     }
