@@ -37,8 +37,7 @@ body {
   }
 
   &--closed {
-    background-color: red;
-    display: none;
+    width: 0;
   }
 
   &__close {
