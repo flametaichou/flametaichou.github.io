@@ -11,6 +11,12 @@ body {
 }
 
 .header {
+  height: 4em;
+  display: flex;
+  align-items: center;
+  padding: 1em 2em;
+  border-bottom: 1px solid $colorGray0;
+
   h1 {
     margin-block-start: 0;
     margin-block-end: 0;
@@ -31,8 +37,7 @@ body {
     width: 2.4em;
     height: 2.4em;
     position: relative;
-    margin-right: 1em;
-    margin-left: 1em;
+    margin-right: 2em;
   }
 
   &__toggle {
@@ -70,13 +75,6 @@ body {
       background: $colorWhite;
     }
   }
-
-  height: 4em;
-  display: flex;
-  align-items: center;
-  padding: 1em;
-
-  border-bottom: 1px solid $colorGray0;
 }
 
 .overlay {
@@ -141,7 +139,7 @@ body {
   }
 
   &__menu {
-    padding: 2em;
+    padding: 1em 2em;
 
     ul {
       list-style-type: none;
