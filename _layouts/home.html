@@ -2,9 +2,22 @@
 layout: default
 ---
 
-<ul>
+<div class="home">
     {% for post in site.posts %}
-        <li><a href="{{ post.url | relative_url }}">{{post.title}}</a></li>
+
+    <article>
+        <h2>
+            {{post.title}}
+        </h2>
+
+        <p>
+            {{post}}
+        </p>
+
+        <a href="{{ post.url | relative_url }}">Read more...</a>
+    </article>
+
     {% endfor %}
+</div>
+<ul>
 </ul>
-<h3><a href="/about">About</a></h3>
