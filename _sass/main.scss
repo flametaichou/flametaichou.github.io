@@ -25,6 +25,7 @@ body {
   &__toggle {
     z-index: 2;
     position: absolute;
+    width: 100%;
     //font-size: 2em;
     //border: 1px solid dimgray;
     //color: dimgray;
@@ -34,7 +35,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
-    width: 50px;
      */
 
     &:before,
