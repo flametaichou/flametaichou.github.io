@@ -19,7 +19,6 @@ body {
   text-align: right;
   height: 100%;
 
-
   animation: slide-right 0.1s ease-in;
   transition: width 0.2s;
 
@@ -38,6 +37,7 @@ body {
   }
 
   &--closed {
+    background-color: red;
     display: none;
   }
 
