@@ -5,9 +5,33 @@
     <meta charset="UTF-8">
     <title>{{page.title}}</title>
 	<link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+    <script>
+        let navbarOpened = true;
+
+        toggleNavbar = function () {
+            navbarOpened = !navbarOpened;
+
+            const navbar = document.getElementById('navbar');
+            const navbarBtn = document.getElementById('navbar-btn');
+
+            if (!navbarOpened) {
+                navbar.classList.add('navigation--closed');
+                navbarBtn.textContent = '>';
+
+            } else {
+                navbar.classList.remove('navigation--closed');
+                navbarBtn.textContent = '<';
+            }
+        }
+    </script>
 </head>
 <body>
-    <div class="navigation">
+    <div id="navbar-close" class="navigation__close">
+        <button id="navbar-btn" onclick="toggleNavbar()">
+            >
+        </button>
+    </div>
+    <div id="navbar" class="navigation">
         <div class="navigation__top"></div>
         <div class="navigation__title">
             <h1>

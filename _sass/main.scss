@@ -17,15 +17,28 @@ body {
   display: flex;
   flex-direction: column;
   text-align: right;
+  height: 100%;
 
   @include breakpoint-desktop {
     justify-content: flex-end;
     width: 30%;
+
+    .navigation__close {
+      display: none;
+    }
   }
 
   @include breakpoint-mobile {
     width: 400px;
     position: absolute;
+  }
+
+  &__close {
+    z-index: 1;
+    position: absolute;
+    left: 2em;
+    top: 2em;
+    font-size: 2em;
   }
 
   &__top {
@@ -36,7 +49,6 @@ body {
 
   &__bottom {
     @include breakpoint-desktop {
-      flex: 0 0;
       height: 10vh;
     }
   }
