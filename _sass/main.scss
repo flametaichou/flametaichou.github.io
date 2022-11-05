@@ -19,6 +19,10 @@ body {
   text-align: right;
   height: 100%;
 
+
+  animation: slide-right 0.1s ease-in;
+  transition: width 0.2s;
+
   @include breakpoint-desktop {
     justify-content: flex-end;
     width: 30%;
@@ -33,12 +37,23 @@ body {
     position: absolute;
   }
 
+  &--closed {
+    display: none;
+  }
+
   &__close {
     z-index: 1;
     position: absolute;
     left: 2em;
     top: 2em;
-    font-size: 2em;
+
+    button {
+      font-size: 2em;
+    }
+
+    @include breakpoint-desktop {
+      display: none;
+    }
   }
 
   &__top {
