@@ -18,8 +18,6 @@ body {
   &__close {
     z-index: 1;
     position: absolute;
-    left: 2em;
-    top: 2em;
 
     button {
       width: 2em;
@@ -61,6 +59,7 @@ body {
   @include breakpoint-mobile {
     width: 400px;
     position: absolute;
+    top: 0;
   }
 
   &--closed {
