@@ -19,17 +19,47 @@ body {
     width: 2em;
     height: 2em;
     position: relative;
+    margin-right: 1em;
+  }
 
-    button {
-      z-index: 2;
-      position: absolute;
-      font-size: 2em;
-      border: 1px solid dimgray;
-      color: dimgray;
-      background-color: rgba(255, 255, 255, 0.05);
+  &__toggle {
+    z-index: 2;
+    position: absolute;
+    //font-size: 2em;
+    //border: 1px solid dimgray;
+    //color: dimgray;
+    //background-color: rgba(255, 255, 255, 0.05);
+    /*
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 50px;
+     */
+
+    &:before,
+    &:after,
+    div {
+      background: dimgray;
+      content: "";
+      display: block;
+      height: 6px;
+      border-radius: 3px;
+      margin: 7px 0;
+      transition: 0.5s;
     }
 
-    margin-right: 1em;
+    &__active {
+      .header__toggle:before {
+        transform: translateY(12px) rotate(135deg);
+      }
+      .header__toggle:after {
+        transform: translateY(-12px) rotate(-135deg);
+      }
+      .header__toggle div {
+        transform: scale(0);
+      }
+    }
   }
 
   height: 4em;

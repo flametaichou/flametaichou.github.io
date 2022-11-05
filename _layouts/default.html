@@ -18,21 +18,21 @@
             if (!navbarOpened) {
                 navbar.classList.add('navigation--closed');
                 overlay.classList.add('overlay--closed');
-                navbarBtn.textContent = '>';
+                navbarBtn.classList.remove('header__toggle--active');
 
             } else {
                 navbar.classList.remove('navigation--closed');
                 overlay.classList.remove('overlay--closed');
-                navbarBtn.textContent = 'X';
+                navbarBtn.classList.add('header__toggle--active');
             }
         }
     </script>
 </head>
 <body>
     <div class="header">
-        <div id="navbar-close" class="header__close">
-            <button id="navbar-btn" onclick="toggleNavbar()">
-                X
+        <div class="header__close">
+            <button id="navbar-btn" class="header__toggle" onclick="toggleNavbar()">
+                <div></div>
             </button>
         </div>
         <h1>
