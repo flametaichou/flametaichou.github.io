@@ -43,6 +43,10 @@ body {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.05);
   z-index: 0;
+
+  &--closed {
+    display: none;
+  }
 }
 
 .navigation {

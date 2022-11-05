@@ -13,13 +13,16 @@
 
             const navbar = document.getElementById('navbar');
             const navbarBtn = document.getElementById('navbar-btn');
+            const overlay = document.getElementById('overlay');
 
             if (!navbarOpened) {
                 navbar.classList.add('navigation--closed');
+                overlay.classList.add('overlay--closed');
                 navbarBtn.textContent = '>';
 
             } else {
                 navbar.classList.remove('navigation--closed');
+                overlay.classList.remove('overlay--closed');
                 navbarBtn.textContent = 'X';
             }
         }
@@ -45,7 +48,7 @@
         </div>
         <div class="navigation__bottom"></div>
     </div>
-    <div class="overlay"></div>
+    <div id="overlay" class="overlay overlay--closed"></div>
     <div class="content">
         {{ content }}
     </div>
