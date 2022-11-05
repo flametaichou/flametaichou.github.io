@@ -8,10 +8,6 @@
     <script>
         let sidebarOpened = true;
 
-        if (window.innerWidth <= 900) {
-            toggleSidebar();
-        }
-
         toggleSidebar = function () {
             sidebarOpened = !sidebarOpened;
 
@@ -29,6 +25,10 @@
                 overlay.classList.remove('overlay--closed');
                 sidebarBtn.classList.add('header__toggle--active');
             }
+        };
+
+        if (window.innerWidth <= 900) {
+            toggleSidebar();
         }
     </script>
 </head>
