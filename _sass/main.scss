@@ -37,7 +37,6 @@ body {
     /*
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     position: absolute;
      */
 
@@ -53,16 +52,14 @@ body {
       transition: 0.5s;
     }
 
-    &--active {
-      .header__toggle:before {
-        transform: translateY(12px) rotate(135deg);
-      }
-      .header__toggle:after {
-        transform: translateY(-12px) rotate(-135deg);
-      }
-      .header__toggle div {
-        transform: scale(0);
-      }
+    &--active:before {
+      transform: translateY(12px) rotate(135deg);
+    }
+    &--active:after {
+      transform: translateY(-12px) rotate(-135deg);
+    }
+    &--active div {
+      transform: scale(0);
     }
   }
 
