@@ -94,7 +94,9 @@ body {
   }
 
   &__title {
-
+    @include breakpoint-mobile {
+      display: none;
+    }
   }
 
   &__menu {
