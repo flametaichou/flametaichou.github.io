@@ -6,32 +6,32 @@
     <title>{{page.title}}</title>
 	<link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
     <script>
-        let navbarOpened = true;
+        let sidebarOpened = true;
 
-        toggleNavbar = function () {
-            navbarOpened = !navbarOpened;
+        togglesidebar = function () {
+            sidebarOpened = !sidebarOpened;
 
-            const navbar = document.getElementById('navbar');
-            const navbarBtn = document.getElementById('navbar-btn');
+            const sidebar = document.getElementById('sidebar');
+            const sidebarBtn = document.getElementById('sidebar-btn');
             const overlay = document.getElementById('overlay');
 
-            if (!navbarOpened) {
-                navbar.classList.add('navigation--closed');
+            if (!sidebarOpened) {
+                sidebar.classList.add('navigation--closed');
                 overlay.classList.add('overlay--closed');
-                navbarBtn.classList.remove('header__toggle--active');
+                sidebarBtn.classList.remove('header__toggle--active');
 
             } else {
-                navbar.classList.remove('navigation--closed');
+                sidebar.classList.remove('navigation--closed');
                 overlay.classList.remove('overlay--closed');
-                navbarBtn.classList.add('header__toggle--active');
+                sidebarBtn.classList.add('header__toggle--active');
             }
         }
     </script>
 </head>
 <body>
     <div class="header">
-        <div class="header__close" onclick="toggleNavbar()">
-            <div id="navbar-btn" class="header__toggle">
+        <div class="header__close" onclick="togglesidebar()">
+            <div id="sidebar-btn" class="header__toggle">
                 <div></div>
             </div>
         </div>
@@ -39,8 +39,8 @@
             {{ site.title }}
         </h1>
     </div>
-    <div id="navbar" class="navigation">
-        <div class="header">
+    <div id="sidebar" class="navigation">
+        <div class="header header--sidebar">
             <h1>
                 {{ site.title }}
             </h1>
@@ -52,7 +52,7 @@
             </h1>
         </div>
         <div class="navigation__menu">
-            {% include navbar.html %}
+            {% include menu.html %}
         </div>
         <div class="navigation__bottom"></div>
     </div>

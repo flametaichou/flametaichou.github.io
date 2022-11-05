@@ -20,6 +20,10 @@ body {
     margin-block-end: 0;
   }
 
+  &--sidebar {
+    text-align: right;
+  }
+
   &__close {
     width: 2em;
     height: 2em;
@@ -38,7 +42,7 @@ body {
     &:before,
     &:after,
     div {
-      background: dimgray;
+      background: $colorBlack;
       content: "";
       display: block;
       height: 1em;
@@ -55,6 +59,11 @@ body {
     }
     &--active div {
       transform: scale(0);
+    }
+    &--active:before,
+    &--active:after,
+    &--active div {
+      background: $colorWhite;
     }
   }
 
