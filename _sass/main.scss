@@ -1,9 +1,50 @@
+@import "vars";
+
 body {
-  background-color: rgb(20, 20, 20);
-  color: #fff;
+  @media screen and (min-width: $widthMobile) {
+    display: flex;
+  }
 }
 
-a{
-    color: rgb(2, 170, 38);
-    text-decoration: none;
+.navigation {
+  background: $colorBlack;
+  color: $colorWhite;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $widthMobile) {
+    justify-content: flex-end;
+  }
+
+  @media screen and (max-width: $widthMobile) {
+    width: 400px;
+  }
+
+  &__top {
+    @media screen and (min-width: $widthMobile) {
+      flex: 1 0 auto;
+    }
+  }
+
+  &__bottom {
+    @media screen and (min-width: $widthMobile) {
+      flex: 0 0;
+      height: 5em;
+    }
+  }
+
+  &__title {
+
+  }
+
+  &__menu {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (min-width: $widthMobile) {
+    position: absolute;
+  }
 }
