@@ -15,8 +15,6 @@ layout: default
         <span class="post__date">{{ page.date | date_to_string }}</span>
     </div>
 
-    {% include author.html %}}
-
     <h1>
         {% if page.title%}
         {{ page.title }}
@@ -35,5 +33,9 @@ layout: default
             </a>
             {% endfor %}
         </nav>
+
+        <div>
+            {% include author.html %}
+        </div>
     </div>
 </article>
