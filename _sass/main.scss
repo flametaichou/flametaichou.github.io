@@ -274,3 +274,20 @@ body {
     margin-bottom: 30px;
   }
 }
+
+.author {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+  }
+
+  span {
+    padding-left: 20px;
+    color: $colorPrimary;
+    font-weight: bold;
+  }
+}
