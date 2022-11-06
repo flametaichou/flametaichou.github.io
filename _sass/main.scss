@@ -247,6 +247,16 @@ body {
 
   }
 
+  &__content {
+    padding-top: 20px;
+
+    &:first-letter {
+      font-size: $fontSizeLarge;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
   &__tags {
     flex: 1 0;
   }

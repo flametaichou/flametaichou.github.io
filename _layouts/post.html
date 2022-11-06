@@ -2,26 +2,38 @@
 layout: default
 ---
 
-<article>
-    {% if page.title%}
-    <h1>{{page.title}}</h1>
-    {% else %}
-    <h1>Untitled post</h1>
-    {% endif %}
-
-    <div>
-        {{ page.date | date_to_string }}
+<article class="post">
+    <div class="post__title">
+            <span class="post__category">
+                {% if page.categories %}
+                {{ page.categories }}
+                {% else %}
+                Other
+                {% endif %}
+            </span>
+        /
+        <span class="post__date">{{ page.date | date_to_string }}</span>
     </div>
 
-    <div>
-        {% for tag in page.tags %}
-        <a href="/tags/{{ tag | slugify }}">
-            {{ tag }}
-        </a>
-        {% endfor %}
-    </div>
+    <h1>
+        {% if page.title%}
+        {{ page.title }}
+        {% else %}
+        Untitled post
+        {% endif %}
+    </h1>
 
-    <p>
+    <p class="post__content">
         {{ content }}
     </p>
+
+    <div class="post__footer">
+        <nav class="post__tags">
+            {% for tag in page.tags %}
+            <a href="/tags/{{ tag | slugify }}" class="tag tag--small">
+                {{ tag }}
+            </a>
+            {% endfor %}
+        </nav>
+    </div>
 </article>
