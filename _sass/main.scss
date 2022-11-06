@@ -6,6 +6,7 @@ body {
   margin: 0;
   font-family: "Noto Sans", sans-serif;
   font-size: $fontSizeDefault;
+  color: $colorBlack;
 
   @include breakpoint-desktop {
     display: flex;
@@ -203,6 +204,7 @@ body {
   }
 
   &__title {
+    color: $colorGray1;
     font-weight: bold;
   }
 

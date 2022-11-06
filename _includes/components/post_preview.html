@@ -1,0 +1,33 @@
+<article class="post">
+    <div class="post__title">
+            <span class="post__category">
+                {% if include.post.categories %}
+                {{ include.post.categories }}
+                {% else %}
+                Other
+                {% endif %}
+            </span>
+        /
+        <span class="post__date">{{ include.post.date | date_to_string }}</span>
+    </div>
+
+    <h2>
+        {{include.post.title}}
+    </h2>
+
+    <p>
+        {{ include.post.description }}
+    </p>
+
+    <div class="post__footer">
+        <div class="post__tags">
+            {% for tag in include.post.tags %}
+            <a href="/tags/{{ tag | slugify }}" class="tag">
+                {{ tag }}
+            </a>
+            {% endfor %}
+        </div>
+
+        <a href="{{ include.post.url | relative_url }}">Read more...</a>
+    </div>
+</article>

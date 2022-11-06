@@ -9,33 +9,9 @@ description: All posts
 <div class="home">
     {% for post in site.posts %}
 
-    <article class="post">
-        <div class="post__title">
-            <span class="post__category">{{ post.categories }}</span>
-            /
-            <span class="post__date">{{ post.date | date_to_string }}</span>
-        </div>
-
-        <h2>
-            {{post.title}}
-        </h2>
-
-        <p>
-            {{ post.description }}
-        </p>
-
-        <div class="post__footer">
-            <div class="post__tags">
-                {% for tag in post.tags %}
-                <a href="/tags/{{ tag | slugify }}" class="tag">
-                    {{ tag }}
-                </a>
-                {% endfor %}
-            </div>
-
-            <a href="{{ post.url | relative_url }}">Read more...</a>
-        </div>
-    </article>
+        {% include components/post_preview.html
+            post = post
+        %}
 
     {% endfor %}
 </div>
