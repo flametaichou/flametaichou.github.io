@@ -193,6 +193,11 @@ body {
   &:not(:last-of-type) {
     margin-right: 10px;
   }
+
+  &--active {
+    background-color: $colorSecondary;
+    color: $colorWhite;
+  }
 }
 
 .post {
