@@ -247,3 +247,9 @@ body {
     display: flex;
   }
 }
+
+.tag-posts {
+  &__tags {
+    margin-bottom: 30px;
+  }
+}

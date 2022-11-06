@@ -6,11 +6,12 @@ description: All tags
 
 <h1>{{ page.title }}</h1>
 
-{% include all_tags.html %}
-<hr>
+<div class="tags">
+    {% include all_tags.html %}
+</div>
 
-<div class="pagination-container">
-   
+<!--
+<div>
     {% for tag in site.tags %}
     <div>
         {% assign tag_str = tag | first %}
@@ -24,4 +25,4 @@ description: All tags
     <hr>
     {% endfor %}
 </div>
-<hr>
+-->
