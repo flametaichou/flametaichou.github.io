@@ -20,6 +20,14 @@ description: All posts
             {{ post.description }}
         </p>
 
+        <div>
+            {% for tag in post.tags %}
+            <a href="/tags/{{ tag | slugify }}">
+                {{ tag }}
+            </a>
+            {% endfor %}
+        </div>
+
         <a href="{{ post.url | relative_url }}">Read more...</a>
     </article>
 
