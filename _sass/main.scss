@@ -199,8 +199,7 @@ body {
     background-color: rgba($colorSecondary, 0.1);
   }
 
-  &:active {
-    color: $colorSecondary;
+  &:active, &--active {
     background-color: rgba($colorSecondary, 0.07);
   }
 
@@ -210,11 +209,6 @@ body {
 
   &:not(:last-of-type) {
     margin-right: 10px;
-  }
-
-  &--active {
-    background-color: $colorSecondary;
-    color: $colorWhite;
   }
 }
 
