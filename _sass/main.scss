@@ -95,7 +95,7 @@ body {
 
 .navigation {
   z-index: 1;
-  background: $colorBlack;
+  background: $colorPrimary;
   color: $colorWhite;
   display: flex;
   flex-direction: column;
@@ -165,4 +165,23 @@ body {
 
 .content {
   padding: 2em max(20px, 10%);
+}
+
+.tag {
+  border: 1px solid $colorSecondary;
+  border-radius: 2px;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($colorSecondary, 0.1);
+  }
+
+  &:active {
+    background-color: rgba($colorSecondary, 0.05);
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 5px;
+  }
 }
