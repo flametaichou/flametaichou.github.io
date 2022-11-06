@@ -9,20 +9,3 @@ description: All tags
 <div class="tags">
     {% include all_tags.html %}
 </div>
-
-<!--
-<div>
-    {% for tag in site.tags %}
-    <div>
-        {% assign tag_str = tag | first %}
-        {% for post in site.tags[tag_str] %}
-        {% include components/post_preview.html
-        post = post
-        %}
-        {% endfor %}
-    </div>
-
-    <hr>
-    {% endfor %}
-</div>
--->

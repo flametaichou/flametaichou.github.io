@@ -22,7 +22,7 @@
     <div class="post__footer">
         <nav class="post__tags">
             {% for tag in include.post.tags %}
-            <a href="/tags/{{ tag | slugify }}" class="tag">
+            <a href="/tags/{{ tag | slugify }}" class="tag tag--small">
                 {{ tag }}
             </a>
             {% endfor %}

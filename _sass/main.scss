@@ -214,6 +214,11 @@ body {
   &:not(:last-of-type) {
     margin-right: 10px;
   }
+
+  &--small {
+    font-size: $fontSizeSmall;
+    padding: 5px 10px;
+  }
 }
 
 .post {
