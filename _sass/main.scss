@@ -247,13 +247,15 @@ body {
 
   }
 
-  p {
-    padding-top: 20px;
-
-    &:first-letter {
+  &--big {
+    p {
       font-size: $fontSizeLarge;
-      text-transform: uppercase;
-      font-weight: bold;
+
+      &:first-letter {
+        font-size: $fontSizeXL;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
     }
   }
 
