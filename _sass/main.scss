@@ -170,9 +170,12 @@ body {
   flex: 1 0;
   overflow-y: auto;
 
-  box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
-  -webkit-box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
-  -moz-box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
+  @include breakpoint-desktop {
+    z-index: 1;
+    box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
+  }
 
   ::-webkit-scrollbar {
     width: 20px;
@@ -222,6 +225,7 @@ body {
 }
 
 .post {
+  height: 100vh;
   @include shadow-default;
   padding: 30px 20px;
 
