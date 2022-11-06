@@ -14,16 +14,16 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
 }
 ::-webkit-scrollbar-track {
-  background: $colorGray1;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: $colorGray2;
-  border: solid 5px $colorGray1;
-  border-radius: 10px;
+  background: $colorGray1;
+  border: solid 1px $colorGray0;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: $colorGray2;
@@ -220,7 +220,7 @@ body {
 
   &--small {
     font-size: $fontSizeSmall;
-    padding: 5px 10px;
+    padding: 3px 10px;
   }
 }
 
