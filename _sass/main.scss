@@ -170,6 +170,10 @@ body {
   flex: 1 0;
   overflow-y: auto;
 
+  box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
+  -moz-box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
+
   ::-webkit-scrollbar {
     width: 20px;
     height: 20px;
