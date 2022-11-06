@@ -144,8 +144,9 @@ body {
   &__menu {
     padding: 1em 2em;
 
-    ul {
-      list-style-type: none;
+    nav {
+      display: flex;
+      flex-direction: column;
     }
 
     a {
