@@ -15,15 +15,15 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: $colorGray0;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: $colorGray1;
@@ -34,7 +34,6 @@ body {
   display: flex;
   align-items: center;
   padding: 1em 2em;
-  border-bottom: 1px solid $colorGray0;
 
   h1 {
     margin-block-start: 0;
@@ -227,7 +226,6 @@ body {
 }
 
 .post {
-  height: 100vh;
   @include shadow-default;
   padding: 30px 20px;
 
