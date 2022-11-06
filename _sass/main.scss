@@ -9,7 +9,7 @@ body {
   color: $colorBlack;
   display: flex;
 
-  @include breakpoint-desktop {
+  @include breakpoint-mobile {
     flex-direction: column;
   }
 }
