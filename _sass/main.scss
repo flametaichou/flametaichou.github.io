@@ -7,9 +7,10 @@ body {
   font-family: "Noto Sans", sans-serif;
   font-size: $fontSizeDefault;
   color: $colorBlack;
+  display: flex;
 
   @include breakpoint-desktop {
-    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -21,12 +22,11 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: $colorGray1;
-  border: solid 1px $colorGray0;
-  border-radius: 4px;
+  background: $colorGray0;
+  border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: $colorGray2;
+  background: $colorGray1;
 }
 
 .header {
