@@ -9,12 +9,16 @@ description: All posts
 <div class="home">
     {% for post in site.posts %}
 
-    <article>
+    <article class="post">
+        <div class="post__title">
+            <span class="post__category">{{ post.category }}</span>
+            /
+            <span class="post__date">{{ post.date | date_to_string }}</span>
+        </div>
+
         <h2>
             {{post.title}}
         </h2>
-
-        <div>{{ post.date | date_to_string }}</div>
 
         <p>
             {{ post.description }}
@@ -28,7 +32,9 @@ description: All posts
             {% endfor %}
         </div>
 
-        <a href="{{ post.url | relative_url }}">Read more...</a>
+        <div class="post__actions">
+            <a href="{{ post.url | relative_url }}">Read more...</a>
+        </div>
     </article>
 
     {% endfor %}

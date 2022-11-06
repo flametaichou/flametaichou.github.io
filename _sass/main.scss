@@ -192,3 +192,27 @@ body {
     margin-right: 10px;
   }
 }
+
+.post {
+  @include shadow-default;
+  padding: 30px 20px;
+
+  &__title {
+    font-size: $fontSizeLarge;
+    font-weight: bold;
+  }
+
+  &__category {
+    color: $colorPrimary;
+  }
+
+  &__date {
+
+  }
+
+  &__actions {
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
