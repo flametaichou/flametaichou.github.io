@@ -3,7 +3,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
+    <title>
+        {{ site.title }}
+        {% if page.title %}
+         - {{ page.title }}
+        {% endif %}
+    </title>
 	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
     <script>

@@ -203,12 +203,12 @@ body {
   }
 
   &__title {
-    font-size: $fontSizeLarge;
     font-weight: bold;
   }
 
   &__category {
     color: $colorPrimary;
+    text-transform: uppercase;
   }
 
   &__date {
