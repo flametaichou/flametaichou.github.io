@@ -168,6 +168,23 @@ body {
 .content {
   padding: 2em max(20px, 10%);
   flex: 1 0;
+  overflow-y: auto;
+
+  ::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+  ::-webkit-scrollbar-track {
+    background: $colorGray1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $colorGray2;
+    border: solid 5px $colorGray1;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: $colorGray2;
+  }
 }
 
 .tag {
