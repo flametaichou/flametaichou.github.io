@@ -45,6 +45,8 @@ body {
     @include breakpoint-desktop {
       display: none;
     }
+
+    @include shadow-default;
   }
 
   &--sidebar {
