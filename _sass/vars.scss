@@ -25,7 +25,3 @@ $fontSizes: (
         )
 );
 $fontSize: map-get($fontSizes, 'desktop');
-
-@media (max-width: $widthMobile) {
-        $fontSize: map-get($fontSizes, 'mobile');
-}

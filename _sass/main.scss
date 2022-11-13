@@ -5,7 +5,7 @@ body {
   height: 100vh;
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-size: map-get($fontSize, 'default');
+  @include font-size('default');
   color: $colorBlack;
   display: flex;
 
@@ -172,7 +172,7 @@ body {
 
     a {
       color: $colorGray0;
-      font-size: map-get($fontSize, 'xl');
+      @include font-size('xl');
       text-decoration: none;
 
       &:active {
@@ -224,7 +224,7 @@ body {
   }
 
   &--small {
-    font-size: map-get($fontSize, 'small');
+    @include font-size('small');
     padding: 3px 10px;
   }
 }
@@ -253,10 +253,10 @@ body {
 
   &--big {
     p {
-      font-size: map-get($fontSize, 'large');
+      @include font-size('large');
 
       &:first-letter {
-        font-size: map-get($fontSize, 'xl');
+        @include font-size('xl');
         text-transform: uppercase;
         font-weight: bold;
       }
