@@ -301,6 +301,7 @@ body {
     border-radius: 4px;
     padding: 5px 30px;
     margin-bottom: 5px;
+    transition: background-color 0.3s;
 
     &:hover {
       background-color: rgba($colorAccent, 0.1);
