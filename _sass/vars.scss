@@ -14,13 +14,13 @@ $fontSize: (
         'small': 12px,
         'default': 14px,
         'large': 18px,
-        'XL': 24px
+        'xl': 24px
 );
 @media (max-width: $widthMobile) {
   $fontSize: (
           'small': 14px,
           'default': 16px,
           'large': 20px,
-          'XL': 28px
+          'xl': 28px
   );
 }
