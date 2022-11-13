@@ -10,17 +10,22 @@ $colorGray2: dimgray;
 
 $widthMobile: 1024px;
 
-$fontSize: (
-        'small': 12px,
-        'default': 14px,
-        'large': 18px,
-        'xl': 24px
+$fontSizes: (
+        'mobile': (
+                'small': 14px,
+                'default': 16px,
+                'large': 20px,
+                'xl': 28px
+        ),
+        'desktop': (
+                'small': 12px,
+                'default': 14px,
+                'large': 18px,
+                'xl': 24px
+        )
 );
+$fontSize: map-get($fontSizes, 'desktop');
+
 @media (max-width: $widthMobile) {
-  $fontSize: (
-          'small': 14px !important,
-          'default': 16px !important,
-          'large': 20px !important,
-          'xl': 28px !important
-  );
+        $fontSize: map-get($fontSizes, 'mobile');
 }
