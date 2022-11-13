@@ -49,9 +49,12 @@ body {
   }
 
   &--sidebar {
-    padding: 0 30px;
     justify-content: end;
     border-color: transparent;
+
+    h1 {
+      padding: 0 30px;
+    }
   }
 
   &__close {
@@ -295,6 +298,7 @@ body {
 
 .menu {
   &-item {
+    border-radius: 4px;
     padding: 0 30px;
 
     &:hover {
@@ -302,7 +306,7 @@ body {
     }
 
     &:active, &--active {
-      background-color: $colorAccent;
+      background-color: $colorAccent !important;
     }
   }
 }
