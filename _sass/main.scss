@@ -5,7 +5,7 @@ body {
   height: 100vh;
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-size: $fontSize('default');
+  font-size: map.get($fontSize, 'default');
   color: $colorBlack;
   display: flex;
 
