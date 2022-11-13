@@ -10,7 +10,17 @@ $colorGray2: dimgray;
 
 $widthMobile: 1024px;
 
-$fontSizeSmall: 12px;
-$fontSizeDefault: 14px;
-$fontSizeLarge: 18px;
-$fontSizeXL: 24px;
+$fontSize: (
+        'small': 12px,
+        'default': 14px,
+        'large': 18px,
+        'XL': 24px
+);
+@media (max-width: $widthMobile) {
+  $fontSize: (
+          'small': 14px,
+          'default': 16px,
+          'large': 20px,
+          'XL': 28px
+  );
+}
