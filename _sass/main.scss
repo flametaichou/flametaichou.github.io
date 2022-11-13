@@ -172,7 +172,7 @@ body {
 
     a {
       color: $colorGray0;
-      font-size: $fontSize('xl');
+      font-size: map.get($fontSize, 'xl');
       text-decoration: none;
 
       &:active {
@@ -224,7 +224,7 @@ body {
   }
 
   &--small {
-    font-size: $fontSize('small');
+    font-size: map.get($fontSize, 'small');
     padding: 3px 10px;
   }
 }
@@ -253,10 +253,10 @@ body {
 
   &--big {
     p {
-      font-size: $fontSize('large');
+      font-size: map.get($fontSize, 'large');
 
       &:first-letter {
-        font-size: $fontSize('xl');
+        font-size: map.get($fontSize, 'xl');
         text-transform: uppercase;
         font-weight: bold;
       }
