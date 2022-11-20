@@ -1,0 +1,28 @@
+@import "../vars";
+@import "../mixins";
+
+.author {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+  }
+
+  a {
+    padding-left: 10px;
+    color: $colorGray2;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:active {
+      color: $colorGray2;
+    }
+
+    &:visited {
+      color: $colorGray2;
+    }
+  }
+}

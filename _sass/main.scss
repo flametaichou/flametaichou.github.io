@@ -3,6 +3,7 @@
 @import "highlight";
 @import "pages/posts";
 @import "pages/tag_posts";
+@import "components/author";
 
 body {
   height: 100vh;
@@ -243,23 +244,6 @@ body {
     font-size: map-get($fontSize, 'small');
     padding: 3px 10px;
     line-height: 30px;
-  }
-}
-
-.author {
-  display: flex;
-  align-items: center;
-
-  img {
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-  }
-
-  span {
-    padding-left: 10px;
-    color: $colorPrimary;
-    font-weight: bold;
   }
 }
 
