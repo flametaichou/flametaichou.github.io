@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="13.143345mm"
+   height="11.292755mm"
+   viewBox="0 0 13.143345 11.292755"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <rect
+       x="132.78149"
+       y="201.37462"
+       width="129.79929"
+       height="80.011597"
+       id="rect113-0" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-62.64443,-39.973327)">
+    <rect
+       style="fill:#008000;fill-opacity:0.699498;stroke-width:0.262262"
+       id="rect331"
+       width="9.9201441"
+       height="8.7650471"
+       x="64.285011"
+       y="41.203121" />
+    <rect
+       style="fill:#0086ff;fill-opacity:0.70448;stroke-width:0.269075"
+       id="rect712-3"
+       width="9.1920404"
+       height="8.037672"
+       x="77.747025"
+       y="5.9336224"
+       transform="rotate(26.476524)" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,28.993103,-11.028478)"
+       id="text111"
+       style="white-space:pre;shape-inside:url(#rect113-0);display:inline;fill:#000000"><tspan
+         x="132.78125"
+         y="212.40412"
+         id="tspan2488"><tspan
+           style="font-family:Montserrat;-inkscape-font-specification:Montserrat;fill:#ffffff"
+           id="tspan2486">Flame</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Montserrat;-inkscape-font-specification:Montserrat;fill:#ffffff;stroke-width:0.264583"
+       x="64.333885"
+       y="47.805805"
+       id="text493"><tspan
+         id="tspan491"
+         style="fill:#ffffff;stroke-width:0.264583"
+         x="64.333885"
+         y="47.805805">Codes</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Montserrat;-inkscape-font-specification:Montserrat;fill:#ffffff;stroke-width:0.264583"
+       x="62.422176"
+       y="45.137249"
+       id="text654"><tspan
+         id="tspan652"
+         style="stroke-width:0.264583"
+         x="62.422176"
+         y="45.137249">&lt;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:Montserrat;-inkscape-font-specification:Montserrat;fill:#ffffff;stroke-width:0.264583"
+       x="74.184402"
+       y="48.154049"
+       id="text658"><tspan
+         id="tspan656"
+         style="stroke-width:0.264583"
+         x="74.184402"
+         y="48.154049">&gt;</tspan></text>
+  </g>
+</svg>
