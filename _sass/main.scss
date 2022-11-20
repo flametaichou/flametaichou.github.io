@@ -290,5 +290,5 @@ a {
 .page {
   //padding: 1em max(1em, 5vw);
   padding: 1em;
-  max-width: calc(800px - (30px * 2));
+  max-width: calc(#{$widthMobile} - (1em * 2));
 }
