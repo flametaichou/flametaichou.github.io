@@ -13,6 +13,8 @@
   //padding: 30px 20px;
 
   background-color: $colorWhite;
+  display: flex;
+  flex-direction: column;
 
   /*
   &:not(:last-of-type) {
@@ -35,6 +37,7 @@
   }
 
   &__main {
+    flex: 1 0;
     padding: 2em;
     display: flex;
     flex-direction: column;
@@ -52,7 +55,7 @@
   }
 
   &__date {
-    color: $colorGray0;
+    color: $colorGray1;
   }
 
   &__overlay {
