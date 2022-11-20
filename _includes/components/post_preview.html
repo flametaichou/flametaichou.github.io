@@ -8,9 +8,9 @@
                 {% endif %}
         </span>
 
-        {% if post.cover_image %}
         <div class="post__overlay"></div>
-        <img src="/data/images/{{ post.cover_image }}" />
+        {% if post.cover_image %}
+        <img src="/data/images/{{ post.cover_image }}" alt="{{ include.post.title }}"/>
         {% endif %}
     </div>
 
