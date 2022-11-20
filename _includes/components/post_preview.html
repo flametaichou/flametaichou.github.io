@@ -1,12 +1,17 @@
 <article class="post">
+    {% if post.cover_image %}
+    <div class="post__cover">
+        <span class="post__category">
+            {% if include.post.categories %}
+            {{ include.post.categories }}
+            {% else %}
+            Other
+            {% endif %}
+        </span>
+        <img src="/data/images/{{ post.cover_image }}" />
+    </div>
+    {% endif %}
     <div class="post__title">
-            <span class="post__category">
-                {% if include.post.categories %}
-                {{ include.post.categories }}
-                {% else %}
-                Other
-                {% endif %}
-            </span>
         /
         <span class="post__date">{{ include.post.date | date_to_string }}</span>
     </div>
@@ -14,10 +19,6 @@
     <h2>
         {{include.post.title}}
     </h2>
-
-    {% if post.cover_image %}
-    <img src="/data/images/{{ post.cover_image }}" />
-    {% endif %}
 
     <p>
         {{ post.excerpt }}

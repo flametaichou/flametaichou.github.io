@@ -15,16 +15,6 @@ layout: default
         <span class="post__date">{{ page.date | date_to_string }}</span>
     </div>
 
-    <h1>
-        {% if page.title%}
-        {{ page.title }}
-        {% else %}
-        Untitled post
-        {% endif %}
-    </h1>
-
-    {{ content }}
-
     <div class="post__footer">
         <nav class="post__tags">
             {% for tag in page.tags %}
@@ -38,4 +28,27 @@ layout: default
             {% include author.html %}
         </div>
     </div>
+
+    {% if post.cover_image %}
+    <div class="post__cover">
+        <img src="/data/images/{{ post.cover_image }}" />
+    </div>
+    {% endif %}
+
+    <div class="post__title">
+        <h1>
+            {% if page.title%}
+            {{ page.title }}
+            {% else %}
+            Untitled post
+            {% endif %}
+        </h1>
+        {% if page.description%}
+        <h3>
+            {{ page.description }}
+        </h3>
+        {% endif %}
+    </div>
+
+    {{ content }}
 </article>
