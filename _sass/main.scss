@@ -216,6 +216,7 @@ a {
 .content {
   flex: 1 0;
   overflow-y: auto;
+  padding: 1em;
 
   @include breakpoint-desktop {
     z-index: 1;
@@ -285,10 +286,6 @@ a {
       background-color: $colorAccent !important;
     }
   }
-}
-
-.page {
-  padding: 1em;
 }
 
 .post__wrapper {
