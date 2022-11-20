@@ -250,8 +250,14 @@ body {
   }
 
   &__category {
-    color: $colorPrimary;
+    //border: 1px solid $colorSecondary;
+    border-radius: 4px;
+    background-color: $colorAccent;
+    color: $colorWhite;
+    padding: 5px 20px;
+    text-decoration: none;
     text-transform: uppercase;
+    font-weight: bold;
   }
 
   &__date {
