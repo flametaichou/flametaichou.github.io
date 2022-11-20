@@ -15,15 +15,13 @@
         {{include.post.title}}
     </h2>
 
-    {%- if post.cover_image -%}
-    <img src="/assets/images/{{ post.cover_image }}" class="article-image" />
-    {%- endif -%}
+    {% if post.cover_image %}
+    <img src="/data/images/{{ post.cover_image }}" />
+    {% endif %}
 
-    {%- if site.show_excerpts -%}
     <p>
         {{ post.excerpt }}
     </p>
-    {%- endif -%}
 
     <div class="post__footer">
         <nav class="post__tags">
