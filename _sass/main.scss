@@ -255,6 +255,23 @@ body {
     font-weight: bold;
   }
 
+  &__cover {
+    width: 100%;
+    background-color: $colorGray2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__tags {
+    flex: 1 0;
+  }
+
+  &__footer {
+    padding-top: 20px;
+    display: flex;
+  }
+
   &--big {
     p {
       //font-size: map-get($fontSize, 'large');
@@ -270,15 +287,6 @@ body {
         //font-weight: bold;
       }
     }
-  }
-
-  &__tags {
-    flex: 1 0;
-  }
-
-  &__footer {
-    padding-top: 20px;
-    display: flex;
   }
 }
 
