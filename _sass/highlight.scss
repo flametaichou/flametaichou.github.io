@@ -2,13 +2,15 @@
  * https://jwarby.github.io/jekyll-pygments-themes/
  * https://raw.githubusercontent.com/jwarby/pygments-css/master/native.css
  */
+
 .highlight pre {
   color: #d0d0d0;
-  background-color: #404040
+  background-color: #404040;
+  padding: 20px 10px;
+  border-left: 4px solig #5a5a5a;
 }
 
 .highlight .hll {
-  color: #d0d0d0;
   background-color: #404040
 }
 
