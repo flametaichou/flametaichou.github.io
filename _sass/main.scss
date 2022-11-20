@@ -293,4 +293,5 @@ a {
 
 .post__wrapper {
   max-width: calc(#{$widthMobile} - (1em * 2));
+  margin: auto;
 }
