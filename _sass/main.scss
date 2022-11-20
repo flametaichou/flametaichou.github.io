@@ -23,11 +23,11 @@ a {
   color: $colorSecondary;
 
   &:active {
-    color: lighten($colorSecondary, 0.8);
+    color: lighten($colorSecondaryDarken1, 0.8);
   }
 
   &:visited {
-    color: darken($colorSecondary, 0.8);
+    color: darken($colorPurple, 0.8);
   }
 }
 
