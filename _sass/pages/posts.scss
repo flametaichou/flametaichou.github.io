@@ -9,7 +9,7 @@
 }
 
 .post {
-  @include shadow-default;
+  //@include shadow-default;
   padding: 30px 20px;
 
   display: flex;
@@ -60,8 +60,7 @@
     background: linear-gradient(
                     180deg,
                     rgba(40, 40, 40, 0.8) 0%,
-                    rgba(255, 255, 255, 0) 50%,
-                    rgba(255, 255, 255, 0) 75%,
+                    rgba(255, 255, 255, 0) 33%,
                     rgb(255, 255, 255) 100%
     );
     z-index: 1;
