@@ -1,0 +1,8 @@
+@import "../vars";
+@import "../mixins";
+
+.tag-posts {
+  &__tags {
+    margin-bottom: 30px;
+  }
+}
