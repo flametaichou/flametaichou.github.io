@@ -216,6 +216,7 @@ a {
 .content {
   flex: 1 0;
   overflow-y: auto;
+  background-color: $colorGray0;
 
   @include breakpoint-desktop {
     z-index: 1;
