@@ -130,7 +130,7 @@ a {
 }
 
 .navigation {
-  z-index: 2;
+  z-index: 1;
   background: $colorPrimary;
   color: $colorWhite;
   display: flex;
@@ -228,7 +228,7 @@ a {
 
 .tag {
   border: 1px solid $colorSecondary;
-  border-radius: 4px;
+  @include border-radius-default;
   color: $colorSecondary;
   padding: 5px 15px;
   cursor: pointer;
@@ -260,7 +260,7 @@ a {
 
 .category {
   //border: 1px solid $colorSecondary;
-  border-radius: 4px;
+  @include border-radius-default;
   background-color: $colorAccent;
   color: $colorWhite;
   padding: 5px 20px;
@@ -272,7 +272,7 @@ a {
 
 .menu {
   &-item {
-    border-radius: 4px;
+    @include border-radius-default;
     padding: 5px 30px;
     margin-bottom: 5px;
     transition: background-color 0.3s;

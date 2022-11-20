@@ -9,12 +9,14 @@
 }
 
 .post {
-  //@include shadow-default;
+  @include shadow-default;
   //padding: 30px 20px;
 
   background-color: $colorWhite;
   display: flex;
   flex-direction: column;
+
+  @include border-radius-default;
 
   /*
   &:not(:last-of-type) {
