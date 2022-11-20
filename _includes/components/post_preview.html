@@ -11,9 +11,9 @@
         <img src="/data/images/{{ post.cover_image }}" />
     </div>
     {% endif %}
-    <div class="post__title">
+    <div class="post__date">
         /
-        <span class="post__date">{{ include.post.date | date_to_string }}</span>
+        <span>{{ include.post.date | date_to_string }}</span>
     </div>
 
     <h2>

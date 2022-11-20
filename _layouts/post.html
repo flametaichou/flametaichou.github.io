@@ -3,7 +3,7 @@ layout: default
 ---
 
 <article class="post post--big">
-    <div class="post__title">
+    <div class="post__date">
             <span class="post__category">
                 {% if page.categories %}
                 {{ page.categories }}
@@ -12,7 +12,7 @@ layout: default
                 {% endif %}
             </span>
         /
-        <span class="post__date">{{ page.date | date_to_string }}</span>
+        <span>{{ page.date | date_to_string }}</span>
     </div>
 
     <div class="post__footer">

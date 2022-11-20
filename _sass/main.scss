@@ -241,8 +241,8 @@ body {
   }
 
   &__title {
-    color: $colorGray1;
-    font-weight: bold;
+    padding: 0 50px;
+    text-align: center;
   }
 
   &__category {
@@ -251,7 +251,8 @@ body {
   }
 
   &__date {
-
+    color: $colorGray1;
+    font-weight: bold;
   }
 
   &--big {
