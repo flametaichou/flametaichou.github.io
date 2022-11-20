@@ -254,6 +254,18 @@ body {
   }
 }
 
+.category {
+  //border: 1px solid $colorSecondary;
+  border-radius: 4px;
+  background-color: $colorAccent;
+  color: $colorWhite;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
 .menu {
   &-item {
     border-radius: 4px;

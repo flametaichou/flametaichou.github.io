@@ -5,14 +5,18 @@
     </div>
     {% endif %}
 
-    <div>
-        <span class="post__category">
+    <div class="post__section">
+        <span class="category">
                 {% if include.post.categories %}
                 {{ include.post.categories }}
                 {% else %}
                 Other
                 {% endif %}
         </span>
+
+        <div class="post__date">
+            <span>{{ include.post.date | date_to_string }}</span>
+        </div>
     </div>
 
     <div class="post__title">
@@ -27,7 +31,7 @@
         {{ post.excerpt }}
     </p>
 
-    <div class="post__footer">
+    <div class="post__section">
         <nav class="post__tags">
             {% for tag in include.post.tags %}
             <a href="/tags/{{ tag | slugify }}" class="tag tag--small">
@@ -35,10 +39,6 @@
             </a>
             {% endfor %}
         </nav>
-
-        <div class="post__date">
-            <span>{{ include.post.date | date_to_string }}</span>
-        </div>
     </div>
 </article>
 
