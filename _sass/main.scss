@@ -257,7 +257,7 @@ body {
 
   &--big {
     p {
-      font-size: map-get($fontSize, 'large');
+      //font-size: map-get($fontSize, 'large');
 
       &:first-letter {
         font-size: map-get($fontSize, 'xl');
