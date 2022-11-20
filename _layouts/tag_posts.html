@@ -1,23 +1,21 @@
 ---
-layout: default
+layout: page
 title: Posts tagged by {{ page.tag }}
 description: Posts by tag
 ---
 
-<div class="page">
-    <div class="tag-posts">
-        <div class="tag-posts__tags">
-            {% include all_tags.html %}
-        </div>
+<div class="tag-posts">
+    <div class="tag-posts__tags">
+        {% include all_tags.html %}
     </div>
+</div>
 
-    <div class="posts">
-        {% for post in site.tags[page.tag] %}
+<div class="posts">
+    {% for post in site.tags[page.tag] %}
 
-        {% include components/post_preview.html
-        post = post
-        %}
+    {% include components/post_preview.html
+    post = post
+    %}
 
-        {% endfor %}
-    </div>
+    {% endfor %}
 </div>
