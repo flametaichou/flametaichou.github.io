@@ -47,6 +47,9 @@ body {
     }
 
     @include shadow-default;
+
+    background: $colorPrimary;
+    color: $colorWhite;
   }
 
   &--sidebar {
@@ -76,7 +79,8 @@ body {
     &:before,
     &:after,
     div {
-      background: $colorBlack;
+      //background: $colorBlack;
+      background: $colorWhite;
       content: "";
       display: block;
       height: 4px;
@@ -97,7 +101,7 @@ body {
     &--active:before,
     &--active:after,
     &--active div {
-      background: $colorWhite;
+      //background: $colorWhite;
     }
   }
 }
