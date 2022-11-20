@@ -39,7 +39,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 128px;
+    height: 256px;
     overflow-y: hidden;
 
     img {
@@ -112,6 +112,10 @@
           margin-right: .1em;
         }
       }
+    }
+
+    .post__cover {
+      height: 128px;
     }
   }
 }
