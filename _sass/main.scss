@@ -288,7 +288,9 @@ a {
 }
 
 .page {
-  //padding: 1em max(1em, 5vw);
   padding: 1em;
+}
+
+.post__wrapper {
   max-width: calc(#{$widthMobile} - (1em * 2));
 }
