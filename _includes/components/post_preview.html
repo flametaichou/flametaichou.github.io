@@ -5,18 +5,20 @@
     </div>
     {% endif %}
 
-    <h2>
+    <div class="post__title">
         <span class="post__category">
-            {% if include.post.categories %}
-            {{ include.post.categories }}
-            {% else %}
-            Other
-            {% endif %}
+                {% if include.post.categories %}
+                {{ include.post.categories }}
+                {% else %}
+                Other
+                {% endif %}
         </span>
-        <a href="{{ include.post.url | relative_url }}">
-            {{ include.post.title }}
-        </a>
-    </h2>
+        <h2>
+            <a href="{{ include.post.url | relative_url }}">
+                {{ include.post.title }}
+            </a>
+        </h2>
+    </div>
 
     <p>
         {{ post.excerpt }}

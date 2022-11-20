@@ -244,11 +244,6 @@ body {
     margin-bottom: 30px;
   }
 
-  &__title {
-    padding: 50px 0;
-    text-align: center;
-  }
-
   &__category {
     //border: 1px solid $colorSecondary;
     border-radius: 4px;
@@ -258,11 +253,15 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
+    margin-right: 15px;
+  }
+
+  &__title {
+
   }
 
   &__date {
-    color: $colorGray1;
-    font-weight: bold;
+    color: $colorGray0;
   }
 
   &__cover {
@@ -283,6 +282,11 @@ body {
   }
 
   &--big {
+    .post__title {
+      padding: 50px 0;
+      text-align: center;
+    }
+
     p {
       //font-size: map-get($fontSize, 'large');
 
