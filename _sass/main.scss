@@ -18,6 +18,19 @@ body {
   }
 }
 
+
+a {
+  color: $colorSecondary;
+
+  &:active {
+    color: lighten($colorSecondary, 0.2);
+  }
+
+  &:visited {
+    color: darken($colorSecondary, 0.2);
+  }
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
