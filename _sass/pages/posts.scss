@@ -4,7 +4,7 @@
 .posts {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-gap: 2vw;
+  grid-gap: 2vh;
   grid-row-gap: 2vh;
 }
 
@@ -13,9 +13,6 @@
   //padding: 30px 20px;
 
   background-color: $colorWhite;
-
-  display: flex;
-  flex-direction: column;
 
   /*
   &:not(:last-of-type) {
@@ -39,6 +36,8 @@
 
   &__main {
     padding: 2em;
+    display: flex;
+    flex-direction: column;
   }
 
   &__category {
@@ -142,5 +141,9 @@
     .post__cover {
       height: 256px;
     }
+  }
+
+  &:not(&--big) {
+    border: 1px solid $colorGray0;
   }
 }
