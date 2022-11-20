@@ -216,7 +216,6 @@ a {
 .content {
   flex: 1 0;
   overflow-y: auto;
-  background-color: $colorGray0;
 
   @include breakpoint-desktop {
     z-index: 1;
@@ -224,8 +223,6 @@ a {
     box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
     -webkit-box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
     -moz-box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
-
-    padding: 0 max(1em, 5vw);
   }
 }
 
@@ -288,4 +285,8 @@ a {
       background-color: $colorAccent !important;
     }
   }
+}
+
+.page {
+  padding: 1em max(1em, 5vw);
 }
