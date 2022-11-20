@@ -31,11 +31,16 @@
   }
 
   &__cover {
-    width: 100%;
-    background-color: $colorGray2;
+    background-color: $colorGray1;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    height: 64px;
+
+    img {
+      width: 100%;
+    }
   }
 
   &__tags {
