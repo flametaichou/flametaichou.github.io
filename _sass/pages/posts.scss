@@ -54,42 +54,36 @@
 
     h1:before {
       padding-right: 0.3em;
-      margin-left: -0.9em;
       color: $colorAccent;
       content: "/";
     }
 
     h2:before {
       padding-right: 0.3em;
-      margin-left: -1.5em;
       color: $colorAccent;
       content: "//";
     }
 
     h3:before {
       padding-right: 0.3em;
-      margin-left: -2em;
       color: $colorAccent;
       content: "///";
     }
 
     h4:before {
       padding-right: 0.3em;
-      margin-left: -2.8em;
       color: $colorAccent;
       content: "////";
     }
 
     h5:before {
       padding-right: 0.3em;
-      margin-left: -3.2em;
       color: $colorAccent;
       content: "/////";
     }
 
     h6:before {
       padding-right: 0.3em;
-      margin-left: -3.7em;
       color: $colorAccent;
       content: "//////";
     }
