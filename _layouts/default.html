@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#323232" >
+    <meta name="theme-color" content="#323232">
+    <meta name="msapplication-TileColor" content="#323232">
+    <link rel="icon" type="image/png" sizes="32x32" href="/data/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/data/logo.png">
+
     <title>
         {{ site.title }}
         {% if page.title %}
@@ -44,7 +48,7 @@
                 <div></div>
             </div>
         </div>
-        <img src="/data/images/logo_clean.svg" alt="{{ site.title }}"/>
+        <img src="/data/logo.svg" alt="{{ site.title }}"/>
         <h1>
             {{ site.title }}
         </h1>
@@ -52,7 +56,7 @@
     <div id="sidebar" class="navigation navigation--closed">
         <div class="navigation__top"></div>
         <div class="navigation__logo">
-            <img src="/data/images/logo_clean.svg" alt="{{ site.title }}"/>
+            <img src="/data/logo.svg" alt="{{ site.title }}"/>
         </div>
         <div class="navigation__menu">
             {% include menu.html %}
