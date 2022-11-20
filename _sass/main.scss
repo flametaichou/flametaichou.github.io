@@ -37,38 +37,22 @@ body {
   display: flex;
   align-items: center;
   padding: 1em 2em;
+  background: $colorPrimary;
+  color: $colorWhite;
+
+  @include breakpoint-desktop {
+    display: none;
+  }
+
+  @include shadow-default;
+
+  img {
+    height: 2em;
+  }
 
   h1 {
     margin-block-start: 0;
     margin-block-end: 0;
-  }
-
-  &--main {
-    @include breakpoint-desktop {
-      display: none;
-    }
-
-    @include shadow-default;
-
-    background: $colorPrimary;
-    color: $colorWhite;
-
-    img {
-      height: 64px;
-    }
-  }
-
-  &--sidebar {
-    justify-content: end;
-    border-color: transparent;
-
-    h1 {
-      padding: 0 30px;
-    }
-
-    img {
-      height: 150px;
-    }
   }
 
   &__close {
@@ -165,6 +149,19 @@ body {
 
     @include breakpoint-mobile {
       display: none;
+    }
+  }
+
+  &__logo {
+    justify-content: end;
+    border-color: transparent;
+
+    h1 {
+      padding: 0 30px;
+    }
+
+    img {
+      height: 150px;
     }
   }
 
