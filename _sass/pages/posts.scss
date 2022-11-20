@@ -10,7 +10,7 @@
 
 .post {
   //@include shadow-default;
-  padding: 30px 20px;
+  //padding: 30px 20px;
 
   display: flex;
   flex-direction: column;
@@ -82,37 +82,37 @@
     h1:before {
       padding-right: 0.3em;
       color: $colorAccent;
-      content: "•";
+      content: "⏺";
     }
 
     h2:before {
       padding-right: 0.3em;
       color: $colorAccent;
-      content: "••";
+      content: "⏺⏺";
     }
 
     h3:before {
       padding-right: 0.3em;
       color: $colorAccent;
-      content: "•••";
+      content: "⏺⏺⏺";
     }
 
     h4:before {
       padding-right: 0.3em;
       color: $colorAccent;
-      content: "••••";
+      content: "⏺⏺⏺⏺";
     }
 
     h5:before {
       padding-right: 0.3em;
       color: $colorAccent;
-      content: "•••••";
+      content: "⏺⏺⏺⏺⏺";
     }
 
     h6:before {
       padding-right: 0.3em;
       color: $colorAccent;
-      content: "••••••";
+      content: "⏺⏺⏺⏺⏺⏺";
     }
   }
 
