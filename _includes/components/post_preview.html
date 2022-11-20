@@ -5,7 +5,7 @@
     </div>
     {% endif %}
 
-    <div class="post__title">
+    <div>
         <span class="post__category">
                 {% if include.post.categories %}
                 {{ include.post.categories }}
@@ -13,6 +13,9 @@
                 Other
                 {% endif %}
         </span>
+    </div>
+
+    <div class="post__title">
         <h2>
             <a href="{{ include.post.url | relative_url }}">
                 {{ include.post.title }}
