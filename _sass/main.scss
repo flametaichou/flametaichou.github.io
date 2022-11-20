@@ -277,11 +277,10 @@ body {
       //font-size: map-get($fontSize, 'large');
 
       &::first-letter {
-        -webkit-initial-letter: 4 1;
-        initial-letter: 4 1;
+        initial-letter: 6 1;
         color: $colorPrimary;
         font-weight: bold;
-        margin-right: .3em;
+        //margin-right: .3em;
         //font-size: map-get($fontSize, 'xl');
         //text-transform: uppercase;
         //font-weight: bold;
