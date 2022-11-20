@@ -7,8 +7,6 @@ description: >
   
 permalink: /:title/
 
-highlighter: pygments
-
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
