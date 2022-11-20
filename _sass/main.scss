@@ -188,15 +188,17 @@ body {
 }
 
 .content {
-  padding: 2em max(20px, 10%);
   flex: 1 0;
   overflow-y: auto;
 
   @include breakpoint-desktop {
     z-index: 1;
+
     box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
     -webkit-box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
     -moz-box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
+
+    padding: 2em max(20px, 10%);
   }
 }
 
