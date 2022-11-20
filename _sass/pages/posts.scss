@@ -3,7 +3,7 @@
 
 .posts {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 2vw;
   grid-row-gap: 0.5vh;
 }
@@ -42,6 +42,7 @@
   &__section {
     padding-top: 20px;
     display: flex;
+    align-items: center;
   }
 
   &--big {

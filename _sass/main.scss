@@ -214,6 +214,7 @@ body {
   padding: 5px 15px;
   cursor: pointer;
   text-decoration: none;
+  line-height: 32px;
 
   &:hover {
     background-color: rgba($colorSecondary, 0.1);
@@ -234,6 +235,7 @@ body {
   &--small {
     font-size: map-get($fontSize, 'small');
     padding: 3px 10px;
+    line-height: 30px;
   }
 }
 
