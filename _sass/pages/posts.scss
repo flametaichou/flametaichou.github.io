@@ -47,11 +47,11 @@
     }
   }
 
-  &__overflow {
+  &__overlay {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: linear-gradient(180deg, rgb(0 0 0) 0%, rgba(0,0,0,0) 100%);;
+    background: linear-gradient(180deg, rgb(0 0 0) 0%, rgba(0,0,0,0) 100%);
   }
 
   &__tags {
