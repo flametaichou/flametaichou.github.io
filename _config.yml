@@ -7,7 +7,10 @@ description: >
   
 permalink: /:title/
 
-highlighter: rouge
+markdown: kramdown
+
+kramdown:
+  syntax_highlighter: rouge
 
 plugins:
  - jekyll-feed
