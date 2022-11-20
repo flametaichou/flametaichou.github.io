@@ -12,6 +12,9 @@
   @include shadow-default;
   padding: 30px 20px;
 
+  display: flex;
+  flex-direction: column;
+
   &:not(:last-of-type) {
     margin-bottom: 30px;
   }
@@ -36,13 +39,16 @@
   }
 
   &__tags {
-    flex: 1 0;
   }
 
   &__section {
     padding-top: 20px;
     display: flex;
     align-items: center;
+  }
+
+  p {
+    flex: 1 0;
   }
 
   &--big {
