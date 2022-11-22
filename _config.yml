@@ -6,13 +6,10 @@ description: >
   Google search results) and in your feed.xml site description.
 
 languages: ["en", "ru"]
-default_lang: en
-exclude_from_localization: ["javascript", "images", "css", "public"]
 
-permalink: /:categories/:title/
+permalink: pretty
 
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
  - jekyll-sitemap
- - jekyll-polyglot
