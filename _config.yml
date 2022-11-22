@@ -7,22 +7,9 @@ description: >
 
 lang: en
 languages: ["en", "ru"]
+default_lang: en
 
 permalink: /:categories/:title/
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "default"
-      lang: en
-      permalink: /en/:categories/:title/
-  - scope:
-      path: ""
-    values:
-      layout: "default"
-      lang: ru
-      permalink: /ru/:categories/:title/
 
 plugins:
  - jekyll-feed
