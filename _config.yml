@@ -9,12 +9,10 @@ lang: en
 languages: ["en", "ru"]
 default_lang: en
 
-parallel_localization: true
-
 permalink: /:categories/:title/
 
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
  - jekyll-sitemap
- - jekyll-polyglot
+ - jekyll-multiple-languages-plugin
