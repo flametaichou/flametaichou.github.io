@@ -50,13 +50,17 @@
         </div>
         <img src="/data/logo.svg" alt="{{ site.title }}"/>
         <h1>
-            {{ site.lang }}
+            {{ site.title }}
         </h1>
     </div>
     <div id="sidebar" class="navigation navigation--closed">
         <div class="navigation__top"></div>
         <div class="navigation__logo">
             <img src="/data/logo.svg" alt="{{ site.title }}"/>
+        </div>
+        <div>
+            lang:
+            {{ site.lang }}
         </div>
         <div class="navigation__menu">
             {% include menu.html %}
