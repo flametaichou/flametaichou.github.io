@@ -8,19 +8,21 @@ description: >
 lang: en
 languages: ["en", "ru"]
 
-permalink: /:lang/:categories/:title/
+permalink: /:categories/:title/
 
 defaults:
   - scope:
       path: ""
     values:
       layout: "default"
-      language: en
+      lang: en
+      permalink: /:lang/:categories/:title/
   - scope:
-      path: "ru"
+      path: ""
     values:
       layout: "default"
-      language: ru
+      lang: ru
+      permalink: /:lang/:categories/:title/
 
 plugins:
  - jekyll-feed
