@@ -16,13 +16,13 @@ defaults:
     values:
       layout: "default"
       lang: en
-      permalink: /:lang/:categories/:title/
+      permalink: /en/:categories/:title/
   - scope:
       path: ""
     values:
       layout: "default"
       lang: ru
-      permalink: /:lang/:categories/:title/
+      permalink: /ru/:categories/:title/
 
 plugins:
  - jekyll-feed
