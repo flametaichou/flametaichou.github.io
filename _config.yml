@@ -8,7 +8,7 @@ description: >
 lang: en
 languages: ["en", "ru"]
 
-permalink: /:category/:title/
+permalink: /:categories/:title/
 
 plugins:
  - jekyll-feed
