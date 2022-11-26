@@ -43,13 +43,9 @@
         };
 
         function walkText(node) {
-            if (node.nodeType === 3) {
-                node.data = node.data.replace(/\[\[.*[a-zA-Z]+.*\]]/g, "TESTTEST");
-            }
-            if (node.nodeType === 1) {
-                for (var i = 0; i < node.childNodes.length; i++) {
-                    walkText(node.childNodes[i]);
-                }
+            node.data = node.data.replace(/\[\[.*[a-zA-Z]+.*\]]/g, "TESTTEST");
+            for (var i = 0; i < node.childNodes.length; i++) {
+                walkText(node.childNodes[i]);
             }
         }
         walkText(document.firstChild);
