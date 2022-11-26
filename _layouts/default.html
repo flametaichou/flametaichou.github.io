@@ -41,9 +41,21 @@
                 sidebarBtn.classList.add('header__toggle--active');
             }
         };
+
+        function walkText(node) {
+            if (node.nodeType === 3) {
+                node.data = node.data.replace(/\[\[.*[a-zA-Z]+.*\]]/g, "TESTTEST");
+            }
+            if (node.nodeType === 1) {
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    walkText(node.childNodes[i]);
+                }
+            }
+        }
+        walkText(document.body);
     </script>
 </head>
-<body>
+<body id="[[ test ]]">
     <div class="header">
         <div class="header__close" onclick="toggleSidebar()">
             <div id="sidebar-btn" class="header__toggle">
@@ -61,6 +73,7 @@
             <img src="/data/logo.svg" alt="{{ site.title }}"/>
         </div>
         <div class="navigation__menu">
+            [[ test ]]
             {% include menu.html %}
         </div>
         <div class="navigation__bottom"></div>
