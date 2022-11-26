@@ -41,7 +41,13 @@
         };
 
         translate = function () {
-            window.document.firstElementChild.innerHTML.replace('[[ test ]]', 'Test');
+            document.open();
+
+            document.firstElementChild.innerHTML =
+            document.firstElementChild.innerHTML.replace('[[ test ]]', 'Test');
+
+            document.write();
+            document.close();
         };
 
         translate();
