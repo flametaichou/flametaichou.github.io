@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% assign lang = page.lang | default: site.lang | default: 'en' %}
+{% raw %}{% assign translations = site.data.translations %}{% endraw %}
 <html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
