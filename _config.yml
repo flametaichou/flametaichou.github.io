@@ -22,6 +22,12 @@ defaults:
     values:
       language: en
       permalink: /en/:basename
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      language: ru
+      permalink: /ru/:basename
 
 plugins:
   - jekyll-feed
