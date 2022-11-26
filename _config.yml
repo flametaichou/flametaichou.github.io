@@ -21,7 +21,7 @@ defaults:
       type: "pages"
     values:
       language: en
-      permalink: /en/:path
+      permalink: /en/:basename
 
 plugins:
   - jekyll-feed
