@@ -1,5 +1,5 @@
 title: Test Title
- 
+
 description: >
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -9,7 +9,27 @@ languages: ["en", "ru"]
 
 permalink: pretty
 
+#collections:
+#  pages:
+#    output: true
+#    lang: ru
+#    permalink: /ru/:path
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      language: ru
+      permalink: /ru/:path
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      language: en
+      permalink: /en/:path
+
 plugins:
- - jekyll-feed
- - jekyll-seo-tag
- - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
