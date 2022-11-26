@@ -20,12 +20,6 @@ defaults:
       path: ""
       type: "pages"
     values:
-      language: ru
-      permalink: /ru/:path
-  - scope:
-      path: ""
-      type: "pages"
-    values:
       language: en
       permalink: /en/:path
 
