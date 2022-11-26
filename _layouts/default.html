@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+{% assign lang = page.lang | default: site.lang | default: 'en' %}
+<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,18 +40,6 @@
                 sidebarBtn.classList.add('header__toggle--active');
             }
         };
-
-        translate = function () {
-            document.open();
-
-            document.firstElementChild.innerHTML =
-            document.firstElementChild.innerHTML.replace('[[ test ]]', 'Test');
-
-            document.write();
-            document.close();
-        };
-
-        translate();
     </script>
 </head>
 <body>
@@ -69,9 +58,6 @@
         <div class="navigation__top"></div>
         <div class="navigation__logo">
             <img src="/data/logo.svg" alt="{{ site.title }}"/>
-        </div>
-        <div>
-            [[ test ]]
         </div>
         <div class="navigation__menu">
             {% include menu.html %}

@@ -1,0 +1,12 @@
+home:
+  en: "Home"
+  ru: "Главная"
+posts:
+  en: "Posts"
+  es: "Блог"
+tags:
+  en: "Tags"
+  es: "Тэги"
+about:
+  en: "About"
+  es: "Обо мне"
