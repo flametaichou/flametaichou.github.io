@@ -39,6 +39,13 @@
                 sidebarBtn.classList.add('header__toggle--active');
             }
         };
+
+        translate = function () {
+            window.document.firstElementChild.innerHTML =
+                window.document.firstElementChild.innerHTML.replace('[[ test ]]', 'Test');
+        };
+
+        translate();
     </script>
 </head>
 <body>
@@ -59,8 +66,7 @@
             <img src="/data/logo.svg" alt="{{ site.title }}"/>
         </div>
         <div>
-            lang:
-            {{ site.lang }}
+            [[ test ]]
         </div>
         <div class="navigation__menu">
             {% include menu.html %}

@@ -12,22 +12,21 @@ permalink: pretty
 #collections:
 #  pages:
 #    output: true
-#    lang: ru
-#    permalink: /ru/:path
+#    permalink: /en/:basename
 
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      language: en
-      permalink: /en/:basename
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      language: ru
-      permalink: /ru/:basename
+#defaults:
+#  - scope:
+#      path: ""
+#      type: "pages"
+#    values:
+#      language: en
+#      permalink: /en/:basename
+#  - scope:
+#      path: ""
+#      type: "pages"
+#    values:
+#      language: ru
+#      permalink: /ru/:basename
 
 plugins:
   - jekyll-feed
