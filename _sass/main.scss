@@ -220,14 +220,15 @@ a {
   &__lang {
     padding: 1em 2em;
     display: flex;
+    align-items: center;
 
     select {
       width: 100%;
     }
 
     img {
-      height: 100%;
-      margin-left: 2em;
+      height: 32px;
+      margin-right: 1em;
     }
   }
 }
