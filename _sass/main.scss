@@ -212,6 +212,14 @@ a {
       }
     }
   }
+
+  &__lang {
+    padding: 1em 2em;
+
+    select {
+      width: 100%;
+    }
+  }
 }
 
 .content {
