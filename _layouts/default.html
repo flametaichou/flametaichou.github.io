@@ -40,7 +40,7 @@
         };
 
 
-        const i18n = {{ site.data.translations }};
+        const i18n = {{ site.data.translations | jsonify }};
 
         function t(lang) {
             document.documentElement.setAttribute('lang', lang);
