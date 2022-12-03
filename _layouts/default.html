@@ -43,6 +43,10 @@
         <div class="navigation__menu">
             {% include menu.html %}
         </div>
+        <hr/>
+        <div class="navigation__description">
+            {{ site.description }}
+        </div>
         <div class="navigation__bottom"></div>
         <div class="navigation__lang">
             <a href="{{ site.feed.path | relative_url }}" target="_blank">

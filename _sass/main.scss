@@ -220,6 +220,11 @@ body {
     }
   }
 
+  &__description {
+    font-size: map-get($fontSize, 'small');
+    color: $colorGray0;
+  }
+
   &__lang {
     padding: 1em 2em;
     display: flex;

@@ -11,7 +11,7 @@ languages: ['en', 'ru']
 permalink: pretty
 
 feed:
-  path: /posts/feed.atom
+  path: /posts/feed.xml
 
 #collections:
 #  pages:
