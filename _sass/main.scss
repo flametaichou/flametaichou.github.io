@@ -189,7 +189,7 @@ body {
   }
 
   &__bottom {
-    height: 15vh;
+    //height: 10vh;
 
     @include breakpoint-mobile {
       flex: 1 0 auto;
