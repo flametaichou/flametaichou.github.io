@@ -8,6 +8,9 @@ const USER_LANG = localStorage.getItem(i18n_KEY);
 const LANG_SWITCHER_ELEMENT_ID = 'lang-switcher';
 
 function t(lang) {
+    const loader = document.getElementById('loader');
+    loader.classList.remove('loader--closed');
+
     document.documentElement.setAttribute('lang', lang);
 
     for (key of Object.keys(i18n)) {
@@ -18,6 +21,8 @@ function t(lang) {
     }
 
     localStorage.setItem(i18n_KEY, lang);
+
+    loader.classList.add('loader--closed');
 }
 
 function selectLang() {
