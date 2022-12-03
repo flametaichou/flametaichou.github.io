@@ -221,6 +221,8 @@ body {
   }
 
   &__description {
+    border-top: 1px solid $colorGray3;
+    padding: 1em 2em;
     font-size: map-get($fontSize, 'small');
     color: $colorGray0;
   }

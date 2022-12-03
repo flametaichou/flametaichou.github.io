@@ -16,6 +16,8 @@
          - {{ page.title }}
         {% endif %}
     </title>
+    <meta name="description" content="{{ site.description }}">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/styles.css' | relative_url }}">
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/styles.css' | relative_url }}">
@@ -43,7 +45,6 @@
         <div class="navigation__menu">
             {% include menu.html %}
         </div>
-        <hr/>
         <div class="navigation__description">
             {{ site.description }}
         </div>
