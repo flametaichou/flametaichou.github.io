@@ -1,0 +1,26 @@
+a {
+  color: $colorSecondary;
+
+  &:active {
+    color: lighten($colorSecondaryDarken1, 0.8);
+  }
+
+  &:visited {
+    color: darken($colorPurple, 0.8);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: $colorGray0;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $colorGray1;
+}
