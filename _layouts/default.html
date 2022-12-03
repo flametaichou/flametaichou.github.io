@@ -43,6 +43,8 @@
         const i18n = {{ site.data.translations }};
 
         function t(lang) {
+            document.documentElement.setAttribute('lang', lang);
+
             for (key of Object.keys(i18n)) {
                 elements = document.getElementsByName(`i18n.${key}`);
                 elements.forEach((e) => {
