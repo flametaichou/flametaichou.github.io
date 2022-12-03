@@ -45,6 +45,11 @@
         </div>
         <div class="navigation__bottom"></div>
         <div class="navigation__lang">
+            <a href="{{ site.feed.path | relative_url }}" target="_blank">
+                <img src="/data/icons/FA-rss-feed.svg" alt="Change language"/>
+            </a>
+        </div>
+        <div class="navigation__lang">
             <img src="/data/icons/FA-translation.svg" alt="Change language"/>
             {% include lang_switcher.html %}
         </div>
