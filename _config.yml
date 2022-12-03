@@ -10,6 +10,9 @@ languages: ['en', 'ru']
 
 permalink: pretty
 
+feed:
+  path: /posts/feed.atom
+
 #collections:
 #  pages:
 #    output: true

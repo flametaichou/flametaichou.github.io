@@ -1,11 +1,9 @@
 <!--<label for="lang-switcher"></label>-->
-<div class="f-select">
-    <select id="lang-switcher" onchange="changeLang('lang-switcher')">
-        {% for lang in site.languages %}
-        <option value="{{ lang }}">{{ lang }}</option>
-        {% endfor %}
-    </select>
-</div>
+<select id="lang-switcher" onchange="changeLang('lang-switcher')" class="f-select">
+    {% for lang in site.languages %}
+    <option value="{{ lang }}">{{ lang }}</option>
+    {% endfor %}
+</select>
 
 <!--
     {% for lang in site.languages %}
