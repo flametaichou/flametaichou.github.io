@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+{% include lang.html %}
+<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,7 +54,10 @@
             }
         }
 
-        t('ru');
+        function changeLang(elementId) {
+            const lang = document.getElementById(elementId).value;
+            t(lang);
+        }
     </script>
 </head>
 <body>
@@ -72,6 +76,9 @@
         <div class="navigation__top"></div>
         <div class="navigation__logo">
             <img src="/data/logo.svg" alt="{{ site.title }}"/>
+        </div>
+        <div>
+            {% include lang_switcher.html %}
         </div>
         <div class="navigation__menu">
             {% include menu.html %}
