@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-{% assign lang = page.lang | default: site.lang | default: 'en' %}
-{% assign translations = site.data.translations %}
-<html lang="{{ lang }}">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,8 +15,7 @@
          - {{ page.title }}
         {% endif %}
     </title>
-	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css" >
-    <!-- <link rel="stylesheet" type="text/css" href="{{ "/assets/css/style.css" | relative_url }}"> -->
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/styles.css' | relative_url }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <script>
         let sidebarOpened = false;
@@ -42,18 +39,22 @@
             }
         };
 
-        /*
-        function walkText(node) {
-            node.data = node.data.replace(/\[\[.*[a-zA-Z]+.*\]]/g, "TESTTEST");
-            for (var i = 0; i < node.childNodes.length; i++) {
-                walkText(node.childNodes[i]);
+
+        const i18n = {{ site.data.translations }};
+
+        function t(lang) {
+            for (key of Object.keys(i18n)) {
+                elements = document.getElementsByName(`i18n.${key}`);
+                elements.forEach((e) => {
+                    e.innerText = i18n[key][lang];
+                });
             }
         }
-        walkText(document.firstChild);
-        */
+
+        t('ru');
     </script>
 </head>
-<body id="[[ test ]]">
+<body>
     <div class="header">
         <div class="header__close" onclick="toggleSidebar()">
             <div id="sidebar-btn" class="header__toggle">
@@ -71,7 +72,6 @@
             <img src="/data/logo.svg" alt="{{ site.title }}"/>
         </div>
         <div class="navigation__menu">
-            [[ test ]]
             {% include menu.html %}
         </div>
         <div class="navigation__bottom"></div>
