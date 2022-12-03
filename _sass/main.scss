@@ -15,10 +15,6 @@ body {
   color: $colorBlack;
   display: flex;
 
-  animation: intro .3s both;
-  -webkit-animation-delay: .15s;
-  animation-delay: .15s;
-
   @include breakpoint-mobile {
     flex-direction: column;
   }
@@ -146,6 +142,10 @@ body {
   height: 100%;
   width: 300px;
 
+  animation: intro .3s both;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+
   transition: width 0.2s;
 
   @include breakpoint-desktop {
@@ -189,13 +189,12 @@ body {
   }
 
   &__bottom {
-    height: 10vh;
+    height: 15vh;
 
-    /*
     @include breakpoint-mobile {
-      display: none;
+      flex: 1 0 auto;
+      //display: none;
     }
-    */
   }
 
   &__menu {
