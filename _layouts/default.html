@@ -19,48 +19,8 @@
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/styles.css' | relative_url }}">
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/styles.css' | relative_url }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <script src="{{ '/assets/js/select.js' | relative_url }}"></script>
-    <script>
-        let sidebarOpened = false;
-
-        toggleSidebar = function () {
-            sidebarOpened = !sidebarOpened;
-
-            const sidebar = document.getElementById('sidebar');
-            const sidebarBtn = document.getElementById('sidebar-btn');
-            const overlay = document.getElementById('overlay');
-
-            if (!sidebarOpened) {
-                sidebar.classList.add('navigation--closed');
-                overlay.classList.add('overlay--closed');
-                sidebarBtn.classList.remove('header__toggle--active');
-
-            } else {
-                sidebar.classList.remove('navigation--closed');
-                overlay.classList.remove('overlay--closed');
-                sidebarBtn.classList.add('header__toggle--active');
-            }
-        };
-
-
-        const i18n = {{ site.data.translations | jsonify }};
-
-        function t(lang) {
-            document.documentElement.setAttribute('lang', lang);
-
-            for (key of Object.keys(i18n)) {
-                elements = document.getElementsByName(`i18n.${key}`);
-                elements.forEach((e) => {
-                    e.innerText = i18n[key][lang];
-                });
-            }
-        }
-
-        function changeLang(elementId) {
-            const lang = document.getElementById(elementId).value;
-            t(lang);
-        }
-    </script>
+    <script src="{{ '/assets/js/i18n.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/sidebar.js' | relative_url }}"></script>
 </head>
 <body>
     <div class="header">
@@ -78,9 +38,6 @@
         <div class="navigation__top"></div>
         <div class="navigation__logo">
             <img src="/data/logo.svg" alt="{{ site.title }}"/>
-        </div>
-        <div>
-            {% include lang_switcher.html %}
         </div>
         <div class="navigation__menu">
             {% include menu.html %}
