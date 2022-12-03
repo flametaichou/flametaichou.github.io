@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% include lang.html %}
-<html lang="{{ lang }}" onload="initLang()">
+<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +22,7 @@
     <script src="{{ '/assets/js/i18n.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/sidebar.js' | relative_url }}"></script>
 </head>
-<body>
+<body onload="initLang()">
     <div class="header">
         <div class="header__close" onclick="toggleSidebar()">
             <div id="sidebar-btn" class="header__toggle">

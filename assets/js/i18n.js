@@ -19,13 +19,13 @@ function t(lang) {
     localStorage.setItem(i18n_KEY, lang);
 }
 
-function changeLang(elementId) {
+function selectLang(elementId) {
     const lang = document.getElementById(elementId).value;
     t(lang);
 }
 
 function initLang() {
     const lang = USER_LANG ? USER_LANG : SYSTEM_LANG;
-    changeLang(lang);
+    t(lang);
 }
 
