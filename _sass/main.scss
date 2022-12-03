@@ -14,6 +14,10 @@ body {
   color: $colorBlack;
   display: flex;
 
+  animation: intro .3s both;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+
   @include breakpoint-mobile {
     flex-direction: column;
   }
@@ -215,9 +219,15 @@ a {
 
   &__lang {
     padding: 1em 2em;
+    display: flex;
 
     select {
       width: 100%;
+    }
+
+    img {
+      height: 100%;
+      margin-left: 2em;
     }
   }
 }
