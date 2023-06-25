@@ -1,0 +1,15 @@
+{
+  "home": "Home",
+  "posts": "Posts",
+  "tags": "Tags",
+  "library": "Library",
+  "about": "About",
+  "category.articles": "Articles",
+  "category.notes": "Notes",
+  "category.other": "Other",
+  "about.header1": "Hello! I'm",
+  "about.header2": ", and I code something",
+  "about.p1": "I have some thoughts along the way, writing them down here",
+  "library.description": "It is not a library as is, but a list of links I want to save and share with everyone interested",
+  "error.404": "Page not found"
+}

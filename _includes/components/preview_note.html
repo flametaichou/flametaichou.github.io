@@ -1,0 +1,27 @@
+<article
+    class="note-preview"
+>
+    <div class="note-preview__main">
+        <div>
+            {% include components/date.html date = include.post.date %}
+        </div>
+
+        <div class="note-preview__section note-preview__header">
+            <a href="{{ include.post.url | relative_url }}">
+                {{ include.post.title }}
+            </a>
+        </div>
+
+        <div class="note-preview__section markdown">
+            {{ post.excerpt }}
+        </div>
+
+        <div class="note-preview__section note-preview__tags">
+            {% for tag in include.post.tags %}
+            <a href="/tags/{{ tag | slugify }}">
+                #{{ tag }}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</article>

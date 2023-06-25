@@ -1,1 +1,15 @@
-test 404 error
+---
+# example 404.md
+
+layout: default
+permalink: /404.html
+---
+
+<div class="error">
+    <div class="error__title">
+        404
+    </div>
+    <div class="error__description">
+        {% include components/i18n.html code = 'error.404' %}
+    </div>
+</div>

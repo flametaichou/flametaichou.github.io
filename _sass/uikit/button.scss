@@ -1,0 +1,72 @@
+.f-btn {
+  background-color: $colorGray0;
+  color: $colorGray2 !important;
+  @include border-radius-default;
+  font-weight: bold;
+  padding: 0.5em 0.8em;;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 32px;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: rgba($colorGray2, 0.2);
+  }
+
+  &:active, &--active {
+    background-color: rgba($colorGray2, 0.1);
+  }
+
+  /*
+  &:visited {
+    color: inherit;
+  }
+  */
+
+  &[disabled] {
+    background-color: $colorGray1;
+    color: $colorWhite !important;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  &--primary {
+    background-color: $colorPrimary;
+    color: $colorWhite !important;
+
+    &:hover {
+      background-color: rgba($colorPrimary, 0.9);
+    }
+
+    &:active, &--active {
+      background-color: rgba($colorPrimary, 0.8);
+    }
+  }
+
+  &--secondary {
+    background-color: $colorSecondary;
+    color: $colorWhite !important;
+
+    &:hover {
+      background-color: rgba($colorSecondary, 0.9);
+    }
+
+    &:active, &--active {
+      background-color: rgba($colorSecondary, 0.8);
+    }
+  }
+
+  &--accent {
+    background-color: $colorAccent;
+    color: $colorWhite !important;
+
+    &:hover {
+      background-color: rgba($colorAccent, 0.9);
+    }
+
+    &:active, &--active {
+      background-color: rgba($colorAccent, 0.8);
+    }
+  }
+}

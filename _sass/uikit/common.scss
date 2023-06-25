@@ -2,25 +2,61 @@ a {
   color: $colorSecondary;
 
   &:active {
-    color: lighten($colorSecondaryDarken1, 0.8);
+    color: $colorSecondaryLighten1;
   }
 
   &:visited {
-    color: darken($colorPurple, 0.8);
+    color: $colorPurpleDarken1;
   }
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: $colorGray0;
-  border-radius: 2px;
+  background: $colorGray1;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: $colorGray1;
+  background: $colorGray2;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: calc(1ex / 0.42);
+  //margin: calc(1ex / 0.42) 0;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: calc(1ex / 0.42);
+  //margin: calc(1ex / 0.42) 0;
+}
+
+h3 {
+  font-size: 1.6em;
+  line-height: calc(1ex / 0.38);
+  //margin: calc(1ex / 0.38) 0;
+}
+
+h4 {
+  font-size: 1.2em;
+  line-height: calc(1ex / 0.37);
+  //margin: calc(1ex / 0.37) 0;
+}
+
+h5 {
+  font-size: 1.1em;
+  line-height: calc(1ex / 0.35);
+  //margin: calc(1ex / 0.37) 0;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: calc(1ex / 0.32);
+  //margin: calc(1ex / 0.32) 0;
 }

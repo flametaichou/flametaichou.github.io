@@ -5,24 +5,16 @@
   display: flex;
   align-items: center;
 
-  img {
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-  }
-
   a {
-    padding-left: 10px;
-    color: $colorGray2;
-    font-weight: bold;
+    color: $colorGray1;
     text-decoration: none;
 
     &:active {
-      color: $colorGray2;
+      color: $colorGray1;
     }
 
     &:visited {
-      color: $colorGray2;
+      color: $colorGray1;
     }
   }
 }

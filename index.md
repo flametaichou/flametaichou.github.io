@@ -1,7 +1,8 @@
 ---
 layout: page
+redirect_to: posts
 ---
 
 # Main page
 
-testing main page
+Nothing here (for now)

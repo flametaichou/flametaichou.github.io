@@ -1,0 +1,47 @@
+
+<!-- Pagination links -->
+<div class="pagination">
+
+    <div>
+        <a href="/posts/" class="f-btn" {% if paginator.page == 1 %}disabled{% endif %}>
+            ❘🡠
+        </a>
+
+        <a href="/posts/{% if paginator.previous_page != 1 %}{{ paginator.previous_page }}{% endif %}" class="f-btn f-btn--secondary" {% if paginator.page == 1 %}disabled{% endif %}>
+            🡠
+        </a>
+
+        <span class="pagination__tooltip">
+            {{ paginator.page }} / {{ paginator.total_pages }}
+        </span>
+
+
+        <a href="/posts/{{ paginator.next_page }}" class="f-btn f-btn--secondary" {% if paginator.page == paginator.total_pages %}disabled{% endif %}>
+            🡢
+        </a>
+
+        <a href="/posts/{{ paginator.total_pages }}" class="f-btn" {% if paginator.page == paginator.total_pages %}disabled{% endif %}>
+            🡢❘
+        </a>
+    </div>
+
+    <!--
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+        Previous
+    </a>
+    {% else %}
+    <span class="previous">Previous</span>
+    {% endif %}
+
+    <span class="page_number ">
+    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+    </span>
+
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    {% else %}
+    <span class="next ">Next</span>
+    {% endif %}
+    -->
+</div>

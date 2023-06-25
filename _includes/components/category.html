@@ -1,0 +1,4 @@
+<span class="chip{% if include.small %} chip--small{% endif %}{% if include.category == 'notes' %} chip--accent{% elsif include.category != 'other' %} chip--secondary{% else %} chip--default{% endif %}">
+    {% assign categoryCode = 'category.' | append: include.category %}
+    {% include components/i18n.html code = categoryCode %}
+</span>

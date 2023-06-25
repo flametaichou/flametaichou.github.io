@@ -1,0 +1,19 @@
+.error {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  font-size: map-get($fontSize, 'xl');
+
+  &__title {
+    font-family: 'Alfa Slab One', 'Impact', serif;
+    color: $colorSecondary;
+    font-size: 400%;
+  }
+
+  &__description {
+  }
+}

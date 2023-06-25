@@ -1,0 +1,19 @@
+---
+layout: page
+---
+
+<div class="about">
+    <div class="about__content">
+        <h1 class="about__header">
+            <span>{% include components/i18n.html code = 'about.header1' %}</span>
+            <span id="about-name">Flame</span>
+            <span class="about__caret">|</span>
+            <span>{% include components/i18n.html code = 'about.header2' %}</span>
+        </h1>
+        <p>
+            {% include components/i18n.html code = 'about.p1' %}
+        </p>
+    </div>
+
+    <script src="{{ '/assets/js/about.js' | relative_url }}"></script>
+</div>

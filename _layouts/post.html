@@ -2,33 +2,50 @@
 layout: default
 ---
 
-<article class="post post--big">
+<article class="post {% if page.categories %}post--{{ page.categories }}{% endif %}">
+
     {% if page.cover_image %}
-    <div class="post__cover">
+    <div
+        class="post__cover"
+        style="background-image: url('/data/images/{{ page.cover_image }}');"
+    >
         <div class="post__overlay"></div>
-        <img src="/data/images/{{ page.cover_image }}" />
+        <img src="/data/images/{{ page.cover_image }}" alt="{{ page.title }}"/>
     </div>
     {% endif %}
 
-    <div class="post__wrapper post__main">
+    <div class="post__main content__wrapper">
         <div class="post__section">
-            <div class="post__date">
-            <span class="category">
-                {% if page.categories %}
-                {{ page.categories }}
-                {% else %}
-                Other
-                {% endif %}
-            </span>
-                /
-                <span>{{ page.date | date_to_string }}</span>
-            </div>
+            <div class="flex-group">
+                <div class="post__date with-icon">
+                    <img src="/data/icons/FA-calendar.svg" alt="Calendar"/>
+                    {% include components/date.html date = page.date %}
+                </div>
 
-            <div>
-                {% include author.html %}
+                <div class="post-preview__date with-icon">
+                    <img src="/data/icons/FA-directory.svg" alt="Category"/>
+                    {% assign category = page.categories | first | default: 'other' %}
+                    {% assign categoryCode = 'category.' | append: category %}
+                    {% include components/i18n.html code = categoryCode %}
+                </div>
+
+                <div class="post__date with-icon">
+                    <img src="/data/icons/FA-user.svg" alt="Author"/>
+                    {% include components/author.html author = page.author %}
+                </div>
             </div>
         </div>
-
+        {% if page.categories contains "notes" %}
+        <div class="post__section">
+            <h1>
+                {% if page.title%}
+                {{ page.title }}
+                {% else %}
+                Untitled post
+                {% endif %}
+            </h1>
+        </div>
+        {% else %}
         <div class="post__title">
             <h1>
                 {% if page.title%}
@@ -43,15 +60,16 @@ layout: default
             </div>
             {% endif %}
         </div>
+        {% endif %}
 
-        <div class="post__content">
+        <div class="post__content markdown">
             {{ content }}
         </div>
 
         <div class="post__section">
             <nav class="post__tags">
                 {% for tag in page.tags %}
-                <a href="/tags/{{ tag | slugify }}" class="tag tag--small">
+                <a href="/tags/{{ tag | slugify }}" class="chip chip--small chip--outlined chip--clickable chip--secondary">
                     {{ tag }}
                 </a>
                 {% endfor %}

@@ -1,0 +1,68 @@
+<article
+    class="post-preview {% if post.categories %}post-preview--{{ post.categories }}{% endif %} {% if post.cover_image %}post-preview--cover{% endif %}"
+>
+    <!--
+    <div class="post-preview__category">
+        {% assign category = include.post.categories | default: 'other' %}
+        {% include components/category.html category = category %}
+    </div>
+    -->
+
+    {% if post.cover_image %}
+    <div
+        class="post-preview__cover"
+        style="background-image: url('/data/images/{{ post.cover_image }}');"
+    >
+        <div class="post-preview__overlay"></div>
+        <img src="/data/images/{{ post.cover_image }}" alt="{{ include.post.title }}"/>
+    </div>
+    {% endif %}
+
+    <div class="post-preview__main">
+
+        <div class="post-preview__section">
+            <div class="flex-group">
+                <div class="post-preview__date with-icon">
+                    <img src="/data/icons/FA-calendar.svg" alt="Calendar"/>
+                    {% include components/date.html date = include.post.date %}
+                </div>
+
+                <div class="post-preview__date with-icon">
+                    <img src="/data/icons/FA-directory.svg" alt="Category"/>
+                    {% assign category = include.post.categories | first | default: 'other' %}
+                    {% assign categoryCode = 'category.' | append: category %}
+                    {% include components/i18n.html code = categoryCode %}
+                </div>
+            </div>
+        </div>
+
+        <div class="post-preview__section">
+            <div class="post-preview__title">
+                <h3>
+                    <a href="{{ include.post.url | relative_url }}">
+                        {{ include.post.title }}
+                    </a>
+                </h3>
+            </div>
+        </div>
+
+        <div class="post-preview__content markdown">
+            {{ post.excerpt }}
+        </div>
+
+        <div class="post-preview__section">
+            <nav class="post-preview__tags">
+                <!--
+                {% assign category = include.post.categories | first | default: 'other' %}
+                {% include components/category.html category = category small = true %}
+                -->
+
+                {% for tag in include.post.tags %}
+                <a href="/tags/{{ tag | slugify }}" class="chip chip--small chip--outlined chip--clickable chip--secondary">
+                    {{ tag }}
+                </a>
+                {% endfor %}
+            </nav>
+        </div>
+    </div>
+</article>

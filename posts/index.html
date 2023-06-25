@@ -9,11 +9,11 @@ description: All posts
 -->
 
 <div class="posts">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
 
-    {% include components/post_preview.html
-    post = post
-    %}
+    {% include components/preview.html post = post %}
 
     {% endfor %}
 </div>
+
+{% include pagination.html %}

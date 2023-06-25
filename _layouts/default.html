@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#323232">
-    <meta name="msapplication-TileColor" content="#323232">
-    <link rel="icon" type="image/png" sizes="32x32" href="/data/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/data/logo.png">
+    <meta name="theme-color" content="#303032">
+    <meta name="msapplication-TileColor" content="#303032">
+    <link rel="mask-icon" href="/data/images/logo.svg" color="#303032">
+    <link rel="icon" type="image/png" sizes="32x32" href="/data/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/data/images/logo.png">
 
     <title>
         {{ site.title }}
@@ -19,20 +20,21 @@
     <meta name="description" content="{{ site.description }}">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/styles.css' | relative_url }}">
     <script src="{{ '/assets/js/loader.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/sidebar.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/i18n.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/headers.js' | relative_url }}"></script>
 </head>
-<body onload="initLang()">
+<body>
     <div class="header">
         <div class="header__close" onclick="toggleSidebar()">
             <div id="sidebar-btn" class="header__toggle">
                 <div></div>
             </div>
         </div>
-        <img src="/data/logo.svg" alt="{{ site.title }}"/>
+        <img src="/data/images/logo-small.svg" alt="{{ site.title }}" height="48px"/>
         <h1>
             {{ site.title }}
         </h1>
@@ -40,28 +42,36 @@
     <div id="sidebar" class="navigation navigation--closed">
         <div class="navigation__top"></div>
         <div class="navigation__logo">
-            <img src="/data/logo.svg" alt="{{ site.title }}"/>
-        </div>
-        <div class="navigation__menu">
-            {% include menu.html %}
+            <object data="/data/images/logo.svg" type="image/svg+xml" height="100px">
+                <img src="/data/images/logo.svg" srcset="/data/images/logo.svg"  alt="{{ site.title }}" height="100px"/>
+            </object>
+            <!--
+            <img src="/data/images/logo.svg" srcset="/data/images/logo.svg"  alt="{{ site.title }}" height="100px"/>
+            -->
         </div>
         <div class="navigation__description">
             {{ site.description }}
         </div>
-        <div class="navigation__bottom"></div>
         <div class="navigation__lang">
+            {% include lang_switcher.html %}
             <a href="{{ site.feed.path | relative_url }}" target="_blank">
-                <img src="/data/icons/FA-rss-feed.svg" alt="Change language"/>
+                <img src="/data/icons/FA-rss-feed.svg" alt="Open RSS feed"/>
+            </a>
+            <a href="https://github.com/{{ site.author }}/{{ site.author }}.github.io" target="_blank">
+                <img src="/data/icons/FA-github.svg" alt="GitHub page"/>
             </a>
         </div>
+        <div class="navigation__menu">
+            {% include menu.html %}
+        </div>
+        <div class="navigation__bottom"></div>
         <div class="navigation__lang">
-            <img src="/data/icons/FA-translation.svg" alt="Change language"/>
-            {% include lang_switcher.html %}
         </div>
     </div>
     <div id="overlay" class="overlay overlay--closed"></div>
-    <div id="loader" class="loader loader--closed">
-        <div class="loader__spinner"></div>
+    <div id="loader" class="loader">
+        <!--<div class="loader__spinner"></div>-->
+        <div class="loader__line"></div>
     </div>
     <main class="content">
         {{ content }}

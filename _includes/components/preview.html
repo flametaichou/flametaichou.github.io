@@ -1,0 +1,5 @@
+{% if include.post.categories contains "notes" %}
+    {% include components/preview_note.html post = post %}
+{% else %}
+    {% include components/preview_post.html post = post %}
+{% endif %}

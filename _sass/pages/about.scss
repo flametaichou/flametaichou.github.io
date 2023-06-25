@@ -1,0 +1,28 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  &__content {
+    width: 100%;
+  }
+
+  &__caret {
+    color: $colorGray2;
+    animation: blink 1s both;
+    animation-iteration-count: infinite;
+    letter-spacing: 0;
+    //width: 1pt;
+    margin: -7pt;
+  }
+
+  &__header {
+    display: block;
+
+    span {
+      //display: inline;
+      //text-wrap: avoid;
+    }
+  }
+}

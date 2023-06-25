@@ -1,0 +1,4 @@
+<span class="author">
+    {% assign author = include.author | default: site.author %}
+    <a href="https://github.com/{{ author }}" target="_blank">{{ author }}</a>
+</span>

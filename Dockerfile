@@ -1,17 +1,22 @@
-FROM jekyll/jekyll:pages
+FROM ruby:2.7-alpine
 
-COPY * /srv/jekyll/
+ENV GITHUB_GEM_VERSION 214
+ENV JSON_GEM_VERSION 1.8.6
 
-WORKDIR /srv/jekyll
+RUN apk --update add --virtual build_deps \
+    build-base ruby-dev libc-dev linux-headers \
+  && gem install --verbose --no-document \
+    json:${JSON_GEM_VERSION} \
+    github-pages:${GITHUB_GEM_VERSION} \
+    jekyll-github-metadata \
+    minitest \
+  && apk del build_deps \
+  && apk add git \
+  && mkdir -p /usr/src/app \
+  && rm -rf /usr/lib/ruby/gems/*/cache/*.gem
 
-#RUN apk update && \
-#	apk add ruby-dev gcc make curl build-base libc-dev libffi-dev zlib-dev libxml2-dev libgcrypt-dev libxslt-dev python2
+COPY ./ /usr/src/app
+WORKDIR /usr/src/app
 
-#RUN bundle config build.nokogiri --use-system-libraries && \
-#	bundle install
-
-RUN bundle config set --local path 'vendor/bundle'
-RUN bundle install
-RUN bundle exec jekyll serve
-
-EXPOSE 4000
+EXPOSE 4000 80
+CMD jekyll serve -d /_site --watch --force_polling -H 0.0.0.0 -P 4000

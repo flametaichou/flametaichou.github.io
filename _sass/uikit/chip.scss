@@ -1,0 +1,79 @@
+$chipColors: (
+        default: $colorGray2,
+        primary: $colorPrimary,
+        secondary: $colorSecondary,
+        accent: $colorAccent
+);
+
+.chip {
+  @each $colorname, $chipColor in $chipColors {
+    &--#{$colorname} {
+      &:not(.chip--outlined) {
+        border: 1px solid $chipColor;
+        background-color: $chipColor;
+        color: $colorWhite;
+
+        &:hover {
+          background-color: rgba($chipColor, 0.9);
+        }
+
+        &:active {
+          background-color: rgba($chipColor, 0.97);
+        }
+
+        &:visited {
+          color: $colorWhite;
+        }
+      }
+
+      &.chip--outlined {
+        border: 1px solid $chipColor;
+        background-color: transparent;
+        color: $chipColor;
+
+        &:hover {
+          background-color: rgba($chipColor, 0.1);
+        }
+
+        &:active {
+          background-color: rgba($chipColor, 0.07);
+        }
+
+        &:visited {
+          color: $chipColor;
+        }
+      }
+
+      &.chip--active {
+        background-color: $chipColor;
+        color: $colorWhite !important;
+
+        &:hover {
+          background-color: rgba($chipColor, 0.9);
+        }
+      }
+    }
+  }
+
+  &--clickable {
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  @include border-radius-default;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:not(:last-of-type) {
+    margin-right: 10px;
+  }
+
+  padding: 5px 15px;
+  //line-height: 32px;
+
+  &--small {
+    font-size: map-get($fontSize, 'small');
+    padding: 3px 10px;
+    //line-height: 30px;
+  }
+}
