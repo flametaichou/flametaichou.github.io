@@ -173,9 +173,8 @@ function search() {
 ### Тэги
 Jekyll имеет встроенную поддержку [тэгов](https://jekyllrb.com/docs/front-matter/#predefined-variables-for-posts) - они являются частью перечисляемых в шапке страницы параметров. Но если вам нужна страница которая открывается по клику на тэге и показывает все статьи с этим тэгом - в Jekyll такого нет. По большому счету вам нужно что-то вроде эндпоинта `/tags/{tag}` который бы возвращал список статей отфильтрованных по `{tag}` - это динамический контент. Но в Jekyll не существует параметров запросов, не существует динамических путей - только статические страницы.
 
-| ![Пример страницы с тэгами](/data/images/posts/tags-page-example.png) | 
-|:--:| 
-| *Скриншот блога [peterroelants.github.io](https://peterroelants.github.io/tag_index/#a-b-testing)* |
+![Пример страницы с тэгами](/data/images/posts/tags-page-example.png)
+*Скриншот блога [peterroelants.github.io](https://peterroelants.github.io/tag_index/#a-b-testing)*
 
 Я вижу всего 2 способа как сделать страницу с статьями, отфильтрованными по тэгу:
 
@@ -255,9 +254,8 @@ tag: {tag}
 ### Пагинация
 Я не знаю сколько статей будет в моем блоге через какое-то время. 1? 10? 100? Неизвестное количество. Я считаю что "если количество элементов может превышать 100 то имеет смысл использовать [пагинацию](https://en.wikipedia.org/wiki/Pagination)".
 
-| ![Пагинатор](/data/images/posts/paginator-example.png) | 
-|:--:| 
-| *Пагинатор* |
+![Пагинатор](/data/images/posts/paginator-example.png)
+*Пагинатор*
 
 Пагинация - это, определенно, динамический контент. Но в Jekyll это возможно благодаря плагину [jekyll-paginate](https://jekyllrb.com/docs/pagination/), который позволяет настроить пагинацию для статей.
 
@@ -286,14 +284,14 @@ plugins:
 Для статического сайта самое простое решение этой задачи - это создание нескольких версий сайта (по одной для каждого языка). Например:
 
 - Русский  
-`https://flametaichou.github.io/ru/blog`
-`https://flametaichou.github.io/ru/tags`
+`https://flametaichou.github.io/ru/blog`  
+`https://flametaichou.github.io/ru/tags`  
 `https://flametaichou.github.io/ru/tags/i18n`  
 ...
 
 - English  
-`https://flametaichou.github.io/en/blog`
-`https://flametaichou.github.io/en/tags`
+`https://flametaichou.github.io/en/blog`  
+`https://flametaichou.github.io/en/tags`  
 `https://flametaichou.github.io/en/tags/i18n`  
 ...
 
@@ -301,9 +299,8 @@ plugins:
 
 Это неудобно, особенно когда страниц много. Поэтому обычно в таких случаях поступают иначе: страницы сайта (верстка, стили, наполнение) пишутся 1 раз с использованием кодов локализации. Для каждого языка создается файл локализации, где каждому коду сопоставляется строка на этом языке. Когда пользователь запрашивает страницу все коды локализации заменяются на строки из файла с тем языком, которой запросил пользователь. Таким образом пользователь получает страницу на нужном ему языке.
 
-| ![Пример файла локализации](/data/images/posts/i18n-example.png) | 
-|:--:| 
-| *Пример файла локализации* |
+![Пример файла локализации](/data/images/posts/i18n-example.png)
+*Пример файла локализации*
 
 В Jekyll нет никакой заявленной функциональности для мультиязычности, но в интернете есть множество примеров того как ее реализуют:
 
@@ -361,7 +358,7 @@ languages: ['en', 'ru']
   "home": "Home",
   "posts": "Posts",
   "tags": "Tags",
-  "library": "Library",
+  "bookmarks": "Bookmarks",
   "about": "About",
   ...
 }
@@ -373,7 +370,7 @@ languages: ['en', 'ru']
   "home": "Главная",
   "posts": "Блог",
   "tags": "Тэги",
-  "library": "Библиотека",
+  "bookmarks": "Библиотека",
   "about": "О сайте",
   ...
 }
@@ -411,17 +408,14 @@ languages: ['en', 'ru']
 
 Чаще всего такие ссылки ссылаются на заголовки (headings) на страницах. Думаю, вы не раз замечали иконки в виде звеньев цепи на заголовках статей:  
 
-| ![Markdown guide anchor](/data/images/posts/heading-anchor-example1.png) | 
-|:--:| 
-| *Скриншот [markdownguide.org](https://www.markdownguide.org/basic-syntax/#headings)* |
+![Markdown guide anchor](/data/images/posts/heading-anchor-example1.png)
+*Скриншот [markdownguide.org](https://www.markdownguide.org/basic-syntax/#headings)*
 
-| ![GitHub readme anchor](/data/images/posts/heading-anchor-example2.png) | 
-|:--:| 
-| *Скриншот [github.com/jekyll](https://github.com/jekyll/jekyll#philosophy)* |
+![GitHub readme anchor](/data/images/posts/heading-anchor-example2.png)
+*Скриншот [github.com/jekyll](https://github.com/jekyll/jekyll#philosophy)*
 
-| ![Jekyll site anchor](/data/images/posts/heading-anchor-example3.png) | 
-|:--:| 
-| *Скриншот [jekyllrb.com](https://jekyllrb.com/docs/front-matter/#predefined-global-variables)* |
+![Jekyll site anchor](/data/images/posts/heading-anchor-example3.png)
+*Скриншот [jekyllrb.com](https://jekyllrb.com/docs/front-matter/#predefined-global-variables)*
 
 Эти иконки предназначены для того чтобы можно было быстро скопировать ссылку на конкретное место в статье. 
 

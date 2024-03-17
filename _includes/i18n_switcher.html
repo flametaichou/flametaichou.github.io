@@ -1,0 +1,11 @@
+<div class="f-dropdown">
+    <img src="/data/icons/FA-translation.svg" height="32px" width="32px" alt="Change language"/>
+
+    <div class="f-dropdown__content">
+        {% for lang in site.languages %}
+        <a class="f-dropdown__option" onclick="t('{{ lang }}')">
+            {{ site.data.i18n.languages[lang] }}
+        </a>
+        {% endfor %}
+    </div>
+</div>

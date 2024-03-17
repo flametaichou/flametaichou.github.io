@@ -1,0 +1,13 @@
+---
+layout: posts
+title: Notes
+description: All notes
+---
+
+<div id="search-results" class="posts posts--notes">
+    {% for post in site.categories.notes %}
+
+    {% include components/preview_note.html post = post %}
+
+    {% endfor %}
+</div>

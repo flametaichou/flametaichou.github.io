@@ -1,0 +1,31 @@
+<div id="sidebar" class="navigation navigation--closed">
+    <div class="navigation__top"></div>
+
+    <div class="navigation__logo">
+        <a href="{{ site.url }}" class="header__logo">
+            <img src="/data/images/logo-small.svg" alt="{{ site.title }}" height="48px"/>
+            <h1>
+                {{ site.title }}
+            </h1>
+        </a>
+    </div>
+    <div class="navigation__description">
+        {{ site.description }}
+    </div>
+
+    <div class="navigation__lang">
+        {% include i18n_switcher.html %}
+        <a href="{{ site.feed.path | relative_url }}" target="_blank">
+            <img src="/data/icons/FA-rss-feed.svg" alt="Open RSS feed"/>
+        </a>
+        <a href="https://github.com/{{ site.author }}/{{ site.author }}.github.io" target="_blank">
+            <img src="/data/icons/FA-github.svg" alt="GitHub page"/>
+        </a>
+    </div>
+    <div class="navigation__menu">
+        {% include menu.html %}
+    </div>
+    <div class="navigation__bottom"></div>
+    <div class="navigation__lang">
+    </div>
+</div>

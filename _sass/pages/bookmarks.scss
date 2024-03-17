@@ -1,0 +1,41 @@
+$categoryHeight: 300px;
+
+.bookmarks {
+  padding: 2em 0;
+}
+
+.bookmarks-level {
+  &__content {
+    display: flex;
+    align-items: flex-start;
+
+    img {
+      width: 64px;
+      //display: inline-block;
+    }
+
+    ul {
+      //display: inline-block;
+      li {
+        a {
+          display: inline-block;
+          margin-right: 5px;
+        }
+
+        span {
+          color: $colorGray2;
+          font-size: map-get($fontSize, 'small');
+        }
+      }
+    }
+  }
+
+  &__children {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($categoryHeight, 1fr));
+    grid-gap: 2vh;
+    grid-row-gap: 2vh;
+
+    font-size: map-get($fontSize, 'small');
+  }
+}

@@ -1,60 +1,78 @@
 @import "vars";
 @import "mixins";
 @import "keyframes";
-//@import "highlight";
-@import "highlight2";
+@import "highlight";
 @import "pagination";
+@import "burger";
+
+//@import "pages/sidebar";
 @import "pages/post";
 @import "pages/posts";
-@import "pages/tags";
 @import "pages/about";
 @import "pages/error";
+@import "pages/bookmarks";
+
 @import "components/author";
+
 @import "uikit/select";
+@import "uikit/input";
+@import "uikit/util";
 @import "uikit/common";
 @import "uikit/dropdown";
 @import "uikit/button";
 @import "uikit/chip";
+@import "uikit/tabs";
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  font-family: 'Montserrat', 'Verdana', sans-serif;
+  font-family: $fontFamily;
   font-size: map-get($fontSize, 'default');
 
   // https://www.smashingmagazine.com/2020/07/css-techniques-legibility/
-
-  line-height: calc(1ex / 0.32);
-
+  //line-height: calc(1ex / 0.32);
+  /*
   @supports (font-size-adjust: 1) {
     font-size-adjust: 0.5;
   }
+  */
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 
   color: $colorBlack;
+
+  display: flex;
+  flex-direction: column;
+
+  /*
   display: flex;
 
   @include breakpoint-mobile {
     flex-direction: column;
   }
+  */
 }
 
 .header {
-  height: 4em;
+  //height: 2em;
   display: flex;
   align-items: center;
-  padding: 1em 2em;
+  //padding: 1em 2em;
   background: $colorPrimary;
   color: $colorWhite;
-
-  @include breakpoint-desktop {
-    display: none;
-  }
+  z-index: 4;
+  position: relative;
 
   @include shadow-default;
 
+  /*
+  @include breakpoint-desktop {
+    display: none;
+  }
+  */
+
+  /*
   h1 {
     margin-block-start: 0;
     margin-block-end: 0;
@@ -64,47 +82,94 @@ body {
     margin-left: 2em;
     margin-right: 2em;
   }
+  */
 
-  &__close {
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__spacer {
+    flex: 1 0;
+  }
+
+  &__lang {
+    margin-left: 2em;
+  }
+
+  &__menu {
+    margin-left: 2em;
     width: 2.4em;
     height: 2.4em;
     position: relative;
+
+    @include breakpoint-desktop {
+      display: none;
+    }
   }
 
-  &__toggle {
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
+  &__logo {
+    display: flex;
+    align-items: center;
 
-    &:before,
-    &:after,
-    div {
-      //background: $colorBlack;
-      background: $colorWhite;
-      content: "";
-      display: block;
-      height: 4px;
-      border-radius: 2px;
-      margin: 7px 0;
-      transition: 0.3s;
+    @include hidden-anchor;
+
+    h1 {
+      padding: 0 30px;
     }
 
-    &--active:before {
-      transform: translateY(12px) rotate(135deg);
+    img {
+      //height: 150px;
     }
-    &--active:after {
-      transform: translateY(-10px) rotate(-135deg);
+  }
+}
+
+.footer {
+  background: $colorGray0;
+  color: $colorGray2;
+  font-size: map-get($fontSize, 'xs');
+
+  img {
+    height: 32px;
+    filter: brightness(0.8);
+  }
+
+  a {
+    color: inherit !important;
+  }
+
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    //align-items: flex-end;
+    gap: 1em;
+
+    padding: 2em;
+  }
+
+  &__title {
+    font-size: map-get($fontSize, 'small');
+    //font-weight: bold;
+    //font-size: map-get($fontSize, 'default');
+  }
+
+  &__links {
+    display: flex;
+    gap: 1em;
+
+    .f-dropdown__content {
+      color: $colorBlack;
     }
-    &--active div {
-      transform: scale(0);
+  }
+
+  &__column {
+    &--spacer {
+      flex: 1 1;
     }
-    &--active:before,
-    &--active:after,
-    &--active div {
-      //background: $colorWhite;
+
+    &--right {
+      text-align: right;
     }
   }
 }
@@ -112,7 +177,7 @@ body {
 .overlay, .loader {
   position: absolute;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -193,140 +258,21 @@ body {
   }
 }
 
-.navigation {
-  z-index: 3;
-  background: $colorPrimary;
-  color: $colorWhite;
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  height: 100%;
-  width: 275px;
-
-  transition: width 0.2s;
-
-  @include breakpoint-desktop {
-    justify-content: flex-end;
-
-    .navigation__close {
-      display: none;
-    }
-  }
-
-  @include breakpoint-mobile {
-    position: absolute;
-    top: 0;
-
-    object {
-      height: 64px;
-    }
-
-    &--closed {
-      width: 0 !important;
-      overflow: hidden;
-    }
-  }
-
-  &__top {
-    flex: 1 0 auto;
-
-    @include breakpoint-mobile {
-      display: none;
-    }
-  }
-
-  &__logo {
-    display: flex;
-    justify-content: end;
-    border-color: transparent;
-    padding: 2em;
-
-    h1 {
-      padding: 0 30px;
-    }
-
-    /*
-    img {
-      height: 150px;
-      margin-right: 2em;
-    }
-    */
-  }
-
-  &__bottom {
-    height: 10vh;
-
-    @include breakpoint-mobile {
-      flex: 1 0 auto;
-      //display: none;
-    }
-  }
-
-  &__menu {
-    padding: 0em 2em;
-    //border-top: 1px solid $colorGray3;
-
-    nav {
-      display: flex;
-      flex-direction: column;
-    }
-
-    a {
-      color: $colorGray0;
-      font-size: map-get($fontSize, 'large');
-      text-decoration: none;
-
-      &:active {
-        color: $colorGray0;
-      }
-
-      &:visited {
-        color: $colorWhite;
-      }
-    }
-  }
-
-  &__description {
-    padding: 0 2em 2em 2em;
-    //font-size: map-get($fontSize, 'small');
-    color: $colorGray0;
-  }
-
-  &__lang {
-    padding: 1em 2em;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    /*
-    select {
-      width: 100%;
-      margin-right: 1em;
-    }
-    */
-
-    img {
-      height: 32px;
-    }
-
-    > :not(:last-child) {
-      margin-right: 1em;
-    }
-  }
-}
-
 .content {
   display: flex;
   flex-direction: column;
   flex: 1 0;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  //background-color: $colorGray0;
+  padding-bottom: 2em;
+  //position: relative; // FIXME: создает отступ снизу
+  //overflow-y: auto;
+  //scroll-behavior: smooth;
+  //background-color: $colorBackground;
 
   animation: intro .3s both;
   //-webkit-animation-delay: .15s;
   //animation-delay: .15s;
 
+  /*
   @include breakpoint-desktop {
     z-index: 3;
 
@@ -334,55 +280,99 @@ body {
     -webkit-box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
     -moz-box-shadow: -18px -1px 26px -12px rgba(0,0,0,0.75);
   }
+  */
 
+  // TODO: move to separated class
   &__wrapper {
     $wrapperPadding: 2em;
 
-    width: calc(min(100%, #{$widthContent}) - (2 * #{$wrapperPadding}));
-    padding-left: $wrapperPadding;
-    padding-right: $wrapperPadding;
-    margin-left: auto;
-    margin-right: auto;
+   // width: calc(min(100%, #{$widthContent}) - (2 * #{$wrapperPadding}));
+    //padding-left: $wrapperPadding;
+    //padding-right: $wrapperPadding;
+    //margin-left: auto;
+    //margin-right: auto;
+
+    //padding-left: max(10px, env(safe-area-inset-left));
+    //padding-right: max(10px, env(safe-area-inset-right));
+
+    //padding: 0 10px;
+    //max-width: 1200px;
+    //min-width: 1200px;
+    //margin: 0 auto;
+
+
+    max-width: calc(min(100%, #{$widthContent}) - (2 * #{$wrapperPadding}));
+    min-width: calc(min(100%, #{$widthContent}) - (2 * #{$wrapperPadding}));
+    margin: 0 auto;
 
     flex: 1 0;
     //height: 100%;
 
-    padding-bottom: 10vh;
+    //padding-bottom: 10vh; TODO: move to article class
   }
 }
 
-.markdown {
-
-  //text-align: justify;
-
+.page {
   /*
-  p {
-    font-size: 1em;
-    line-height: calc(1ex / 0.32);
-    margin: calc(1ex / 0.32) 0;
-  }
-  */
-
-  /*
-  &::first-letter {
-    font-family: 'Alfa Slab One', 'Impact', serif;
-
-    color: $colorWhite;
-    background-color: $colorSecondary;
-    box-shadow: 3px 3px 0 $colorAccent;
-
-    border-radius: 2px;
-    font-size: 340%;
-    padding-top: map-get($fontSize, 'default');
-    margin-right: 6px;
-    float: left;
-  }
-  */
-
   h1, h2 {
     border-bottom: 1px solid $colorGray0;
   }
+  */
 
+  h1 {
+    font-size: map-get($fontSize, 'xl');
+  }
+
+  h2 {
+    font-size: map-get($fontSize, 'xl');
+  }
+
+  h3 {
+    font-size: map-get($fontSize, 'large');
+  }
+
+  h4 {
+    font-size: map-get($fontSize, 'default');
+  }
+
+  h5 {
+    font-size: map-get($fontSize, 'small');
+  }
+
+  h6 {
+    font-size: map-get($fontSize, 'xs');
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 2.1em;
+    margin-bottom: 1.3em;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    line-height: 1.4;
+    //    line-height: 1.334;
+  }
+
+  blockquote {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+    line-height: 1.4;
+  }
+
+  hr {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+  }
+
+  /*
   h1:before {
     padding-right: 0.3em;
     color: $colorAccent;
@@ -418,65 +408,107 @@ body {
     color: $colorAccent;
     content: "▪▪▪▪▪▪";
   }
+  */
+}
+
+.markdown {
+
+  //text-align: justify;
+
+  /*
+  p {
+    font-size: 1em;
+    line-height: calc(1ex / 0.32);
+    margin: calc(1ex / 0.32) 0;
+  }
+  */
+
+  /*
+  &::first-letter {
+    font-family: $fontFamilyBold;
+
+    color: $colorWhite;
+    background-color: $colorSecondary;
+    box-shadow: 3px 3px 0 $colorAccent;
+
+    border-radius: 2px;
+    font-size: 340%;
+    padding-top: map-get($fontSize, 'default');
+    margin-right: 6px;
+    float: left;
+  }
+  */
 
   img {
     max-width: 80%;
     display: block;
     margin: 0 auto;
+
+    & + em {
+      font-size: map-get($fontSize, 'small');
+      display: block;
+      text-align: center;
+    }
   }
 
   table {
-    width: 100%;
+    //width: 100%; // Нельзя, ломает блоки с кодом
   }
 
   blockquote {
-    background: #f9f9f9;
-    border-left: 10px solid #ccc;
-    margin: auto;
+    background: $colorGray0;
+    border-left: 4px solid $colorSecondary;
+    //margin: auto;
     padding: 0.5em 10px;
+    @include border-radius-default;
+
+    strong {
+      color: $colorSecondary;
+    }
+
+    p {
+      display: inline;
+    }
   }
 
-  blockquote p {
-    display: inline;
+  .footnotes {
+    border-top: 1px solid $colorGray0;
+    color: $colorGray3;
+    font-size: map-get($fontSize, 'small');
   }
 
-  code.highlighter-rouge.language-plaintext {
-    padding: 1px 5px;
-    background-color: $colorGray0;
-    border: 1px solid $colorGray1;
-    border-radius: 6px;
-    color: $colorBlack;
-  }
-
-  pre.highlight {
-    font-family: monospace;
-    overflow-y: auto;
-  }
-
-  .lineno {
-    background-color: $colorBlack;
+  .footnote {
+    text-decoration: none;
   }
 }
 
 .menu {
-  &-item {
-    @include border-radius-default;
-    padding: 5px 10px;
-    margin-bottom: 5px;
-    transition: background-color 0.3s, padding 0.3s;
+  @include breakpoint-mobile {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
 
-    &:hover {
-      background-color: rgba($colorSecondary, 0.2);
-      padding: 5px 15px;
-    }
+    padding: 1em;
+    background-color: $colorPrimary;
+    flex-direction: column;
 
-    &:active, &--active {
-      background-color: $colorSecondary !important;
-      padding: 5px 15px;
+    @include shadow-default;
+
+    z-index: 4;
+
+    transition: visibility 0.1s, opacity 0.1s linear;
+    visibility: visible;
+
+    &--closed {
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }
 
+// TODO: move to ui-kit?
 .with-icon {
   display: flex;
   align-items: center;
@@ -501,7 +533,7 @@ body {
   filter: grayscale(1) brightness(0);
   opacity: 0.07;
   transition: opacity 0.3s;
-  font-size: 70%;
+  font-size: 90%;
 
   &:hover {
     opacity: 0.1;

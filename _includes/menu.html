@@ -1,19 +1,18 @@
-<nav class="menu">
+<nav id="menu" class="nav menu menu--closed">
   <!--
-  <a href="/" class="menu-item {% if page.url == '/' %}menu-item--active{% endif %}">
+  {% comment %}
+  <a href="/" class="nav-item {% if page.url == '/' %}nav-item--active{% endif %}">
     {% include components/i18n.html code = 'home' %}
   </a>
+  {% endcomment %}
   -->
-  <a href="/posts" class="menu-item {% if page.url contains '/posts' %}menu-item--active{% endif %}">
+  <a href="/posts" class="nav-item {% if page.url contains '/posts' %}nav-item--active{% endif %}">
     {% include components/i18n.html code = 'posts' %}
   </a>
-  <a href="/tags" class="menu-item {% if page.url contains '/tags' %}menu-item--active{% endif %}">
-    {% include components/i18n.html code = 'tags' %}
+  <a href="/bookmarks" class="nav-item {% if page.url contains '/bookmarks' %}nav-item--active{% endif %}">
+    {% include components/i18n.html code = 'bookmarks' %}
   </a>
-  <a href="/library" class="menu-item {% if page.url contains '/library' %}menu-item--active{% endif %}">
-    {% include components/i18n.html code = 'library' %}
-  </a>
-  <a href="/about" class="menu-item {% if page.url contains '/about' %}menu-item--active{% endif %}">
+  <a href="/about" class="nav-item {% if page.url contains '/about' %}nav-item--active{% endif %}">
     {% include components/i18n.html code = 'about' %}
   </a>
 </nav>

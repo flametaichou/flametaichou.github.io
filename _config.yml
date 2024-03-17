@@ -10,8 +10,8 @@ languages: ['en', 'ru']
 
 permalink: /posts/:categories/:title/
 
-paginate_path: /posts/:num/
-paginate: 10
+#paginate_path: /posts/:num/
+#paginate: 10
 
 feed:
   path: /posts/feed.xml
@@ -64,4 +64,4 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jekyll-paginate
+#  - jekyll-paginate

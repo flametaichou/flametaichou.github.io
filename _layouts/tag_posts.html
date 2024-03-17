@@ -2,10 +2,10 @@
 layout: tags
 ---
 
-<div class="posts">
+<div id="search-results" class="posts">
     {% for post in site.tags[page.tag] %}
 
-    {% include components/preview.html post = post %}
+    {% include components/preview_post.html post = post %}
 
     {% endfor %}
 </div>

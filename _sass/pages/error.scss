@@ -1,5 +1,5 @@
 .error {
-  height: 100vh;
+  flex: 1 0;
 
   display: flex;
   align-items: center;
@@ -9,9 +9,10 @@
   font-size: map-get($fontSize, 'xl');
 
   &__title {
-    font-family: 'Alfa Slab One', 'Impact', serif;
+    font-family: $fontFamilyBold;
     color: $colorSecondary;
     font-size: 400%;
+    line-height: normal;
   }
 
   &__description {

@@ -11,4 +11,4 @@ jobs:
       - uses: hendrixjoseph/jekyll-tag-page-generator-action@master
         with:
           source: "https://flametaichou.github.io/data/tags.json"
-          destination: "./_tags/"
+          destination: "./posts/tags/"

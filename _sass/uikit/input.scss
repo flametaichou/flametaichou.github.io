@@ -1,0 +1,41 @@
+.f-input {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+
+  padding: 0.5em 0.8em;;
+  line-height: 32px;
+
+  display: block;
+  min-width: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+
+  @include border-radius-default;
+  //box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  &:focus {
+    outline: 1px solid $colorSecondaryLighten5;
+    //box-shadow: 0 0 0 0.3em $colorSecondaryLighten5;
+  }
+
+  &:hover {
+  }
+
+  &:target {
+  }
+
+  &:active {
+  }
+
+  &--search {
+    padding-right: 3em;
+    background: url('/data/icons/FA-magnify.svg') no-repeat right 0.8em center / 1.4em, linear-gradient(to left, $colorWhite 3em, $colorWhite 3em);
+  }
+}

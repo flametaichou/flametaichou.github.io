@@ -2,7 +2,11 @@
 layout: markdown_page
 ---
 
-{% include components/i18n.html code = 'library.description' %}
+{% for cat in site.data.bookmarks.categories3 %}
+    {% include bookmarks_level.html category = cat %}
+{% endfor %}
+
+{% include components/i18n.html code = 'bookmarks.description' %}
 
 ## Linux
 <https://serverfault.com/questions/378086/how-to-extend-a-linux-pv-partition-online-after-virtual-disk-growth> - Extend a Linux PV partition online after virtual disk growth

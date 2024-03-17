@@ -2,10 +2,12 @@
     class="post-preview {% if post.categories %}post-preview--{{ post.categories }}{% endif %} {% if post.cover_image %}post-preview--cover{% endif %}"
 >
     <!--
+    {% comment %}
     <div class="post-preview__category">
         {% assign category = include.post.categories | default: 'other' %}
         {% include components/category.html category = category %}
     </div>
+    {% endcomment %}
     -->
 
     {% if post.cover_image %}
@@ -33,6 +35,11 @@
                     {% assign categoryCode = 'category.' | append: category %}
                     {% include components/i18n.html code = categoryCode %}
                 </div>
+
+                <div class="post-preview__date with-icon">
+                    <img src="/data/icons/FA-translation.svg" alt="Language"/>
+                    {{ include.post.lang }}
+                </div>
             </div>
         </div>
 
@@ -58,8 +65,8 @@
                 -->
 
                 {% for tag in include.post.tags %}
-                <a href="/tags/{{ tag | slugify }}" class="chip chip--small chip--outlined chip--clickable chip--secondary">
-                    {{ tag }}
+                <a href="/posts/tags/{{ tag | slugify }}" class="chip chip--small chip--outlined chip--clickable chip--secondary">
+                    #{{ tag }}
                 </a>
                 {% endfor %}
             </nav>

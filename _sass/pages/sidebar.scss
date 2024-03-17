@@ -1,0 +1,95 @@
+.navigation {
+  z-index: 3;
+  background: $colorPrimary;
+  color: $colorWhite;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  height: 100%;
+  width: 275px;
+
+  transition: width 0.2s;
+
+  @include shadow-default;
+
+  @include breakpoint-desktop {
+    display: none;
+  }
+
+  @include breakpoint-mobile {
+    position: absolute;
+    top: 0;
+
+    object {
+      height: 64px;
+    }
+
+    &--closed {
+      width: 0 !important;
+      overflow: hidden;
+    }
+  }
+
+  &__top {
+    flex: 1 0 auto;
+
+    @include breakpoint-mobile {
+      display: none;
+    }
+  }
+
+  /*
+  &__logo {
+    display: flex;
+    justify-content: end;
+    border-color: transparent;
+    padding: 2em;
+
+    h1 {
+      padding: 0 30px;
+    }
+  }
+  */
+
+  &__bottom {
+    height: 10vh;
+
+    @include breakpoint-mobile {
+      flex: 1 0 auto;
+      //display: none;
+    }
+  }
+
+  &__menu {
+    padding: 0em 2em;
+    //border-top: 1px solid $colorGray3;
+
+    nav {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /*
+  &__description {
+    padding: 0 2em 2em 2em;
+    //font-size: map-get($fontSize, 'small');
+    color: $colorGray0;
+  }
+  */
+
+  &__lang {
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    img {
+      height: 32px;
+    }
+
+    > :not(:last-child) {
+      margin-right: 1em;
+    }
+  }
+}

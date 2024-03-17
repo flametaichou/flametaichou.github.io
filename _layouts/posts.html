@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<!--
+<h1>{{ page.title }}</h1>
+-->
+
+<div class="toolbar">
+    <div class="content__wrapper toolbar__inner">
+        <div class="f-tabs">
+            <div class="f-tab {% if page.url == '/posts/' or page.url contains '/posts/tags/' %}f-tab--active{% endif %}">
+                <a href="/posts/">
+                    {% include components/i18n.html code = 'category.all' %}
+                </a>
+            </div>
+            <div class="f-tab {% if page.url contains '/posts/articles/' %}f-tab--active{% endif %}">
+                <a href="/posts/articles/">
+                    {% include components/i18n.html code = 'category.articles' %}
+                </a>
+            </div>
+            <div class="f-tab {% if page.url contains '/posts/notes/' %}f-tab--active{% endif %}">
+                <a href="/posts/notes/">
+                    {% include components/i18n.html code = 'category.notes' %}
+                </a>
+            </div>
+        </div>
+
+        <!-- FIXME -->
+        <div style="flex: 1 0;"></div>
+
+        <div class="toolbar__search">
+            <label for="search-input">
+                {% include components/i18n.html code = 'search' %}
+            </label>
+            <input type="text" id="search-input" class="f-input f-input--search"/>
+        </div>
+    </div>
+</div>
+
+<div class="content__wrapper">
+    {{ content }}
+</div>

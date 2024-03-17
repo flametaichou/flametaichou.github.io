@@ -1,0 +1,86 @@
+$sizes: (
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4
+);
+
+.pa {
+  @each $sizeName, $size in $sizes {
+    &-#{$sizeName} {
+      padding: $size + em;
+    }
+  }
+}
+
+.pb {
+  @each $sizeName, $size in $sizes {
+    &-#{$sizeName} {
+      padding-bottom: $size + em;
+    }
+  }
+}
+
+.pt {
+  @each $sizeName, $size in $sizes {
+    &-#{$sizeName} {
+      padding-top: $size + em;
+    }
+  }
+}
+
+.pl {
+  @each $sizeName, $size in $sizes {
+    &-#{$sizeName} {
+      padding-left: $size + em;
+    }
+  }
+}
+
+.pr {
+  @each $sizeName, $size in $sizes {
+    &-#{$sizeName} {
+      padding-right: $size + em;
+    }
+  }
+}
+
+.ma {
+  @each $sizeName, $size in $sizes {
+    &-#{$sizeName} {
+      margin: $size + em;
+    }
+  }
+}
+
+.mb {
+  @each $sizeName, $size in $sizes {
+    &-#{$sizeName} {
+      margin-bottom: $size + em;
+    }
+  }
+}
+
+.mt {
+  @each $sizeName, $size in $sizes {
+    &-#{$sizeName} {
+      margin-top: $size + em;
+    }
+  }
+}
+
+.ml {
+  @each $sizeName, $size in $sizes {
+    &-#{$sizeName} {
+      margin-left: $size + em;
+    }
+  }
+}
+
+.mr {
+  @each $sizeName, $size in $sizes {
+    &-#{$sizeName} {
+      margin-right: $size + em;
+    }
+  }
+}

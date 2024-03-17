@@ -1,0 +1,39 @@
+<div class="bookmarks-level">
+    <h{{ include.level | default: 2 }} id={{ include.category.name }}>{{ include.category.name }}</h{{ include.level | default: 2 }}>
+
+    <div class="bookmarks-level__content">
+        <img src="{{ include.category.img | default: '/data/images/book.svg' }}" alt="{{ include.category.name }}"/>
+
+        <ul>
+            {% for link in include.category.links %}
+            <li>
+                <!-- FIXME: why it becomes wider when a span goes after it? -->
+                <a href="{{ link.url }}" target="_blank">
+                    {{ link.title }}
+                </a>
+
+                <!--
+                <span class="chip chip--outlined chip--small chip--default">
+                    {% assign parts = link.url | split: "/" %}
+                    {{ parts[2] }}
+                </span>
+                -->
+
+                <span class="bookmarks-level__hint">
+                    {% assign parts = link.url | split: "/" %}
+                    {{ parts[2] }}
+                </span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="bookmarks-level__children">
+        {% if include.category.children %}
+            {% for child in include.category.children %}
+                {% assign next_level = include.level | plus: 1 %}
+                {% include bookmarks_level.html category = child level = next_level %}
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>

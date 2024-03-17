@@ -1,0 +1,36 @@
+.burger {
+  z-index: 4;
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &:before,
+  &:after,
+  div {
+    //background: $colorBlack;
+    background: $colorWhite;
+    content: "";
+    display: block;
+    height: 4px;
+    border-radius: 2px;
+    margin: 7px 0;
+    transition: 0.3s;
+  }
+
+  &--active:before {
+    transform: translateY(12px) rotate(135deg);
+  }
+  &--active:after {
+    transform: translateY(-10px) rotate(-135deg);
+  }
+  &--active div {
+    transform: scale(0);
+  }
+  &--active:before,
+  &--active:after,
+  &--active div {
+    //background: $colorWhite;
+  }
+}

@@ -1,11 +1,11 @@
 ---
-layout: tags
-title: Posts
-description: All posts
+layout: posts
+title: Articles
+description: All articles
 ---
 
 <div id="search-results" class="posts">
-    {% for post in site.posts %}
+    {% for post in site.categories.articles %}
 
     {% include components/preview_post.html post = post %}
 

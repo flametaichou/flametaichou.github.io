@@ -10,6 +10,7 @@ a {
   }
 }
 
+/*
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
@@ -24,7 +25,9 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: $colorGray2;
 }
+*/
 
+/*
 h1 {
   font-size: 2.5em;
   line-height: calc(1ex / 0.42);
@@ -59,4 +62,38 @@ h6 {
   font-size: 1em;
   line-height: calc(1ex / 0.32);
   //margin: calc(1ex / 0.32) 0;
+}
+*/
+
+.nav {
+  display: flex;
+  gap: 10px;
+
+  a {
+    color: $colorGray0;
+    font-size: map-get($fontSize, 'large');
+    text-decoration: none;
+
+    &:active {
+      color: $colorGray0;
+    }
+
+    &:visited {
+      color: $colorWhite;
+    }
+  }
+
+  &-item {
+    @include border-radius-default;
+    padding: 3px 20px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba($colorSecondary, 0.2);
+    }
+
+    &:active, &--active {
+      background-color: $colorSecondary !important;
+    }
+  }
 }

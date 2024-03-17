@@ -1,20 +1,23 @@
-let sidebarOpened = false;
+let menuOpened = false;
 
-toggleSidebar = function () {
-    sidebarOpened = !sidebarOpened;
+toggleMenu = function () {
+    menuOpened = !menuOpened;
 
-    const sidebar = document.getElementById('sidebar');
-    const sidebarBtn = document.getElementById('sidebar-btn');
+    //const sidebar = document.getElementById('sidebar');
+    const menu = document.getElementById('menu');
+    const menuBtn = document.getElementById('menu-btn');
     const overlay = document.getElementById('overlay');
 
-    if (!sidebarOpened) {
-        sidebar.classList.add('navigation--closed');
+    if (!menuOpened) {
+        //sidebar.classList.add('navigation--closed');
+        menu.classList.add('menu--closed');
         overlay.classList.add('overlay--closed');
-        sidebarBtn.classList.remove('header__toggle--active');
+        menuBtn.classList.remove('burger--active');
 
     } else {
-        sidebar.classList.remove('navigation--closed');
+        //sidebar.classList.remove('navigation--closed');
+        menu.classList.remove('menu--closed');
         overlay.classList.remove('overlay--closed');
-        sidebarBtn.classList.add('header__toggle--active');
+        menuBtn.classList.add('burger--active');
     }
 };

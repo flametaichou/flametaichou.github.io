@@ -1,0 +1,27 @@
+.f-tabs {
+  display: flex;
+}
+
+.f-tab {
+  display: flex;
+  align-items: center;
+
+  a {
+    @include hidden-anchor;
+  }
+
+  font-size: map-get($fontSize, 'default');
+
+  &:not(:last-of-type) {
+    margin-right: 1em;
+  }
+
+  &:hover {
+    color: $colorSecondary;
+  }
+
+  &--active {
+    color: $colorSecondary;
+    border-bottom: 4px solid $colorSecondary;
+  }
+}

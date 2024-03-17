@@ -1,24 +1,73 @@
 @import "../vars";
 @import "../mixins";
 
-$cardSize: 400px;
+//$cardSize: 500px;
+$imagePreviewHeight: 250px; // $cardSize / 2
+
+.toolbar {
+  background-color: $colorGray0;
+  border-bottom: 1px solid $colorGray1;
+
+  //color: $colorWhite;
+  //@include shadow-default;
+
+  &__inner {
+    display: flex;
+    gap: 1em;
+  }
+
+  &__search {
+    padding: 0.5em 0;
+
+    label {
+      display: none;
+    }
+  }
+}
+
+.tags {
+  padding-top: 2em;
+
+  &__list {
+    margin-bottom: 1em;
+  }
+}
 
 .posts {
-  padding: 2em;
+  padding: 2em 0;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax($cardSize, 1fr));
-  grid-gap: 2vh;
-  grid-row-gap: 2vh;
+  > :not(:last-child) {
+    margin-bottom: 2em;
+  }
+
+  /*
+  &--notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($cardSize, 1fr));
+    grid-gap: 2vh;
+    grid-row-gap: 2vh;
+  }
+  */
 }
 
 .post-preview {
   display: flex;
-  flex-direction: column;
+  //flex-direction: column;
   position: relative;
-  min-height: $cardSize;
+  //min-height: $cardSize;
 
   border: 1px solid $colorGray0;
+
+  //background-color: $colorGray0;
+
+  //@include shadow-default;
+  @include border-radius-default;
+
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    @include shadow-default;
+  }
 
   &__cover {
     flex: 1 0;
@@ -35,7 +84,7 @@ $cardSize: 400px;
 
     img {
       max-width: 100%;
-      height: $cardSize / 2;
+      height: $imagePreviewHeight;
       z-index: 0;
     }
   }
@@ -68,6 +117,10 @@ $cardSize: 400px;
 
   &__date {
     color: $colorGray1;
+
+    img {
+      filter: brightness(0.8);
+    }
   }
 
   &__tags {
@@ -77,7 +130,8 @@ $cardSize: 400px;
   &__section {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    //justify-content: space-between;
+    gap: 1em;
 
     &:not(:first-of-type) {
       padding-top: 20px;
@@ -90,7 +144,8 @@ $cardSize: 400px;
 
   &--cover {
     @include breakpoint-mobile {
-      grid-row: span 2;
+      //grid-row: span 2;
+      flex-direction: column;
     }
 
     .post-preview__category {
@@ -105,7 +160,7 @@ $cardSize: 400px;
   $notesLineHeight: 27px;
 
   border: 1px solid $colorGray0;
-  min-height: $cardSize;
+  //min-height: $cardSize;
   font-style: italic;
 
   display: flex;

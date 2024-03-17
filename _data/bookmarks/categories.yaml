@@ -1,0 +1,184 @@
+- name: Linux
+  img: https://upload.wikimedia.org/wikipedia/commons/f/f1/Icons8_flat_linux.svg
+  links:
+    - url: https://serverfault.com/questions/378086/how-to-extend-a-linux-pv-partition-online-after-virtual-disk-growth
+      title: Extend a Linux PV partition online after virtual disk growth
+  children:
+
+- name: Docker
+  img: https://upload.wikimedia.org/wikipedia/commons/a/a7/Docker-svgrepo-com.svg
+  links:
+    - url: https://www.cloudsavvyit.com/14114/how-to-connect-to-localhost-within-a-docker-container/
+      title: How to Connect to Localhost Within a Docker Container
+  children:
+
+- name: HTTP
+  img: https://upload.wikimedia.org/wikipedia/commons/5/5b/HTTP_logo.svg
+  links:
+    - url: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+      title: CORS 
+    - url: https://habr.com/ru/company/otus/blog/706908/
+      title: Развернуто про CORS 
+    - url: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite
+      title: Set-Cookie SameSite 
+    - url: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+      title: Status codes 
+    - url: https://www.rfc-editor.org/rfc/rfc7231#section-6.1
+      title: Status codes
+  children:
+
+- name: Programming
+  img:
+  links:
+    - url: https://habr.com/ru/post/710166/
+      title: О важности владения кодом
+  children:
+    - name: Codestyle
+      img:
+      links:
+        - url: https://habr.com/ru/post/44748/
+          title:  нейминг функций 
+        - url: https://learn.javascript.ru/function-basics
+          title: нейминг функций
+        - url: https://t.me/myobrechenychannel/180
+          title:  Развернуто и эмоционально про плохой нейминг 
+        - url: https://habr.com/ru/company/ispsystem/blog/714992/
+          title:  Проблема именования — взгляд под необычным углом 
+    - name: PHP
+      img: https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg
+      links:
+        - url: https://github.com/brandonsavage/Upload
+          title:  File upload code example 
+    - name: Java
+      img: https://upload.wikimedia.org/wikipedia/ru/3/39/Java_logo.svg
+      links:
+        - url: https://maven.apache.org/settings.html
+          title:  About maven settings 
+    - name: Frontend
+      img:
+      links:
+        - url: https://habr.com/ru/company/samokat_tech/blog/704342/
+          title:  как тестировать современный фронтенд 
+        - url: https://krausest.github.io/js-framework-benchmark/current.html
+          title: JS framework benchmark
+    - name: HTML / CSS
+      img:
+      links:
+        - url: https://ant.design/components/overview/
+          title:  Ant Design UI library
+        - url: https://pictogrammers.github.io/@mdi/font/7.1.96/
+          title:  All Material Design Icons (MDI) 
+        - url: https://medium.com/hypersphere-codes/randomness-in-css-b55a0845c8dd
+          title: Randomness in CSS
+        - url: https://www.geeksforgeeks.org/auto-fit-vs-auto-fill-property-in-css-grid/
+          title: Auto-Fit vs Auto-Fill Property in CSS Grid
+        - url: https://www.smashingmagazine.com/2020/07/css-techniques-legibility/
+          title: Modern CSS Techniques To Improve Legibility
+        - url: https://clrs.cc/
+          title:  A nicer color palette for the web  (default web palette replacement) 
+    - name: VueJS
+      img: https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg
+      links:
+        - url: https://antdv.com/components/overview
+          title:  Ant Design for Vue 
+        - url: https://habr.com/ru/post/700392/
+          title:  Сервисная архитектура во Vue 2 
+    - name: Examples \ how to
+      img:
+      links:
+        - url: https://codepen.io/ceg9498/post/creating-lined-paper
+          title: Lined paper in CSS
+        - url: https://nicolasgallagher.com/pure-css-folded-corner-effect/
+          title: Pure CSS folded-corner effect
+
+- name: Git
+  img: https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg
+  links:
+    - url: https://paulhammant.com/2013/04/05/what-is-trunk-based-development/
+      title: trunk based development 
+    - url: https://nvie.com/posts/a-successful-git-branching-model/
+      title: git flow 
+    - url: https://habr.com/ru/post/106912/
+      title: git flow (на русском)
+  children:
+
+- name: Design
+  img:
+  links:
+    - url: https://www.nngroup.com/articles/popups/
+      title: "Popups: 10 Problematic Trends and Alternatives"
+    - url: https://awdee.ru/10-problems-of-popups/
+      title: 10 проблем попапов и как их решить
+  children:
+
+- name: Testing
+  img:
+  links:
+    - url: https://en.wikipedia.org/wiki/Regression_testing
+      title: Regression testing 
+    - url: https://en.wikipedia.org/wiki/Test-driven_development
+      title: TDD
+  children:
+
+- name: Software
+  img:
+  links:
+    - url: https://github.com/pulsar-edit/pulsar
+      title: Pulsar text editor (the Atom fork)
+  children:
+
+- name: Jekyll / GitHub Pages
+  img:
+  links:
+    - url: https://github.com/github/pages-gem
+      title: GitHub Pages ruby gem 
+    - url: https://shopify.github.io/liquid/basics/operators/
+      title: Liquid Operators 
+    - url: https://www.section.io/engineering-education/build-a-jekyll-site/
+      title: Building a Blog site from Scratch using Jekyll 
+    - url: https://jun711.github.io/web/how-to-highlight-code-on-a-Jekyll-site-syntax-highlighting/
+      title: How to highlight code on Jekyll site 
+    - url: https://learnvue.co/tutorials/deploy-vue-to-github-pages
+      title: How To Deploy Your Vue App to GitHub Pages 
+    - url: https://gohugo.io/hosting-and-deployment/hosting-on-github/
+      title: Hosting Hugo on GitHub Pages 
+    - url: https://sylvaindurand.org/making-jekyll-multilingual/
+      title: Making Jekyll multilingual 
+    - url: https://www.usecue.com/blog/multilingual-jekyll-websites/
+      title: Multilingual Jekyll websites 
+    - url: https://meumobi.github.io/jekyll/2019/06/05/multi-languages-with-jekyll.html
+      title: Deploy a multi-language jekyll site 
+    - url: https://leo3418.github.io/collections/multilingual-jekyll-site.html
+      title: Build a Multilingual Jekyll Site 
+    - url: https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/
+      title: Creating a Multilingual Blog With Jekyll 
+    - url: https://github.com/pages-themes
+      title: GitHub pages themes 
+    - url: https://sayzlim.net/jekyll-include-component/
+      title: How to Build a Jekyll Component 
+    - url: https://felixhayashi.github.io/ReadmeGalleryCreatorForGitHub/
+      title: README.md Gallery Creator for GitHub
+  children:
+
+- name: Other
+  img:
+  links:
+    - url: https://betterprogramming.pub/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841
+      title: About string case styles 
+    - url: https://semver.org/
+      title: Semantic versioning 
+    - url: https://github.com/MubertAI/Mubert-Text-to-Music
+      title: prompt-based music generation 
+    - url: https://google.github.io/styleguide/
+      title: Google Style Guides 
+    - url: https://github.com/vweevers/common-changelog
+      title: Common Changelog style guide for changelogs 
+    - url: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+      title: List of language codes (ISO 639-1) 
+    - url: https://www.canva.com/colors/color-palettes/
+      title: Canva color palettes explorer 
+    - url: https://github.com/kylestetz/slang
+      title: Slang — An audio programming language 
+    - url: https://cloudconvert.com
+      title: Online file format converter
+  children: 

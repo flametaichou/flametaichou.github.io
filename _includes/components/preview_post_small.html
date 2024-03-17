@@ -1,0 +1,46 @@
+<article
+    class="post-preview {% if post.categories %}post-preview--{{ post.categories }}{% endif %} {% if post.cover_image %}post-preview--cover{% endif %}"
+>
+    <div class="post-preview__main">
+
+        <div class="post-preview__section">
+            <div class="post-preview__date with-icon">
+                <img src="/data/icons/FA-calendar.svg" alt="Calendar"/>
+                {% include components/date.html date = include.post.date %}
+            </div>
+
+            <div class="post-preview__title">
+                <strong>
+                    <a href="{{ include.post.url | relative_url }}">
+                        {{ include.post.title }}
+                    </a>
+                </strong>
+            </div>
+
+            <div class="post-preview__date with-icon">
+                <img src="/data/icons/FA-directory.svg" alt="Category"/>
+                {% assign category = include.post.categories | first | default: 'other' %}
+                {% assign categoryCode = 'category.' | append: category %}
+                {% include components/i18n.html code = categoryCode %}
+            </div>
+
+            <nav class="post-preview__tags">
+                <!--
+                {% assign category = include.post.categories | first | default: 'other' %}
+                {% include components/category.html category = category small = true %}
+                -->
+
+                {% for tag in include.post.tags %}
+                <a href="/posts/tags/{{ tag | slugify }}" class="chip chip--small chip--outlined chip--clickable chip--secondary">
+                    #{{ tag }}
+                </a>
+                {% endfor %}
+            </nav>
+
+            <div class="post-preview__date with-icon">
+                <img src="/data/icons/FA-translation.svg" alt="Language"/>
+                {{ include.post.lang }}
+            </div>
+        </div>
+    </div>
+</article>

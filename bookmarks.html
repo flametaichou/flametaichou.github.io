@@ -1,0 +1,9 @@
+---
+layout: page
+---
+
+<div class="bookmarks">
+    {% for category in site.data.bookmarks.categories %}
+        {% include bookmarks_level.html category = category level = 2 %}
+    {% endfor %}
+</div>

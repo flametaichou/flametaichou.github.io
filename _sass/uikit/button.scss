@@ -4,11 +4,12 @@
   @include border-radius-default;
   font-weight: bold;
   padding: 0.5em 0.8em;;
+  line-height: 32px;
   cursor: pointer;
   text-decoration: none;
-  line-height: 32px;
   transition: background-color 0.2s;
   white-space: nowrap;
+  border: none;
 
   &:hover {
     background-color: rgba($colorGray2, 0.2);

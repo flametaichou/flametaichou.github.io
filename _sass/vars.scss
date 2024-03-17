@@ -3,6 +3,7 @@
 $colorPrimary: #303032;
 $colorSecondary: #5E8A14;
 $colorSecondaryLighten1: lighten($colorSecondary, 0.8);
+$colorSecondaryLighten5: rgba(94, 138, 20, 0.2);
 $colorAccent: #EBB30A;
 
 $colorInfo: #278AB0;
@@ -16,26 +17,34 @@ $colorPurpleDarken1: darken($colorPurple, 0.8);
 $colorBlack: #111111;
 $colorWhite: #ffffff;
 $colorGray0: #f3f3f3;
-$colorGray1: #cecece;
-$colorGray2: #aaaaaa;
+$colorGray1: #d4d4d4;
+$colorGray2: #b7b7b7;
 $colorGray3: gray;
-$colorGray4: dimgray;
+$colorGray4: #353535;
 
-$widthMobile: 1024px;
-$widthContent: 940px;
+$widthMobile: 900px;
+$widthContent: 1024px;
 
 $fontSizes: (
         'mobile': (
-                'small': 16px,
-                'default': 20px,
-                'large': 28px,
-                'xl': 36px
-        ),
-        'desktop': (
+                'xs': 13px,
                 'small': 14px,
                 'default': 18px,
                 'large': 24px,
-                'xl': 32px
+                'xl': 28px
+        ),
+        'desktop': (
+                'xs': 13px,
+                'small': 14px,
+                'default': 18px,
+                'large': 24px,
+                'xl': 28px
         )
 );
 $fontSize: map-get($fontSizes, 'desktop');
+
+$fontFamily: 'Poppins', 'Verdana', sans-serif;
+$fontFamilyHeaders: 'Arimo', 'Helvetica Neue', Arial, sans-serif;
+$fontFamilyText: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+$fontFamilyBold: 'Alfa Slab One', 'Impact', serif;
+$fontFamilyMono: monospace;

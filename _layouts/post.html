@@ -10,7 +10,7 @@ layout: default
         style="background-image: url('/data/images/{{ page.cover_image }}');"
     >
         <div class="post__overlay"></div>
-        <img src="/data/images/{{ page.cover_image }}" alt="{{ page.title }}"/>
+        <img class="content__wrapper" src="/data/images/{{ page.cover_image }}" alt="{{ page.title }}"/>
     </div>
     {% endif %}
 
@@ -35,17 +35,7 @@ layout: default
                 </div>
             </div>
         </div>
-        {% if page.categories contains "notes" %}
-        <div class="post__section">
-            <h1>
-                {% if page.title%}
-                {{ page.title }}
-                {% else %}
-                Untitled post
-                {% endif %}
-            </h1>
-        </div>
-        {% else %}
+
         <div class="post__title">
             <h1>
                 {% if page.title%}
@@ -55,22 +45,21 @@ layout: default
                 {% endif %}
             </h1>
             {% if page.description%}
-            <div>
+            <div class="post__description">
                 {{ page.description }}
             </div>
             {% endif %}
         </div>
-        {% endif %}
 
-        <div class="post__content markdown">
+        <div class="post__content page markdown">
             {{ content }}
         </div>
 
         <div class="post__section">
             <nav class="post__tags">
                 {% for tag in page.tags %}
-                <a href="/tags/{{ tag | slugify }}" class="chip chip--small chip--outlined chip--clickable chip--secondary">
-                    {{ tag }}
+                <a href="/posts/tags/{{ tag | slugify }}" class="chip chip--small chip--outlined chip--clickable chip--secondary">
+                    #{{ tag }}
                 </a>
                 {% endfor %}
             </nav>
