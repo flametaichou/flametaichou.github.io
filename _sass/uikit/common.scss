@@ -65,6 +65,33 @@ h6 {
 }
 */
 
+
+h1 {
+  font-size: map-get($fontSize, 'xxl');
+}
+
+h2 {
+  font-size: map-get($fontSize, 'xl');
+}
+
+h3 {
+  font-size: map-get($fontSize, 'large');
+}
+
+h4 {
+  font-size: map-get($fontSize, 'default');
+}
+
+h5 {
+  font-size: map-get($fontSize, 'small');
+}
+
+h6 {
+  font-size: map-get($fontSize, 'xs');
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
 .nav {
   display: flex;
   gap: 10px;

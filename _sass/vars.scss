@@ -31,14 +31,16 @@ $fontSizes: (
                 'small': 14px,
                 'default': 18px,
                 'large': 24px,
-                'xl': 28px
+                'xl': 28px,
+                'xxl': 32px
         ),
         'desktop': (
                 'xs': 13px,
                 'small': 14px,
                 'default': 18px,
                 'large': 24px,
-                'xl': 28px
+                'xl': 28px,
+                'xxl': 32px
         )
 );
 $fontSize: map-get($fontSizes, 'desktop');

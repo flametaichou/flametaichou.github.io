@@ -56,7 +56,7 @@ body {
 
 .header {
   //height: 2em;
-  display: flex;
+  //display: flex;
   align-items: center;
   //padding: 1em 2em;
   background: $colorPrimary;
@@ -111,6 +111,8 @@ body {
   &__logo {
     display: flex;
     align-items: center;
+    text-wrap: nowrap;
+    overflow-x: hidden;
 
     @include hidden-anchor;
 
@@ -125,9 +127,11 @@ body {
 }
 
 .footer {
+  //display: flex;
   background: $colorGray0;
   color: $colorGray2;
   font-size: map-get($fontSize, 'xs');
+  padding: 2em 0;
 
   img {
     height: 32px;
@@ -144,8 +148,6 @@ body {
     justify-content: space-between;
     //align-items: flex-end;
     gap: 1em;
-
-    padding: 2em;
   }
 
   &__title {
@@ -284,7 +286,7 @@ body {
 
   // TODO: move to separated class
   &__wrapper {
-    $wrapperPadding: 2em;
+    $wrapperPadding: 1em;
 
    // width: calc(min(100%, #{$widthContent}) - (2 * #{$wrapperPadding}));
     //padding-left: $wrapperPadding;
@@ -303,6 +305,9 @@ body {
 
     max-width: calc(min(100%, #{$widthContent}) - (2 * #{$wrapperPadding}));
     min-width: calc(min(100%, #{$widthContent}) - (2 * #{$wrapperPadding}));
+
+    // it doesn't work with images
+    //width: calc(min(100%, #{$widthContent}) - (2 * #{$wrapperPadding}));
     margin: 0 auto;
 
     flex: 1 0;
@@ -319,32 +324,7 @@ body {
   }
   */
 
-  h1 {
-    font-size: map-get($fontSize, 'xl');
-  }
-
-  h2 {
-    font-size: map-get($fontSize, 'xl');
-  }
-
-  h3 {
-    font-size: map-get($fontSize, 'large');
-  }
-
-  h4 {
-    font-size: map-get($fontSize, 'default');
-  }
-
-  h5 {
-    font-size: map-get($fontSize, 'small');
-  }
-
-  h6 {
-    font-size: map-get($fontSize, 'xs');
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-  }
-
+  // TODO: move to common?
   h1, h2, h3, h4, h5, h6 {
     margin-top: 2.1em;
     margin-bottom: 1.3em;
@@ -360,6 +340,10 @@ body {
   blockquote {
     margin-inline-start: 0;
     margin-inline-end: 0;
+  }
+
+  ul {
+    overflow-x: hidden;
   }
 
   li {
