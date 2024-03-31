@@ -98,8 +98,11 @@ h6 {
 
   a {
     color: $colorGray0;
-    font-size: map-get($fontSize, 'large');
     text-decoration: none;
+
+    @include breakpoint-mobile {
+      font-size: map-get($fontSize, 'large');
+    }
 
     &:active {
       color: $colorGray0;
