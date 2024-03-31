@@ -23,12 +23,12 @@ $colorGray3: gray;
 $colorGray4: #353535;
 
 $widthMobile: 900px;
-$widthContent: 1024px;
+$widthContent: 768px;
 
 $fontSizes: (
         'mobile': (
                 'xs': 13px,
-                'small': 14px,
+                'small': 15px,
                 'default': 18px,
                 'large': 24px,
                 'xl': 28px,
@@ -36,7 +36,7 @@ $fontSizes: (
         ),
         'desktop': (
                 'xs': 13px,
-                'small': 14px,
+                'small': 15px,
                 'default': 18px,
                 'large': 24px,
                 'xl': 28px,

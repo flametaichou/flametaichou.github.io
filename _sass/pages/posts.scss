@@ -69,6 +69,10 @@ $imagePreviewHeight: 250px; // $cardSize / 2
     @include shadow-default;
   }
 
+  &__info {
+    font-size: map-get($fontSize, 'small');
+  }
+
   &__cover {
     flex: 1 0;
     display: flex;
@@ -144,9 +148,10 @@ $imagePreviewHeight: 250px; // $cardSize / 2
   }
 
   &--cover {
+    flex-direction: column;
+
     @include breakpoint-mobile {
       //grid-row: span 2;
-      flex-direction: column;
     }
 
     .post-preview__category {

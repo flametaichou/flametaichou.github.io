@@ -9,6 +9,7 @@ code.highlighter-rouge.language-plaintext {
   font-size: 90%;
   background: $colorGray0;
   padding: 0.125rem 0.25rem;
+  word-break: break-word;
   @include border-radius-default;
 }
 

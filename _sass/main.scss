@@ -177,7 +177,7 @@ body {
 }
 
 .overlay, .loader {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100vh;
@@ -424,7 +424,13 @@ body {
   */
 
   img {
-    max-width: 80%;
+    @include breakpoint-desktop {
+      max-width: 80%;
+    }
+    @include breakpoint-mobile {
+      max-width: 100%;
+    }
+
     display: block;
     margin: 0 auto;
 
@@ -435,8 +441,36 @@ body {
     }
   }
 
-  table {
+
+  table:not(.rouge-table) {
     //width: 100%; // Нельзя, ломает блоки с кодом
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    border: 1px solid $colorSecondary;
+    @include border-radius-default;
+
+    th, td {
+      //padding: 0.5em 2em 0.5em 0;
+      padding: 0.5em 0.5em;
+      text-align: left;
+    }
+
+    thead {
+      background-color: $colorSecondary;
+      color: $colorWhite;
+    }
+
+    tbody {
+      tr {
+        &:not(:last-child) {
+          border-bottom: 1px solid $colorGray1;
+        }
+
+        &:hover {
+          background-color: $colorGray0;
+        }
+      }
+    }
   }
 
   blockquote {

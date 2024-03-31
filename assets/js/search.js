@@ -1,6 +1,8 @@
 let input = undefined;
 
 function search() {
+    setLoaderVisibility(true);
+
     query = input.value;
 
     const resultsNode = document.getElementById('search-results');
@@ -14,6 +16,8 @@ function search() {
             articleNode.style = Object.assign(articleNode.style, { display: undefined });
         }
     }
+
+    setLoaderVisibility(false);
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event

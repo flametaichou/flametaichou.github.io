@@ -4,6 +4,8 @@ function setLoaderVisibility(value) {
     if (value) {
         loader.classList.remove('loader--closed');
     } else {
-        loader.classList.add('loader--closed');
+        setTimeout(() => {
+            loader.classList.add('loader--closed');
+        }, 100);
     }
 }

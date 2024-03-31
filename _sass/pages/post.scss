@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
 
+  &__info {
+    font-size: map-get($fontSize, 'small');
+  }
+
   &__main {
     display: flex;
     flex: 1 0;
