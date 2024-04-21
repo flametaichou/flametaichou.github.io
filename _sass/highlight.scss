@@ -5,6 +5,14 @@
 $textColor: $colorGray4;
 $colorBackground: $colorGray0;
 
+code.highlighter-rouge {
+  &.highlighter-no-lines {
+    .rouge-gutter {
+      display: none;
+    }
+  }
+}
+
 code.highlighter-rouge.language-plaintext {
   font-size: 90%;
   background: $colorGray0;

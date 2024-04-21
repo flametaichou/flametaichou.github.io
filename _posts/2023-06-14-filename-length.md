@@ -36,8 +36,8 @@ For filesystems with limitation in bytes it is a little bit more sophisticated: 
 (it depends on encoding used), so the maximum filename length in characters can vary for different names.
 
 For example: most of popular Linux distros use UTF-8 as system encoding by default. In this case, filenames are
-encoded in UTF-8 bytes, and every character can weight 1-8 bytes ('TODO' different to UTF-16 where every character can weight 2-8 bytes).
-So, the limit can be 23-255 characters depening on which characters are used in filename.
+encoded in UTF-8 bytes, and every character can weight 1-4 bytes (which is different from UTF-16 where every character can weight 2-4 bytes).
+So, the limit can be 23-255 characters depending on which characters are used in filename.
 
 ### Counting bytes
 Here are the examples of how filename bytes can be counted:
@@ -116,8 +116,8 @@ because it contains cyrillic letters that weight 2 bytes in UTF-8 encoding. File
 This file will be saved. 
 
 To sum up, if the filesystem limitation is in bytes, the filename length limit in symbols will depend on the symbols used.
-And, as you can see, there is no difference for UTF-16, because UTF-16 is not so efficient for storing latin symbols. 
-(TODO: stores latin symbols in two bytes?)
+And, as you can see, there is no difference for UTF-16, because UTF-16 is not as efficient for storing latin symbols as UTF-8
+(UTF-16 stores latin symbols in two bytes, whereas UTF-8 requires only one).
 
 ### Related errors
 
