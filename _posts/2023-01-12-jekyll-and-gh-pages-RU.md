@@ -237,7 +237,7 @@ tag: {tag}
 ---
 ```
 
-К счастью описанные действия уже автоматизировали, существует [Github Action](https://github.com/marketplace/actions/tag-page-generator-for-jekyll-blogs) который генерирует такие страницы для тэгов. Инструкции и более детальный анализ проблемы можно найти в [блоге автора](https://www.joehxblog.com/github-actions-tag-page-generator-for-jekyll-blogs/) этого Action'а.
+К счастью, описанные действия уже автоматизировали, существует [Github Action](https://github.com/marketplace/actions/tag-page-generator-for-jekyll-blogs) который генерирует такие страницы для тэгов. Инструкции и более детальный анализ проблемы можно найти в [блоге автора](https://www.joehxblog.com/github-actions-tag-page-generator-for-jekyll-blogs/) этого Action'а.
 
 
 > Решение с единой страницей для тэгов, на мой взгляд:

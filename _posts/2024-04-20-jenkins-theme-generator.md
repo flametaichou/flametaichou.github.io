@@ -22,16 +22,16 @@ that were changing its appearance. I used it with
 (that is the fork of [jenkins-neo-theme](https://jenkins-contrib-themes.github.io/jenkins-neo-theme/))
 for a long time.
 
-Jenkins got a fancy new appearance in version `2.346.1`, which contains a full restyle and a new set of icons.
-Compatibility with existing themes was broken. Author of neo2-theme stopped its maintenance. But the new 
+In version `2.346.1` Jenkins got a fancy new appearance, including a complete restyling and a new set of icons.
+But the compatibility with existing themes was broken. Author of neo2-theme stopped its maintenance. But the new 
 appearance was already great, so the need for a custom theme has become less urgent.
 
-The only two reasons for me to create my own custom theme were:
+I wanted to change only two things:
 - Some of the plugins' icons were still not in the same style with the whole system. 
-- I wanted to save some colors that I used to from neo2-theme 
-(for example, header background color, and dark background in console)
+- I wanted to save the colors that I used to from neo2-theme 
+(for example, header background color and dark background in console)
 
-These reasons led me to create my custom theme.
+These things led me to create my custom theme.
 
 ### How Jenkins themes work
 
@@ -39,7 +39,7 @@ All Jenkins themes work on the same principle: overriding (or redefining) the de
 of overriding styles is provided by multiple plugins. Some of them, such as the 
 [dark-theme](https://plugins.jenkins.io/dark-theme/) or
 [material-theme](https://plugins.jenkins.io/material-theme/)
-provide ready-made CSS themes, 
+provide they own CSS themes, 
 while others, such as the
 [simple-theme-plugin](https://plugins.jenkins.io/simple-theme-plugin/) or 
 [theme-manager](https://plugins.jenkins.io/theme-manager/),
@@ -54,7 +54,7 @@ In the beginning, this project was about only one CSS theme than changed the bac
 and some plugins icons. There was no goal to drastically change the default theme; I only wanted
 to make it similar to neo2.
 
-But in the process, I noticed that I can make colors variables (not a single header color) configurable, 
+But in the process, I noticed that I can make all color variables (not only the header color) configurable, 
 and I liked that idea.
 
 To accomplish this goal, I have needed to connect the CSS variables in Jenkins styles between them. This was
@@ -81,8 +81,6 @@ So, I simply built a small list of icons that can be replaced.
 After adding the interface for picking colors and icons, the project was done.
 
 ### Lit.js
-
-
 
 I used [lit.js](https://lit.dev/) to make this project. It was my first attempt to use it, and I want to make a note about it.
 
