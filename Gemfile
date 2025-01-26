@@ -1,8 +1,7 @@
-source 'http://www.rubygems.org'
+source 'https://rubygems.org'
 
-gem 'commonmarker', '~> 0.17.13'
-
-gem 'github-pages', '~> 214', group: :jekyll_plugins
+gem 'github-pages', '~> 232', group: :jekyll_plugins
+gem 'webrick', '~> 1.8'
 
 group :jekyll_plugins do
   gem 'jekyll-feed'

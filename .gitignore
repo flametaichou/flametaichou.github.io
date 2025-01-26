@@ -1,2 +1,11 @@
+/_site
+/_drafts
+*.lock
+.bundle
+
+### IntelliJ ###
 *.iml
 /.idea
+
+### VS Code ###
+/.vscode

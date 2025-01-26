@@ -1,22 +1,10 @@
-FROM ruby:2.7-alpine
+FROM ruby:3.3-alpine
 
-ENV GITHUB_GEM_VERSION 214
-ENV JSON_GEM_VERSION 1.8.6
+RUN apk update && apk add --no-cache make build-base
 
-RUN apk --update add --virtual build_deps \
-    build-base ruby-dev libc-dev linux-headers \
-  && gem install --verbose --no-document \
-    json:${JSON_GEM_VERSION} \
-    github-pages:${GITHUB_GEM_VERSION} \
-    jekyll-github-metadata \
-    minitest \
-  && apk del build_deps \
-  && apk add git \
-  && mkdir -p /usr/src/app \
-  && rm -rf /usr/lib/ruby/gems/*/cache/*.gem
-
-COPY ./ /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /src/site
+COPY Gemfile .
+RUN bundle install
 
 EXPOSE 4000 80
-CMD jekyll serve -d /_site --watch --force_polling -H 0.0.0.0 -P 4000
+CMD jekyll serve -d /_site --watch --force_polling --drafts -H 0.0.0.0 -P 4000

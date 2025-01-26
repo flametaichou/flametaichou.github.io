@@ -1,0 +1,12 @@
+services:
+  gh-pages:
+    container_name: gh-pages
+
+    build:
+      dockerfile: Dockerfile
+
+    ports:
+      - "4000:4000"
+      
+    volumes:
+      - "./:/src/site"
