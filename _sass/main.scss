@@ -332,9 +332,14 @@ body {
 
   p {
     margin-top: 0;
-    margin-bottom: 1em;
     line-height: 1.4;
     //    line-height: 1.334;
+
+    margin-block-end: 0;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1em;
+    }
   }
 
   blockquote {
@@ -485,7 +490,7 @@ body {
     }
 
     p {
-      display: inline;
+      //display: inline;
     }
   }
 
