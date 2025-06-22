@@ -2,14 +2,14 @@
 date: 2025-06-11
 title: A problem with GroupedOpenApi
 layout: post
-description: Possible solution if your GroupedOpenApi doesn't work in Spring Boot 3
+description: A possible solution if GroupedOpenApi bean doesn't work in Spring Boot 3
 categories: notes
 lang: en
 tags:
   - Java
 ---
 
-Yesterday I had a problem with `GroupedOpenApi` in my Spring Bot 3 project. It seemed like Swagger was completely ignoring it. Swagger was working fine, it used settings provided by `OpenAPI` bean, but it wasn't dividing my APIs into any groups. 
+Yesterday I had a problem with `GroupedOpenApi` in my Spring Boot 3 project. It seemed like Swagger was completely ignoring it. Swagger was working fine, it used settings provided by `OpenAPI` bean, but it wasn't dividing my APIs into any groups. 
 
 (I'm talking about these groups that are placed in the dropdown field, not tags)
 ![Groups](/data/images/posts/swagger-groups.png)
@@ -81,7 +81,7 @@ should be replaced with
 import org.springdoc.core.models.GroupedOpenApi;
 ```
 
-After applying these fixes, I've got working API groups. It looks like the migration wasn't completed properly, even though Swagger and everything else were working fine.
+After applying these fixes, I've got working API groups. It looks like the migration wasn't completed properly, even though Swagger and everything else were working fine except for the API groups.
 
 ### P.S.
 
