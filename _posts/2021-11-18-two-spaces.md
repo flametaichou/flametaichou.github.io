@@ -9,18 +9,7 @@ lang: en
 tags:
 ---
 
-There are two types of space characters - **Space** and **Non-breaking space**. They look identical, but they are the different symbols,
-and they are not equal. I didn't know about it because I haven't worked with typography a lot. Non-breaking space is used to prevent
-automatic line breaking.
-
-| Name | Decimal code | NCR | HEX code | Unicode |
-| --- | --- | --- | --- | --- |
-| Space ( ) | 32 | `&#32;` | 20 | `U+0020` |
-| Non-breaking space ( ) | 160 | `&#160;` | A0 | `U+00A0` |
-
-I discovered it when I worked on the reporting system. I had to pass a test by comparing
-`.xlsx` spreadsheets built with this system with the same files built with [BIRT](https://projects.eclipse.org/projects/technology.birt). Reports
-were compared by scripts, row-by-row. I fixed all the differences that I could notice, but the test was still failed.
+While working on the reporting system, I needed to pass a test by comparing `.xlsx` spreadsheets built with our system with those created with [BIRT](https://projects.eclipse.org/projects/technology.birt). Reports were compared by scripts, row-by-row. I identified and resolved all apparent differences, but the test was still failed.
 
 Cells in both files visually looked the same. There were numbers with spaces as decimal separators. 
 
@@ -41,9 +30,19 @@ Quick test written in JS showed the difference:
 
 BIRT used non-breaking space as the decimal separator (and it was correct), and I used the common space in my reporting system. 
 
+So, there are two types of space characters - **Space** and **Non-breaking space**. They look identical, but they are the different symbols,
+and they are not equal. Non-breaking space is used to prevent automatic line breaking.
+
+| Name | Decimal code | NCR | HEX code | Unicode |
+| --- | --- | --- | --- | --- |
+| Space ( ) | 32 | `&#32;` | 20 | `U+0020` |
+| Non-breaking space ( ) | 160 | `&#160;` | A0 | `U+00A0` |
+
+I didn't know about it because I haven't worked with typography a lot. After changing the separator symbol, all tests became green.
+
 ### Conclusion
 
-Different symbols can look the same (for example: latin `c` and cyrillic `с`). Space is one of these symbols, too. 
+Different symbols can look the same (for example: latin `c` and cyrillic `с`). And space is one of these symbols, too. 
 It can be just a space, or non-breaking space.
 
 Even if these symbols look similar, they are different for computers and software. 

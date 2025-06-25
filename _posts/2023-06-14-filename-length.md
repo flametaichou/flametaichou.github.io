@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Filename length
+title: Reaching maximum filename lengths
 date: 2023-06-14
 description: 
 categories: notes
@@ -8,6 +8,8 @@ cover_image:
 lang: en
 tags:
 ---
+
+I ran into a `java.io.FileNotFoundException: … (File name too long)` error one day, and it turned out to be much deeper than it seems. That’s why I started exploring it, and wrote this note.
 
 The most widely used Linux filesystems have **255 bytes** maximum filename length, meanwhile Microsoft-related filesystems have 
 the limit of **255 characters**. 

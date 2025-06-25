@@ -41,7 +41,7 @@ But why this unboxing occurs? And why using `null` constant is working?
 
 I decided to find answers to these questions.
 
-#### Explanation
+### Explanation
 
 According to [Java Language Specification](https://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.25):
 
@@ -109,7 +109,7 @@ by changing the type of the third operand to `Boolean`.
 
 *All of these examples are fair to another primitive types as well, not only `boolean`.*
 
-#### Conclusion
+### Conclusion
 
 Usually questions of type "What will return this expression?" are related to JavaScript, and this was the first time I 
 was surprised by such a question in Java.
@@ -124,7 +124,7 @@ by myself (when it is necessary) to avoid such errors. That's why I want to note
 > operand types equivalent
 >
  
-#### Links
+### Links
 
 I used information from two StackOverflow topics 
 ([[1]](https://stackoverflow.com/questions/38095615/java-ternary-conditions-strange-null-pointer-exception), 
