@@ -16,18 +16,13 @@ would like to customize it like me, maybe you'll be interested in the
 
 ### The story
 
-Previous versions of Jenkins looked outdated a bit, but they had a lot of themes 
-that were changing its appearance. I used it with 
-[jenkins-neo2-theme](https://tobix.github.io/jenkins-neo2-theme/) 
-(that is the fork of [jenkins-neo-theme](https://jenkins-contrib-themes.github.io/jenkins-neo-theme/))
-for a long time.
+Previous versions of Jenkins looked outdated a bit, but there were a lot of themes that changed its appearance. I used Jenkins with [jenkins-neo2-theme](https://tobix.github.io/jenkins-neo2-theme/) (that is the fork of [jenkins-neo-theme](https://jenkins-contrib-themes.github.io/jenkins-neo-theme/)) for a long time.
 
 In version `2.346.1` Jenkins got a fancy new appearance, including a complete restyling and a new set of icons.
-But the compatibility with existing themes was broken. Author of neo2-theme stopped its maintenance. But the new 
-appearance was already great, so the need for a custom theme has become less urgent.
+But the compatibility with existing themes was broken. The author of neo2-theme has stopped its maintenance. But the new appearance was already great, so the need for a custom theme has become less urgent.
 
 I wanted to change only two things:
-- Some of the plugins' icons were still not in the same style with the whole system. 
+- Some of the plugins icons were still not in the same style with the whole system
 - I wanted to save the colors that I used to from neo2-theme 
 (for example, header background color and dark background in console)
 
@@ -45,8 +40,7 @@ while others, such as the
 [theme-manager](https://plugins.jenkins.io/theme-manager/),
 allow you to upload your own custom CSS.
 
-Additionally, there are many tools, such as Chrome extensions, that can be used to change a website's 
-CSS styles and don't require you to be a Jenkins administrator.
+Additionally, there are many tools, such as Chrome extensions, that can be used to change the CSS styles of a website and don't require you to be a Jenkins administrator.
 
 ### Making of
 
@@ -57,26 +51,18 @@ to make it similar to neo2.
 But in the process, I noticed that I can make all color variables (not only the header color) configurable, 
 and I liked that idea.
 
-To accomplish this goal, I have needed to connect the CSS variables in Jenkins styles between them. This was
-the most difficult part of the whole project:
+To accomplish this goal, I needed to connect CSS variables in Jenkins styles between them. **This was the most difficult part of the whole project**:
 
-- Not all elements used color variables; many of them were colored directly with HEX color values. 
-I needed to change it to make my theme work.
-- There were about 100 variables in the code, and I didn't want to configure each one. Most of them are shades
-of about 10 main colors, so I wanted to link them together. As a result, I wanted the possibility to set up only 
-(to be able to adjust only)
-the main color, which should affect all its shades. To do this, I used SASS functions like `lighten()` and `darken()`.
+- Not all elements used color variables; many of them were colored directly with **HEX color values**. I needed to change it to make them configurable.
+- There were about **100 variables in the code**, and I didn't want to make each one configurable. Most of them were shades of about 10 main colors, so I wanted to link them together. As a result, I wanted to be able to customize only the base color, which should affect all its shades. To do this, I used SASS functions like `lighten()` and `darken()`.
 
-After that, I decided that icons could be configurable too. But much simpler than colors.
-I didn't want to configure every existing icon, only several that require replacement.
-So, I simply built a small list of icons that can be replaced.
+After that, I decided that icons can also be configurable, but much simpler than colors. I didn't want to configure every existing icon, just a few that needed replacement. So, I simply made a short list of icons that can be replaced.
 
 > There is a [Jenkins Symbols](https://www.jenkins.io/doc/developer/views/symbols/) icons set
 > that corresponds to Jenkins style guides. I discovered it when I looked for icons
 > replacements.
 
-> BTW, lately I noticed that the `Lockable resources plugin` and the `Schedule build plugin` have already changed 
-> their icons in the newest versions. So, changing their icons is only relevant for outdated versions.
+*BTW, lately I noticed that the `Lockable resources plugin` and the `Schedule build plugin` have already changed their icons in the newest versions. So, changing their icons is only relevant for outdated versions.*
 
 After adding the interface for picking colors and icons, the project was done.
 

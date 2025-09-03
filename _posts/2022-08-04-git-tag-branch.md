@@ -10,7 +10,7 @@ tags:
   - GitLab
 ---
 
-To build your pipelines, you may need the name of the branch on which the pipeline is running. In most cases,  the predefined variables `CI_COMMIT_BRANCH` or `CI_COMMIT_REF_NAME` can be used for this. According to [GitLab Docs](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html):
+To build your pipelines, you may need the name of the branch on which the pipeline is running. In most cases, the predefined variables `CI_COMMIT_BRANCH` or `CI_COMMIT_REF_NAME` can be used for this. According to [GitLab Docs](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html):
 
 > **CI_COMMIT_BRANCH** - The commit branch name. Available in branch pipelines, including pipelines for the default branch. Not available in merge request pipelines or *tag pipelines*
 > 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Strange NPE in Java ternary condition
+title: Weird NPE in Java ternary condition
 date: 2023-01-24
 description: 
 categories: notes
@@ -86,7 +86,7 @@ public static void main(String[] args) {
 }
 ```
 
-Error has been occurred in third case because type of second operand is the result of applying boxing conversion to type 
+Error has been occurred in the third case because type of the second operand is the result of applying boxing conversion to type 
 of third operand. But first and second cases return `null` because both operands have `Boolean` type.
 
 ```java
@@ -99,7 +99,7 @@ public static void main(String[] args) {
     // First operand is the variable of Boolean type, second operand has Boolean type
     System.out.println((true) ? test : Boolean.FALSE); // null
 
-    // First operand is the variable of Boolean type, second operand has Boolean type
+    // First operand is the variable of Boolean type, second operand has boolean type
     System.out.println((true) ? test : false); // Exception in thread "main" java.lang.NullPointerException
 }
 ```
@@ -111,7 +111,7 @@ by changing the type of the third operand to `Boolean`.
 
 ### Conclusion
 
-Usually questions of type "What will return this expression?" are related to JavaScript, and this was the first time I 
+Usually questions of type "What will this expression return?" are related to JavaScript, and this was the first time I 
 was surprised by such a question in Java.
 
 As for me, this behavior of ternary expressions is not obvious. To be honest, even after

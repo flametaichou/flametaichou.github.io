@@ -28,9 +28,7 @@ Here is the comparison table:
 | exFAT | 255 UTF-16 characters |
 | NTFS | 255 UTF-16 characters |
 
-So, it is simple for NTFS: it stores filenames in UTF-16 encoding, and the limit is 255 UTF-16 characters. So, the maximum filename length is 255 characters
-(but it is not so simple for Windows, because its maximum filename depends not only on a filesystem limitation. You can find explanation 
-[here](https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file))
+So, it is simple for NTFS: it stores filenames in UTF-16 encoding, and the limit is 255 UTF-16 characters. So, the maximum filename length is 255 characters (but it is not so simple for Windows, because its maximum filename depends not only on a filesystem limitation. You can find the explanation [here](https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file))
 
 > Remember that the filename is the name + extension (like `.txt`). Windows hides files extensions by default.
 
@@ -38,8 +36,7 @@ For filesystems with limitation in bytes it is a little bit more sophisticated: 
 (it depends on encoding used), so the maximum filename length in characters can vary for different names.
 
 For example: most of popular Linux distros use UTF-8 as system encoding by default. In this case, filenames are
-encoded in UTF-8 bytes, and every character can weight 1-4 bytes (which is different from UTF-16 where every character can weight 2-4 bytes).
-So, the limit can be 23-255 characters depending on which characters are used in filename.
+encoded in UTF-8 bytes, and every character can weight 1-4 bytes (which is different from UTF-16 where every character can weight 2 or 4 bytes). So, the limit can be 23-255 characters depending on which characters are used in filename.
 
 ### Counting bytes
 Here are the examples of how filename bytes can be counted:
@@ -65,66 +62,75 @@ Java:
 String filename = "filename.txt";
 
 // You can pass the encoding as a parameter
+// Use UTF_16LE or UTF_16BE for UTF-16 if you don't BOM to be included in the count
 System.out.println(filename.getBytes(StandardCharsets.UTF_8).length); 
 ```
 
 ### Examples 
-Here are the examples of how characters used in filename can affect on filename limitation (only relevant when in bytes):
+Here are examples of how the characters used in a filename can affect the filename limit when the limitation is specified in bytes:
 
 #### Example 1
 
 > `filename.txt`
 
-| Symbols | UTF-8 bytes | UTF-16 bytes |
-| 12  | 12 | 26 |
+| Characters | UTF-8 bytes | UTF-16 bytes |
+| 12  | 12 | 24 |
 
-Latin symbols' weight in UTF-8 is 1 byte, so filename size in symbols is equal to the size in bytes in this case.
+One latin character weight in UTF-8 is 1 byte, so filename size in characters is equal to the size in bytes in this case.
 
 #### Example 2
 
 > `имяфайла.txt`
 
-| Symbols | UTF-8 bytes | UTF-16 bytes |
-| 12  | 20 | 26 |
+| Characters | UTF-8 bytes | UTF-16 bytes |
+| 12  | 20 | 24 |
 
-Cyrillic symbols' weight in UTF-8 is 2 bytes, so filename size in symbols is not equal to the size in bytes. 
+One cyrillic character weight in UTF-8 is 2 bytes, so filename size in characters is not equal to the size in bytes. 
 
 #### Example 3
 
 > `wpDhyBnwSBLwLMGVaMTZiROKnxjgUXtEPvDtJDSKfsurnSkmLLOShVQAzbAASHuyKuzBzwWfslkaLKtNvhTFtkuHJJawqDQsmNVkkXiQRZiYIiTJRUXpBxGYZDrbasZNoChyJEVQVGFScoelxfLZUdyomoncLvoGjgFNiCcbmlFDmvGHHYSkNRYobrkqzBqyGqClpzuMCkFgwiZqvMzwbgUsggIUEwfoZeOpWGzSZnVDKoQRUGAxsGkBzzI.txt`
 
-| Symbols | UTF-8 bytes | UTF-16 bytes |
-| 255  | 255 | 512 |
+| Characters | UTF-8 bytes | UTF-16 bytes |
+| 255  | 255 | 510 |
 
-This is an example of maximum filename length.
+This is an example of the maximum filename length consisting of latin characters. 
+
+This file will be saved with a limit of 255 bytes.
 
 #### Example 4
 
 > `жыКкаЮТРНтКдяЖПлЩЁБшьЛЭкттвеРыДзВэаСяёХнРаьБЩЪФЦКОинщрЪЬыфшщРНЧХхуеяЫхьрЮхчнсцхвЭышэЩЯНвдНбжыктЕЕюДДАБпяГВТЬшёДЁяДСсбкРТяяЖАъщсюёсмфшжЯеъЩЕЖЦющгжжтЁУцёюряКХчктзтсшцЦхчадЫбжнЕЦххтЧЪмЭГЫцЩбъжМЧзцВЛЖЪуюьязЖКуЪУСпымУАрЬгиЮвГпАаХЭцгИшдМЯсьыгШЩЧюЬКтфхъхфРьш.txt`
 
-| Symbols | UTF-8 bytes | UTF-16 bytes |
-| 255  | 506 | 512 |
+| Characters | UTF-8 bytes | UTF-16 bytes |
+| 255  | 506 | 510 |
 
-This file will not be saved in filesystems with 255 bytes filename limitations even though it is 255 symbols as the previous one,
-because it contains cyrillic letters that weight 2 bytes in UTF-8 encoding. Filename has to be shorter by `(506 - 255) / 2 ≐ 126` symbols to be saved
+This is an example of a filename of the same length as the previous one, but consisting of cyrillic characters.
+
+Even thou, this file will not be saved in filesystems with 255 bytes filename limitation, because it contains cyrillic characters weighing 2 bytes in UTF-8 encoding. The filename has to be shorter by `(506 - 255) / 2 ≐ 126` characters to be saved.
 
 #### Example 5
 
 > `жыКкаЮТРНтКдяЖПлЩЁБшьЛЭкттвеРыДзВэаСяёХнРаьБЩЪФЦКОинщрЪЬыфшщРНЧХхуеяЫхьрЮхчнсцхвЭышэЩЯНвдНбжыктЕЕюДДАБпяГВТЬшёДЁяДСсбкРТяяЖАъ.txt`
 
-| Symbols | UTF-8 bytes | UTF-16 bytes |
-| 129  | 254 | 260 |
+| Characters | UTF-8 bytes | UTF-16 bytes |
+| 129  | 254 | 258 |
 
-This file will be saved. 
+This is an example of the maximum filename length consisting of cyrillic characters.
 
-To sum up, if the filesystem limitation is in bytes, the filename length limit in symbols will depend on the symbols used.
-And, as you can see, there is no difference for UTF-16, because UTF-16 is not as efficient for storing latin symbols as UTF-8
-(UTF-16 stores latin symbols in two bytes, whereas UTF-8 requires only one).
+This file will be saved with a limit of 255 bytes.
+
+### Conclusion 
+
+To sum up: when the filesystem limit is set in bytes, the maximum filename length in characters will depend on the characters and encoding used. Different characters can have different weights.
+
+This difference can be eliminated by using another encoding, for example character weight will be the same for latin and cyrillic characters in UTF-16, because the weight of any of these characters will be 2 bytes in this case. But be careful, it means that your latin characters shall not be stored as efficient as in UTF-8 (UTF-16 stores latin characters in 2 bytes instead of 1 in UTF-8).
+
+It is also worth remembering that there are characters that are encoded in 3 or 4 bytes of UTF-8. In the case of 3 bytes, UTF-16 will be more efficient for storing them, because they will be stored in 2 bytes instead of 3.
 
 ### Related errors
 
-Filename limitations can be the reason why, for example, file created on Windows with NTFS filesystem can not be saved on Linux with ext4 filesystem, 
-or why the same filename can be allowed for Windows and not allowed for Linux.
+Filename limitations can be the reason why, for example, file created on Windows with NTFS filesystem can not be saved on Linux with ext4 filesystem, or why the same filename can be allowed for Windows and not allowed for Linux.
 
 ### How file managers limit filename length
 
