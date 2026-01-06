@@ -89,7 +89,7 @@ Otherwise, I'm excited about lit.js.
 
 ### Theme generator
 
-I didn't know which term was more suitable for this tool:
+I didn't know which term is more suitable for this tool:
 generator, configurator, or customizer.
 
 Configurator looks good, but I chose generator because I saw similar tools

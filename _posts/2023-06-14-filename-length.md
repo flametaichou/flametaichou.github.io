@@ -35,7 +35,7 @@ So, it is simple for NTFS: it stores filenames in UTF-16 encoding, and the limit
 For filesystems with limitation in bytes it is a little bit more sophisticated: characters can have different weight in bytes 
 (it depends on encoding used), so the maximum filename length in characters can vary for different names.
 
-For example: most of popular Linux distros use UTF-8 as system encoding by default. In this case, filenames are
+For example: most of popular Linux distros use UTF-8 as a system encoding by default. In this case, filenames are
 encoded in UTF-8 bytes, and every character can weight 1-4 bytes (which is different from UTF-16 where every character can weight 2 or 4 bytes). So, the limit can be 23-255 characters depending on which characters are used in filename.
 
 ### Counting bytes

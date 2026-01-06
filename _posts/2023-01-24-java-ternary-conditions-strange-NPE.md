@@ -10,7 +10,7 @@ tags:
 - Java
 ---
 
-One day my coworker sent me a code snippet with a simple question "What will be written in test2 variable?":
+One day my coworker sent me a code snippet with a simple question "What will be written to the test2 variable?":
 ```java
 Boolean test = null;
 Boolean test2 = (true) ? test : false;
