@@ -16,7 +16,4 @@ function addLinksToHeaders() {
     }
 }
 
-// https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
-window.addEventListener('DOMContentLoaded', function() {
-    addLinksToHeaders();
-});
+addLinksToHeaders();

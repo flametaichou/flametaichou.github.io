@@ -1,4 +1,4 @@
-let input = undefined;
+input = document.getElementById('search-input');
 
 function search() {
     setLoaderVisibility(true);
@@ -20,12 +20,7 @@ function search() {
     setLoaderVisibility(false);
 }
 
-// https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
-window.addEventListener('DOMContentLoaded', function() {
-    input = document.getElementById('search-input');
-
-    if (input) {
-        input.addEventListener('change', search);
-        search();
-    }
-});
+if (input) {
+    input.addEventListener('change', search);
+    search();
+}
