@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% include lang.html %}
-<html lang="{{ lang }}">
+<html lang="{{ locale }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -89,9 +89,9 @@
                         </a>
 
                         <div class="f-dropdown__content">
-                            {% for lang in site.languages %}
-                            <a class="f-dropdown__option" onclick="t('{{ lang }}')">
-                                {{ site.data.i18n.languages[lang] }}
+                            {% for language in site.languages %}
+                            <a class="f-dropdown__option" onclick="t('{{ language }}')">
+                                {{ site.data.i18n.languages[language] }}
                             </a>
                             {% endfor %}
                         </div>
