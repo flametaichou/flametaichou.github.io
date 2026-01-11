@@ -10,16 +10,8 @@
     <link rel="mask-icon" href="/data/images/logo.svg" color="#303032">
     <link rel="icon" type="image/png" sizes="32x32" href="/data/images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/data/images/logo.png">
-
-    <title>
-        {% if page.title %}
-        {{ site.title }} - {{ page.title }}
-        {% else %}
-        {{ site.title }}
-        {% endif %}
-    </title>
-    <meta name="description" content="{{ site.description }}">
-
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    {% seo %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
