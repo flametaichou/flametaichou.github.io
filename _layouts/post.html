@@ -44,7 +44,7 @@ layout: default
                 Untitled post
                 {% endif %}
             </h1>
-            {% if page.description%}
+            {% if page.description %}
             <div class="post__description">
                 {{ page.description }}
             </div>
@@ -64,6 +64,12 @@ layout: default
                 {% endfor %}
             </nav>
         </div>
+        
+        {% if page.related_previous or page.related_next %}
+            <div class="post__section">
+                {% include related_posts.html %}
+            </div>
+        {% endif %}
 
         <div class="post__section">
             {% include comments.html %}

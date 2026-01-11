@@ -14,5 +14,7 @@
   "error.404": "Page not found",
   "language.select": "Choose language",
   "footer.powered": "Powered by",
-  "footer.hosted": "Hosted on"
+  "footer.hosted": "Hosted on",
+  "page.previous": "Previous article",
+  "page.next": "Next article"
 }

@@ -14,5 +14,7 @@
   "error.404": "Такой страницы не существует",
   "language.select": "Выбор языка",
   "footer.powered": "Работает на",
-  "footer.hosted": "Хостится на"
+  "footer.hosted": "Хостится на",
+  "page.previous": "Предыдущая статья",
+  "page.next": "Следующая статья"
 }

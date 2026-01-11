@@ -7,6 +7,7 @@ categories: articles
 cover_image: posts/jekyll-logo.png
 lang: ru
 render_with_liquid: false
+related_next: 2026-01-11-jekyll-giscus-RU.md
 tags:
 - Jekyll
 - GitHub Pages

@@ -1,0 +1,32 @@
+<div class="post__related">
+  {% for post in site.posts %}
+    {% if post.path contains page.related_previous %}
+      <div class="related">
+        <a href="{{ post.url | relative_url }}" class="f-btn f-btn--secondary">
+            🡠 {{ post.title }}
+        </a>
+        <div class="related__tooltip">
+          {% include components/i18n.html code = 'page.previous' %}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  <div class="related__spacer">
+
+  </div>
+
+  {% for post in site.posts %}
+    {% if post.path contains page.related_next %}
+      <div class="related">
+        <a href="{{ post.url | relative_url }}" class="f-btn f-btn--secondary">
+            {{ post.title }} 🡢
+        </a>
+        <div class="related__tooltip">
+          {% include components/i18n.html code = 'page.next' %}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+  
